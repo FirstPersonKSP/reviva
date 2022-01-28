@@ -1,0 +1,13 @@
+* KSP Reviva
+
+KSP Reviva is the IVA Revival!
+
+If you like flying KSP planes and rockets in first-person from the in-vehicle UI using [[https://forum.kerbalspaceprogram.com/index.php?/topic/190737-18x-112x-rasterpropmonitor-adopted/][RPM]]
+and/or [[https://forum.kerbalspaceprogram.com/index.php?/topic/160856-wip-111x-moardvs-avionics-systems-mas-interactive-iva-v123-21-may-2021/][MAS]] then this mod is for you.
+
+- Collection of links and patches to collect and ensure most stock and modded IVA are
+  available for KSP 1.12.x
+- Allow in-game editor switching of IVA from stock to different alternates using
+  [[https://forum.kerbalspaceprogram.com/index.php?/topic/140541-1112-b9partswitch-v2180-march-17/][B9PartSwitch]].
+
+
