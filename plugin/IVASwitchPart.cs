@@ -22,22 +22,23 @@ namespace Reviva
             string oldName = GetCurrentInternalName();
             string newName = GetRequiredInternalName();
 
-            Debug.Log($"IVASwitch: {oldName} -> {newName}");
+            Log($"Switch IVA {oldName} -> {newName}");
             if (newName == "")
             {
-                Debug.Log("IVASwitch: internalName is null or empty, no switch");
+                Log("internalName is null or empty, no switch");
                 return;
             }
 	    if (oldName == newName)
             {
-                Debug.Log("IVASwitch: internalName unchanged, no switch");
+                Log("internalName unchanged, no switch");
                 return;
             }
-    
-	    ConfigNode newInternalConfig = new ConfigNode("INTERNAL");
-	    newInternalConfig.AddValue("name", newName);
-	    this.part.partInfo.internalConfig = newInternalConfig;
-	}
+
+            UnloadIVA();
+            UpdateInternalConfig(oldName, newName);
+            RefreshInternalModel();
+            LoadIVA();
+        }
 
         private string GetCurrentInternalName()
         {
@@ -56,6 +57,45 @@ namespace Reviva
 	    if (name == null)
                 name = "";
             return name;
+        }
+
+        private void UnloadIVA()
+        {
+	    if (!HighLogic.LoadedSceneIsFlight)
+                return;
+
+            Log("Unload in-flight IVA");
+            this.part.DespawnIVA();
+        }
+
+        private void UpdateInternalConfig(string oldName, string newName)
+        {
+            ConfigNode newInternalConfig = new ConfigNode("INTERNAL");
+            newInternalConfig.AddValue("name", newName);
+            this.part.partInfo.internalConfig = newInternalConfig;
+        }
+
+        private void RefreshInternalModel()
+        {
+	    if (!HighLogic.LoadedSceneIsFlight)
+                return;
+
+            Log("Refresh IVA interal model");
+            this.part.CreateInternalModel();
+        }
+
+        private void LoadIVA()
+        {
+	    if (!HighLogic.LoadedSceneIsFlight)
+                return;
+
+            Log("Load in-flight IVA");
+            this.part.SpawnIVA();
+        }
+
+        private void Log(string text)
+        {
+            Debug.Log($"[Reviva] {text}");
         }
     }
 }
