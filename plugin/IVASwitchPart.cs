@@ -9,26 +9,33 @@ namespace Reviva
     public class IVASwitchPart : PartModule
     {
 	[KSPField(isPersistant = true)]
-	public string InternalName = null;
+	public string internalName = null;
 
 	public override void OnLoad(ConfigNode node)
 	{
-	    base.OnLoad(node);
+            string newName = (internalName != null ? internalName : "null");
+            Debug.Log("IVASwitch: internalName=" + newName);
+
+            base.OnLoad(node);
 	    IVASwitch();
 	}
 
 	private void IVASwitch()
 	{
-	    if (string.IsNullOrEmpty(InternalName))
+	    if (string.IsNullOrEmpty(internalName))
 		return;
 
 	    ConfigNode oldInternalConfig = part.partInfo.internalConfig;
-	    string oldName = oldInternalConfig.HasValue("name") ? oldInternalConfig.GetValue("name") : "";
+	    string oldName = (oldInternalConfig.HasValue("name")
+			      ? oldInternalConfig.GetValue("name")
+			      : null);
+	    if (string.IsNullOrEmpty(oldName))
+                oldName = "null";
 
-	    Debug.Log(string.Format("IVASwitch: {} -> {}", oldName, InternalName));
+            Debug.Log("IVASwitch: " + oldName + " -> " + internalName);
 
 	    ConfigNode newInternalConfig = new ConfigNode("INTERNAL");
-	    newInternalConfig.AddValue("name", InternalName);
+	    newInternalConfig.AddValue("name", internalName);
 	    part.partInfo.internalConfig = newInternalConfig;
 	}
     }
