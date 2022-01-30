@@ -8,27 +8,29 @@ namespace Reviva
      */
     public class IVASwitchPart : PartModule
     {
-	[KSPField(isPersistant = true)]
-	public string internalName = null;
+        [KSPField(isPersistant = true)]
+        public string internalName = null;
 
-	public override void OnLoad(ConfigNode node)
-	{
+        public override void OnLoad(ConfigNode node)
+        {
             base.OnLoad(node);
-	    IVASwitch();
-	}
+            IVASwitch();
+        }
+
+        /*  -------------------------------------------------------------------------------- */
 
 	private void IVASwitch()
-	{
+        {
             string oldName = GetCurrentInternalName();
             string newName = GetRequiredInternalName();
 
             Log($"Switch IVA {oldName} -> {newName}");
             if (newName == "")
             {
-                Log("internalName is null or empty, no switch");
+                LogError("internalName is null or empty, no switch");
                 return;
             }
-	    if (oldName == newName)
+            if (oldName == newName)
             {
                 Log("internalName unchanged, no switch");
                 return;
@@ -40,29 +42,32 @@ namespace Reviva
             LoadIVA();
         }
 
+
         private string GetCurrentInternalName()
         {
-	    ConfigNode internalConfig = this.part.partInfo.internalConfig;
-	    string name = (internalConfig.HasValue("name")
-			   ? internalConfig.GetValue("name")
-			   : null);
-	    if (name == null)
-                name = "";
-            return name;
+            ConfigNode internalConfig = this.part?.partInfo?.internalConfig;
+            return GetConfigValue(internalConfig, "name");
+        }
+
+        private string GetConfigValue(ConfigNode node, string id)
+        {
+            if (node == null || !node.HasValue(id))
+                return "";
+            return node.GetValue(id) ?? "";
         }
 
         private string GetRequiredInternalName()
         {
-            string name = this.internalName;
-	    if (name == null)
-                name = "";
-            return name;
+            return this.internalName ?? "";
         }
 
         private void UnloadIVA()
         {
-	    if (!HighLogic.LoadedSceneIsFlight)
+            if (!HighLogic.LoadedSceneIsFlight)
+            {
+                Log("Not in flight scene, IVA not unloaded");
                 return;
+            }
 
             Log("Unload in-flight IVA");
             this.part.DespawnIVA();
@@ -70,6 +75,12 @@ namespace Reviva
 
         private void UpdateInternalConfig(string oldName, string newName)
         {
+            if (this.part?.partInfo == null)
+            {
+                LogError("No part or partinfo, cannot switch");
+                return;
+            }
+
             ConfigNode newInternalConfig = new ConfigNode("INTERNAL");
             newInternalConfig.AddValue("name", newName);
             this.part.partInfo.internalConfig = newInternalConfig;
@@ -77,8 +88,16 @@ namespace Reviva
 
         private void RefreshInternalModel()
         {
-	    if (!HighLogic.LoadedSceneIsFlight)
+            if (!HighLogic.LoadedSceneIsFlight)
+            {
+                Log("Not in flight scene, internal model not refreshed");
                 return;
+            }
+            if (this.part == null)
+            {
+                LogError("No current part, internal model not refreshed");
+                return;
+            }
 
             Log("Refresh IVA interal model");
             this.part.CreateInternalModel();
@@ -86,8 +105,11 @@ namespace Reviva
 
         private void LoadIVA()
         {
-	    if (!HighLogic.LoadedSceneIsFlight)
+            if (!HighLogic.LoadedSceneIsFlight)
+            {
+                Log("Not in flight scene, IVA not loaded");
                 return;
+            }
 
             Log("Load in-flight IVA");
             this.part.SpawnIVA();
@@ -96,6 +118,11 @@ namespace Reviva
         private void Log(string text)
         {
             Debug.Log($"[Reviva] {text}");
+        }
+
+        private void LogError(string text)
+        {
+            Debug.LogError($"[Reviva] {text}");
         }
     }
 }

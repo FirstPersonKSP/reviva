@@ -204,6 +204,41 @@ will be saved along with that ship only, this includes when the ship goes on rai
 
 ** TODO Check internalConfig / part for null to stop exceptions
 ** TODO Switching Warbirds causing errors
+
+#+begin_example
+[LOG 22:28:02.614] [Reviva] Switch IVA Mk1InlineInternalASET_WB -> mk1InlineInternal
+[LOG 22:28:02.614] [Reviva] Unload in-flight IVA
+[LOG 22:28:02.615] [Reviva] Refresh IVA interal model
+[LOG 22:28:02.628] [Reviva] Load in-flight IVA
+[LOG 22:28:02.629] [Reviva] Switch IVA mk1InlineInternal -> Mk1InlineInternalASET_WB_SI
+[LOG 22:28:02.629] [Reviva] Unload in-flight IVA
+[LOG 22:28:02.629] [Reviva] Refresh IVA interal model
+[LOG 22:28:02.678] [Reviva] Load in-flight IVA
+[LOG 22:28:02.681] [Part Mark2Cockpit] [ModuleB9PartSwitch 'IVASwitch'] Switched subtype to WarbirdsSI
+[ERR 22:28:02.754] Cannot find an InternalModule of typename 'DPAI_RPM'
+[ERR 22:28:02.754] Cannot find an InternalModule of typename 'DPAI_RPM'
+[ERR 22:28:02.754] Cannot find an InternalModule of typename 'JSISCANsatRPM'
+[ERR 22:28:02.754] Cannot find an InternalModule of typename 'JSISCANsatRPM'
+[ERR 22:28:02.756] Cannot find an InternalModule of typename 'AstrogatorMenu'
+[ERR 22:28:02.757] Cannot find an InternalModule of typename 'InternalVesselView'
+[ERR 22:28:02.757] Cannot find an InternalModule of typename 'InternalVesselView'
+[WRN 22:28:02.893] WARNING: Color entry is not formatted properly! Proper format for Colors is r,g,b{,a}
+[WRN 22:28:02.921] WARNING: Vector3 entry is not formatted properly! Proper format for Vector3 is x,y,z
+[ERR 22:28:02.962] [JSICallbackAnimator]: INITIALIZATION ERROR, CHECK CONFIGURATION.
+[EXC 22:28:02.966] NullReferenceException: Object reference not set to an instance of an object
+	JSI.CallbackAnimationSet..ctor (ConfigNode node, System.String variableName, InternalProp thisProp) (at <05eb104d0dd24f118b48a18639af1146>:0)
+	JSI.JSICallbackAnimator.Start () (at <05eb104d0dd24f118b48a18639af1146>:0)
+	UnityEngine.DebugLogHandler:LogException(Exception, Object)
+	ModuleManager.UnityLogHandle.InterceptLogHandler:LogException(Exception, Object)
+	UnityEngine.Debug:CallOverridenDebugHandler(Exception, Object)
+[ERR 22:28:03.063] Cannot find an InternalModule of typename 'JSISCANsatRPM'
+[ERR 22:28:03.068] Cannot find an InternalModule of typename 'InternalVesselView'
+[ERR 22:28:03.068] Cannot find an InternalModule of typename 'InternalVesselView'
+[ERR 22:28:03.068] Cannot find an InternalModule of typename 'EngineIgnitorRPM'
+[ERR 22:28:03.069] Cannot find an InternalModule of typename 'DPAI_RPM'
+[ERR 22:28:03.069] Cannot find an InternalModule of typename 'DPAI_RPM'
+#+end_example
+
 ** TODO Initial selection from editor did not work (may be above)
 ** TODO Add switching of RPM computer with correct fields.
   - May need copy and paste.
@@ -211,4 +246,17 @@ will be saved along with that ship only, this includes when the ship goes on rai
 ** TODO Implement DE_IVA Mk1 Inline
 ** TODO Remove Mk1 Inline Warbird version (?)
   - Removing may cause issues if anyone has used this.
-    
+** TODO Add in-game option to allow in-flight switching
+  - Default is enabled
+  - If disabled, only affects career/science modes
+** TODO Add support for part upgrades
+  - Default to off
+  - Start nodes are defined in common .cfg
+    - LowTechNode :: roughly equivalent to 1950-1969
+    - MediumTechNode :: roughly equivalent to 1970-1989,
+    - HighTechNode :: roughly equivalent to 1990-now,
+    - FutureTechNode :: roughly equivalent to in-development now
+    - FarFutureTechNode :: sci-fi
+  - Default are CTT nodes
+  - Add in-game option to enable/disable
+  - If enabled, only affects career/science modes
