@@ -4,8 +4,8 @@ KSP Reviva is the IVA Revival!
 
 ** For Players
 
-If you like flying in first-person from the in-vehicle cockpit, either in stock or using
-[[https://forum.kerbalspaceprogram.com/index.php?/topic/190737-18x-112x-rasterpropmonitor-adopted/][RPM]] and/or [[https://forum.kerbalspaceprogram.com/index.php?/topic/160856-wip-111x-moardvs-avionics-systems-mas-interactive-iva-v123-21-may-2021/][MAS,]] then this mod is for you.
+If you like flying in first-person from the in-vehicle crewed cockpit, either in stock or
+using [[https://forum.kerbalspaceprogram.com/index.php?/topic/190737-18x-112x-rasterpropmonitor-adopted/][RPM]] and/or [[https://forum.kerbalspaceprogram.com/index.php?/topic/160856-wip-111x-moardvs-avionics-systems-mas-interactive-iva-v123-21-may-2021/][MAS,]] then this mod is for you.
 
 Features:
 
@@ -27,7 +27,7 @@ Features:
   
 ** For Modders
 
-You can provide multiple IVAs for your command modules: this might allow for an empty (low
+You can provide multiple IVAs for your crewed command modules: this might allow for an empty (low
 resource) IVA and a more complex (heavy resource) IVA as an option, or tech level upgrades
 from lower tech to higher tech (using B9PartSwitch part upgrades).
 
@@ -50,7 +50,8 @@ If you only at least these two mods installed, right clicking on supported comma
 will show the PAW UI with a group called "IVA Switch".
 
 In the in-game editor it will show one or more coloured boxes representing each available
-IVA, plus a "Select IVA" button that shows a drop down menu. When in-flight, only the "Select IVA" button is available.
+IVA, plus a "Select IVA" button that shows a drop down menu. When in-flight, only the
+"Select IVA" button is available.
 
 Without any other mods, it's likely you'll only see a "Stock" selection on stock command
 modules, which is the vanilla IVA modules. These are always the default when adding a new
@@ -78,13 +79,14 @@ in existence that can work on KSP 1.12.x - if you know of more let the mod autho
 | Status      | Mod                              | Quality | For                 | Provides                                     | Link |
 |-------------+----------------------------------+---------+---------------------+----------------------------------------------+------|
 | Recommended | RasterPropMonitor (RPM)          | ***     | Stock               | More complex IVA than stock                  |      |
-| Recommended | Moardv's Avionics System (MAS)   | *****   | Stock               | Successor to RPM (*), includes low tech      |      |
+| Recommended | MOARdv's Avionics System (MAS)   | *****   | Stock               | Successor to RPM (*), includes low tech      |      |
 |             |                                  |         |                     | Mk1, Mk1-3 and Mk1 Lander.                   |      |
 | Recommended | DE_IVAExtension                  | ****    | Stock               | High tech IVA for all of Stock               |      |
 | Recommended | ASET IVA for Making History Pods | *****   | Making History      | High tech IVA for all of Making History      |      |
 | Optional    | ASET Mk1 Cockpit                 | *****   | Stock               | High tech analog Mk1 Cockpit                 |      |
 | Optional    | ASET Mk1 Lander Can              | *****   | Stock               | High tech Mk1 Lander                         |      |
 | Optional    | ASET Mk1-2 Command Pod           | *****   | Stock               | High tech Mk1-3 Command Pod                  |      |
+| Optional    | Probe Control Room               | ***     | PBC                 | Probe control room for probes                |      |
 | Optional    | Warbird Cockpits                 | *****   | Stock, SXT,         | Analog avaition cockpits for several mods    |      |
 |             |                                  |         | Airplane Plus,      |                                              |      |
 |             |                                  |         | Kerbonov            |                                              |      |
@@ -101,6 +103,72 @@ in existence that can work on KSP 1.12.x - if you know of more let the mod autho
 (*) You can have either RPM or MAS, or in fact both at the same time. MAS includes upgrade
 scripts that render some existing RPM IVAs at a high quality and performance (in my experience).
 
+** Support Progress
 
-
+| Name               | From  | IVA             | Support Status |
+|--------------------+-------+-----------------+----------------|
+| Mk1 Cockpit        | Stock | Stock           | Done           |
+|                    |       | RPM             | Done           |
+|                    |       | DE_IVAExtension | Done           |
+|                    |       | ASET            | Done           |
+|--------------------+-------+-----------------+----------------|
+| Mk1 Command Pod    | Stock | Stock           |                |
+|                    |       | RPM             |                |
+|                    |       | DE_IVAExtension |                |
+|--------------------+-------+-----------------+----------------|
+| Mk1 Inline Cockpit | Stock | Stock           |                |
+|                    |       | RPM             |                |
+|                    |       | DE_IVAExtension |                |
+|--------------------+-------+-----------------+----------------|
+| Mk1 Lander Can     | Stock | Stock           |                |
+|                    |       | RPM             |                |
+|                    |       | DE_IVAExtension |                |
+|                    |       | ASET            |                |
+|--------------------+-------+-----------------+----------------|
+| Mk1-3 Command Pod  | Stock | Stock           |                |
+|                    |       | RPM             |                |
+|                    |       | DE_IVAExtension |                |
+|                    |       | ASET            |                |
+|--------------------+-------+-----------------+----------------|
+| Mk2 Cockpit        | Stock | Stock           |                |
+|                    |       | RPM             |                |
+|                    |       | DE_IVAExtension |                |
+|--------------------+-------+-----------------+----------------|
+| Mk2 Inline Cockpit | Stock | Stock           |                |
+|                    |       | RPM             |                |
+|                    |       | DE_IVAExtension |                |
+|--------------------+-------+-----------------+----------------|
+| Mk2 Lander Can     | Stock | Stock           |                |
+|                    |       | RPM             |                |
+|                    |       | DE_IVAExtension |                |
+|--------------------+-------+-----------------+----------------|
+| Mk3 Cockpit        | Stock | Stock           |                |
+|                    |       | RPM             |                |
+|                    |       | DE_IVAExtension |                |
+|--------------------+-------+-----------------+----------------|
+| PPD-12 Cupola      | Stock | Stock           |                |
+|                    |       | RPM             |                |
+|                    |       | DE_IVAExtension |                |
+|--------------------+-------+-----------------+----------------|
+| KV-1               | MH    | MH              |                |
+|                    |       | ASET for MH     |                |
+|--------------------+-------+-----------------+----------------|
+| KV-2               | MH    | MH              |                |
+|                    |       | ASET for MH     |                |
+|--------------------+-------+-----------------+----------------|
+| KV-3               | MH    | MH              |                |
+|                    |       | ASET for MH     |                |
+|--------------------+-------+-----------------+----------------|
+| Mk2 Command Pod    | MH    | MH              |                |
+|                    |       | ASET for MH     |                |
+|--------------------+-------+-----------------+----------------|
+| M.E.M.             | MH    | MH              |                |
+|                    |       | ASET for MH     |                |
+|--------------------+-------+-----------------+----------------|
+| Probe Control Room | PCR   | PCR             |                |
+|                    |       | DE_IVAExtension |                |
+|--------------------+-------+-----------------+----------------|
+| ALCOR              | ALCOR | ALCOR           |                |
+|--------------------+-------+-----------------+----------------|
+|                    |       |                 |                |
 
