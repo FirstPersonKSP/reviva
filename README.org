@@ -24,6 +24,13 @@ Features:
   
   - Note that this mod doesn't include the IVAs, but provides links for recommended or
     optional IVA mods, plus patches to allow them to run and be switched dynamically.
+
+- Very low overhead on performance: command modules get an extra IVASwitchPart, and switch
+  detection only happens when changes are made.
+
+- The different IVA selection does not change the characteristics, mass, cost or other
+  data on the actual command pod: it's all visual for IVA. This means you can change at
+  any time without penalty, by design.
   
 ** For Modders
 
@@ -128,76 +135,78 @@ will be saved along with that ship only, this includes when the ship goes on rai
 
 * Support Progress
 
-| Name               | CFG Name            | From  | IVA             | Support Status |
-|--------------------+---------------------+-------+-----------------+----------------|
-| Mk1 Cockpit        | Mark1Cockpit        | Stock | Stock           | Done           |
-|                    |                     |       | RPM             | Done           |
-|                    |                     |       | DE_IVAExtension | Done           |
-|                    |                     |       | ASET            | Done           |
-|--------------------+---------------------+-------+-----------------+----------------|
-| Mk1 Command Pod    | mk1pod_v2           | Stock | Stock           | Done           |
-|                    |                     |       | RPM             | Done           |
-|                    |                     |       | DE_IVAExtension | Done           |
-|                    |                     |       | Warbirds        | Done           |
-|--------------------+---------------------+-------+-----------------+----------------|
-| Mk1 Inline Cockpit | Mark2Cockpit        | Stock | Stock           | Done           |
-|                    |                     |       | DE_IVAExtension | Done           |
-|                    |                     |       | Warbirds        | Done           |
-|                    |                     |       | WarbirdsSI      | Bugs           |
-|--------------------+---------------------+-------+-----------------+----------------|
-| Mk1 Lander Can     | landerCabinSmall    | Stock | Stock           |                |
-|                    |                     |       | RPM             |                |
-|                    |                     |       | DE_IVAExtension |                |
-|                    |                     |       | ASET            |                |
-|--------------------+---------------------+-------+-----------------+----------------|
-| Mk1-3 Command Pod  | mk1-3pod            | Stock | Stock           |                |
-|                    |                     |       | RPM             |                |
-|                    |                     |       | DE_IVAExtension |                |
-|                    |                     |       | ASET            |                |
-|--------------------+---------------------+-------+-----------------+----------------|
-| Mk2 Cockpit        | mk2Cockpit_Standard | Stock | Stock           |                |
-|                    |                     |       | RPM             |                |
-|                    |                     |       | DE_IVAExtension |                |
-|--------------------+---------------------+-------+-----------------+----------------|
-| Mk2 Inline Cockpit | mk2Cockpit_Inline   | Stock | Stock           |                |
-|                    |                     |       | RPM             |                |
-|                    |                     |       | DE_IVAExtension |                |
-|                    |                     |       | Warbirds        |                |
-|                    |                     |       | WarbirdsSI      |                |
-|--------------------+---------------------+-------+-----------------+----------------|
-| Mk2 Lander Can     | mk2LanderCabin_v2   | Stock | Stock           |                |
-|                    |                     |       | RPM             |                |
-|                    |                     |       | DE_IVAExtension |                |
-|--------------------+---------------------+-------+-----------------+----------------|
-| Mk3 Cockpit        | mk3Cockpit_Shuttle  | Stock | Stock           |                |
-|                    |                     |       | RPM             |                |
-|                    |                     |       | DE_IVAExtension |                |
-|--------------------+---------------------+-------+-----------------+----------------|
-| PPD-12 Cupola      | cupola              | Stock | Stock           |                |
-|                    |                     |       | RPM             |                |
-|                    |                     |       | DE_IVAExtension |                |
-|--------------------+---------------------+-------+-----------------+----------------|
-| KV-1               | kv1Pod              | MH    | MH              |                |
-|                    |                     |       | ASET for MH     |                |
-|--------------------+---------------------+-------+-----------------+----------------|
-| KV-2               | kv2Pod              | MH    | MH              |                |
-|                    |                     |       | ASET for MH     |                |
-|--------------------+---------------------+-------+-----------------+----------------|
-| KV-3               | kv3Pod              | MH    | MH              |                |
-|                    |                     |       | ASET for MH     |                |
-|--------------------+---------------------+-------+-----------------+----------------|
-| Mk2 Command Pod    | Mk2Pod              | MH    | MH              |                |
-|                    |                     |       | ASET for MH     |                |
-|--------------------+---------------------+-------+-----------------+----------------|
-| M.E.M.             | MEMLander           | MH    | MH              |                |
-|                    |                     |       | ASET for MH     |                |
-|--------------------+---------------------+-------+-----------------+----------------|
-| Probe Control Room |                     | PCR   | PCR             |                |
-|                    |                     |       | DE_IVAExtension |                |
-|--------------------+---------------------+-------+-----------------+----------------|
-| ALCOR              |                     | ALCOR | ALCOR           |                |
-|--------------------+---------------------+-------+-----------------+----------------|
-|                    |                     |       |                 |                |
+| Name               | CFG Name            | From  | IVA             | Tech   | Support Status |
+|--------------------+---------------------+-------+-----------------+--------+----------------|
+| Mk1 Cockpit        | Mark1Cockpit        | Stock | Stock           | Low    | Done           |
+|                    |                     |       | RPM             | Med    | Done           |
+|                    |                     |       | DE_IVAExtension | High   | Done           |
+|                    |                     |       | ASET            | High   | Done           |
+|--------------------+---------------------+-------+-----------------+--------+----------------|
+| Mk1 Command Pod    | mk1pod_v2           | Stock | Stock           | Low    | Done           |
+|                    |                     |       | RPM             | Med    | Done           |
+|                    |                     |       | DE_IVAExtension | High   | Done           |
+|                    |                     |       | Warbirds        | Low    | Done           |
+|--------------------+---------------------+-------+-----------------+--------+----------------|
+| Mk1 Inline Cockpit | Mark2Cockpit        | Stock | Stock           | Low    | Done           |
+|                    |                     |       | DE_IVAExtension | High   | Done           |
+|                    |                     |       | Warbirds        | Medium | Done           |
+|                    |                     |       | WarbirdsSI      | Medium | Done           |
+|                    |                     |       | WarbirdsRetro   | Low    | Done           |
+|                    |                     |       | WarbirdsRetroSI | Low    | Done           |
+|--------------------+---------------------+-------+-----------------+--------+----------------|
+| Mk1 Lander Can     | landerCabinSmall    | Stock | Stock           | Low    | Done           |
+|                    |                     |       | RPM             | Med    |                |
+|                    |                     |       | DE_IVAExtension | High   |                |
+|                    |                     |       | ASET            | Low    |                |
+|--------------------+---------------------+-------+-----------------+--------+----------------|
+| Mk1-3 Command Pod  | mk1-3pod            | Stock | Stock           |        |                |
+|                    |                     |       | RPM             |        |                |
+|                    |                     |       | DE_IVAExtension |        |                |
+|                    |                     |       | ASET            |        |                |
+|--------------------+---------------------+-------+-----------------+--------+----------------|
+| Mk2 Cockpit        | mk2Cockpit_Standard | Stock | Stock           |        |                |
+|                    |                     |       | RPM             |        |                |
+|                    |                     |       | DE_IVAExtension |        |                |
+|--------------------+---------------------+-------+-----------------+--------+----------------|
+| Mk2 Inline Cockpit | mk2Cockpit_Inline   | Stock | Stock           |        |                |
+|                    |                     |       | RPM             |        |                |
+|                    |                     |       | DE_IVAExtension |        |                |
+|                    |                     |       | Warbirds        |        |                |
+|                    |                     |       | WarbirdsSI      |        |                |
+|--------------------+---------------------+-------+-----------------+--------+----------------|
+| Mk2 Lander Can     | mk2LanderCabin_v2   | Stock | Stock           |        |                |
+|                    |                     |       | RPM             |        |                |
+|                    |                     |       | DE_IVAExtension |        |                |
+|--------------------+---------------------+-------+-----------------+--------+----------------|
+| Mk3 Cockpit        | mk3Cockpit_Shuttle  | Stock | Stock           |        |                |
+|                    |                     |       | RPM             |        |                |
+|                    |                     |       | DE_IVAExtension |        |                |
+|--------------------+---------------------+-------+-----------------+--------+----------------|
+| PPD-12 Cupola      | cupola              | Stock | Stock           |        |                |
+|                    |                     |       | RPM             |        |                |
+|                    |                     |       | DE_IVAExtension |        |                |
+|--------------------+---------------------+-------+-----------------+--------+----------------|
+| KV-1               | kv1Pod              | MH    | MH              |        |                |
+|                    |                     |       | ASET for MH     |        |                |
+|--------------------+---------------------+-------+-----------------+--------+----------------|
+| KV-2               | kv2Pod              | MH    | MH              |        |                |
+|                    |                     |       | ASET for MH     |        |                |
+|--------------------+---------------------+-------+-----------------+--------+----------------|
+| KV-3               | kv3Pod              | MH    | MH              |        |                |
+|                    |                     |       | ASET for MH     |        |                |
+|--------------------+---------------------+-------+-----------------+--------+----------------|
+| Mk2 Command Pod    | Mk2Pod              | MH    | MH              |        |                |
+|                    |                     |       | ASET for MH     |        |                |
+|--------------------+---------------------+-------+-----------------+--------+----------------|
+| M.E.M.             | MEMLander           | MH    | MH              |        |                |
+|                    |                     |       | ASET for MH     |        |                |
+|--------------------+---------------------+-------+-----------------+--------+----------------|
+| Probe Control Room |                     | PCR   | PCR             |        |                |
+|                    |                     |       | DE_IVAExtension |        |                |
+|--------------------+---------------------+-------+-----------------+--------+----------------|
+| ALCOR              |                     | ALCOR | ALCOR           |        |                |
+|--------------------+---------------------+-------+-----------------+--------+----------------|
+|                    |                     |       |                 |        |                |
 
 * [0/1] Tasks
 
@@ -267,7 +276,7 @@ will be saved along with that ship only, this includes when the ship goes on rai
     - LowTechNode :: roughly equivalent to 1950-1969
     - MediumTechNode :: roughly equivalent to 1970-1989,
     - HighTechNode :: roughly equivalent to 1990-now,
-    - FutureTechNode :: roughly equivalent to in-development now
+    - NearFutureTechNode :: roughly equivalent to in-development now
     - FarFutureTechNode :: sci-fi
   - Default are CTT nodes
   - Add in-game option to enable/disable
