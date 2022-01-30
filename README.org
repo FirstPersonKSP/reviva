@@ -27,14 +27,26 @@ Features:
   
 ** For Modders
 
-You can provide multiple IVAs for your crewed command modules: this might allow for an empty (low
-resource) IVA and a more complex (heavy resource) IVA as an option, or tech level upgrades
-from lower tech to higher tech (using B9PartSwitch part upgrades).
+You can provide multiple IVAs for your modded crewed command modules: this might allow for
+an empty (low resource) IVA and a more complex (heavy resource) IVA as an option, or tech
+level upgrades from lower tech to higher tech (using B9PartSwitch part upgrades).
 
 The only requirement is that there are seperately named INTERNAL definitions for each
 selection. Module Manager is your friend, see the provided examples in Reviva and follow
-the pattern. It is preferable that additional SUBTYPE are added to the standard IVASwitch
-Module, so the user sees a consistent UI interface.
+the pattern.
+
+- If Reviva already has support for the command module mod and provides other IVAs, it is
+  preferable that additional SUBTYPE are added to the standard IVASwitch Module provided
+  by Reviva.
+- If there's no existing support in Reviva, you should copy the similar part style whole for
+  Reviva itself in your own mod (eg. Stock/mk1Cockpit.cfg).
+- You could alternatively clone Reviva and make changes there and push them, or if you're
+  really lazy ask me to do it.
+
+Feel free to ask questions in the forum, I'm not super experienced with KSP modding, but I
+know game development well enough to be dangerous/helpful.
+
+* Installation
 
 ** Required Mods
 
@@ -43,27 +55,6 @@ For Reviva to be enabled there's a mimimum set of required mods (and their depen
 - Reviva - obviously, but this provides a small DLL that remembers the IVA selection and
   handles switching the IVA dynamically in the editor or in flight.
 - [[https://forum.kerbalspaceprogram.com/index.php?/topic/140541-1112-b9partswitch-v2180-march-17/][B9PartSwitch]] - this provides the main mechanism to define and switch IVA definitions.
-
-** In Game Usage
-
-If you only at least these two mods installed, right clicking on supported command modules
-will show the PAW UI with a group called "IVA Switch".
-
-In the in-game editor it will show one or more coloured boxes representing each available
-IVA, plus a "Select IVA" button that shows a drop down menu. When in-flight, only the
-"Select IVA" button is available.
-
-Without any other mods, it's likely you'll only see a "Stock" selection on stock command
-modules, which is the vanilla IVA modules. These are always the default when adding a new
-stock command module, or loading a vessel for the first time after installing the mod
-(yes, it will revert any existing IVA mods to stock).
-
-You can save the selection for the ship design in the editor, in which case each launch
-will use that IVA selection.
-
-For already in-flight vessels, you can change the selection while not in the IVA, and it
-will be saved along with the ship, or when the ship goes on rails (switching away to
-another vessel).
 
 ** Recommended and Optional Mods
 
@@ -103,7 +94,39 @@ in existence that can work on KSP 1.12.x - if you know of more let the mod autho
 (*) You can have either RPM or MAS, or in fact both at the same time. MAS includes upgrade
 scripts that render some existing RPM IVAs at a high quality and performance (in my experience).
 
-** Support Progress
+* User Manual
+
+Once you have installed all the mods needed, once you've restarted the game, right
+clicking on supported command modules will show the PAW UI with a group called "IVA
+Switch".
+
+When in the SPH or VAB editor this will show one or more coloured box images representing
+each available IVA, plus a "Select IVA" button below that if clicked displays a drop down
+menu with all the possible IVA options.
+
+When in-flight, only the "Select IVA" menu button is available: you also need to exit any
+in-IVA view (press C). When changing the IVA you should see the Kerbal portraits
+temporarily go to noise for a moment. You can then re-enter the IVA view with the same
+crew present (hopefully, if one gets lost or changes seats, that's the price you pay for
+such fast in-flight reconstruction).
+
+With only the required mods, it's likely you'll only see a "Stock" selection on stock command
+modules, which is the vanilla IVA modules. These are always the default when adding a new
+stock command module, or loading a vessel for the first time after installing the mod
+(yes, it will revert any existing IVA mods to stock or default setting for that mod).
+
+For Stock and Missing History, it's best to install the "Recommended" mods shown in the
+above table: these provide three or four different IVA variants (low, medium and high
+tech, sometimes with an alternative high tech variant of higher quality).
+
+You can save the selection for the ship design in the SPH/VAB editor, in which case each launch
+will use that IVA selection as the new default.
+
+For already in-flight vessels, you can change the selection (while not in the IVA), and it
+will be saved along with that ship only, this includes when the ship goes on rails
+(switching away to another vessel), and when saving the game.
+
+* Support Progress
 
 | Name               | From  | IVA             | Support Status |
 |--------------------+-------+-----------------+----------------|
