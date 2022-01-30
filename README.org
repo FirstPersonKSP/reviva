@@ -2,13 +2,105 @@
 
 KSP Reviva is the IVA Revival!
 
-If you like flying KSP planes and rockets in first-person from the in-vehicle UI using [[https://forum.kerbalspaceprogram.com/index.php?/topic/190737-18x-112x-rasterpropmonitor-adopted/][RPM]]
-and/or [[https://forum.kerbalspaceprogram.com/index.php?/topic/160856-wip-111x-moardvs-avionics-systems-mas-interactive-iva-v123-21-may-2021/][MAS]] then this mod is for you.
+** For Players
 
-- Collection of links and patches to collect and ensure most stock and modded IVA are
-  available for KSP 1.12.x
-- Allow in-game editor switching of IVA from stock to different alternates using
+If you like flying in first-person from the in-vehicle cockpit, either in stock or using
+[[https://forum.kerbalspaceprogram.com/index.php?/topic/190737-18x-112x-rasterpropmonitor-adopted/][RPM]] and/or [[https://forum.kerbalspaceprogram.com/index.php?/topic/160856-wip-111x-moardvs-avionics-systems-mas-interactive-iva-v123-21-may-2021/][MAS,]] then this mod is for you.
+
+Features:
+
+- Allow switching of IVA from stock to different alternates (if needed mods are loaded) using
   [[https://forum.kerbalspaceprogram.com/index.php?/topic/140541-1112-b9partswitch-v2180-march-17/][B9PartSwitch]].
+  
+  - This can be done from the editor, and the settings are saved with the ship design.
+  - This can *also* be done live from flight! Use the PAW right-click menu on the
+    command module when not in IVA (yup, not realistic, but this is KSP). This allows for the
+    player to load this mod on existing saves and change IVAs on already flying craft, or
+    to try out different IVA.
+  - Without Reviva, only the "last" IVA mod for each command module would be available.
+
+- Links together stock and modded IVA into one place and provides limited patches to
+  ensure they work in 1.12.x.
+  
+  - Note that this mod doesn't include the IVAs, but provides links for recommended or
+    optional IVA mods, plus patches to allow them to run and be switched dynamically.
+  
+** For Modders
+
+You can provide multiple IVAs for your command modules: this might allow for an empty (low
+resource) IVA and a more complex (heavy resource) IVA as an option, or tech level upgrades
+from lower tech to higher tech (using B9PartSwitch part upgrades).
+
+The only requirement is that there are seperately named INTERNAL definitions for each
+selection. Module Manager is your friend, see the provided examples in Reviva and follow
+the pattern. It is preferable that additional SUBTYPE are added to the standard IVASwitch
+Module, so the user sees a consistent UI interface.
+
+** Required Mods
+
+For Reviva to be enabled there's a mimimum set of required mods (and their dependencies):
+
+- Reviva - obviously, but this provides a small DLL that remembers the IVA selection and
+  handles switching the IVA dynamically in the editor or in flight.
+- [[https://forum.kerbalspaceprogram.com/index.php?/topic/140541-1112-b9partswitch-v2180-march-17/][B9PartSwitch]] - this provides the main mechanism to define and switch IVA definitions.
+
+** In Game Usage
+
+If you only at least these two mods installed, right clicking on supported command modules
+will show the PAW UI with a group called "IVA Switch".
+
+In the in-game editor it will show one or more coloured boxes representing each available
+IVA, plus a "Select IVA" button that shows a drop down menu. When in-flight, only the "Select IVA" button is available.
+
+Without any other mods, it's likely you'll only see a "Stock" selection on stock command
+modules, which is the vanilla IVA modules. These are always the default when adding a new
+stock command module, or loading a vessel for the first time after installing the mod
+(yes, it will revert any existing IVA mods to stock).
+
+You can save the selection for the ship design in the editor, in which case each launch
+will use that IVA selection.
+
+For already in-flight vessels, you can change the selection while not in the IVA, and it
+will be saved along with the ship, or when the ship goes on rails (switching away to
+another vessel).
+
+** Recommended and Optional Mods
+
+The following table shows recommended mods and optional mods that can be installed to
+provide non-stock IVAs for stock and other mods. Some of these provide additional IVA for
+other mods, and some only provide a single IVA (in which case Reviva is merely providing
+links and/or patches to ensure they work when installed).
+
+This table hopefully links to all the known functional (ie. for command/flying) IVA mods
+in existence that can work on KSP 1.12.x - if you know of more let the mod author know.
+
+
+| Status      | Mod                              | Quality | For                 | Provides                                     | Link |
+|-------------+----------------------------------+---------+---------------------+----------------------------------------------+------|
+| Recommended | RasterPropMonitor (RPM)          | ***     | Stock               | More complex IVA than stock                  |      |
+| Recommended | Moardv's Avionics System (MAS)   | *****   | Stock               | Successor to RPM (*), includes low tech      |      |
+|             |                                  |         |                     | Mk1, Mk1-3 and Mk1 Lander.                   |      |
+| Recommended | DE_IVAExtension                  | ****    | Stock               | High tech IVA for all of Stock               |      |
+| Recommended | ASET IVA for Making History Pods | *****   | Making History      | High tech IVA for all of Making History      |      |
+| Optional    | ASET Mk1 Cockpit                 | *****   | Stock               | High tech analog Mk1 Cockpit                 |      |
+| Optional    | ASET Mk1 Lander Can              | *****   | Stock               | High tech Mk1 Lander                         |      |
+| Optional    | ASET Mk1-2 Command Pod           | *****   | Stock               | High tech Mk1-3 Command Pod                  |      |
+| Optional    | Warbird Cockpits                 | *****   | Stock, SXT,         | Analog avaition cockpits for several mods    |      |
+|             |                                  |         | Airplane Plus,      |                                              |      |
+|             |                                  |         | Kerbonov            |                                              |      |
+| Optional    | ALCOR by ASET                    | *****   | Alcor               | High tech 3-man lander capsule               |      |
+| Optional    | Vexarp IVA                       | ****    | NFSpacecraft        | Near Future Spacecraft improved IVA          |      |
+| Optional    | Ultimate Shuttle IVA             | ****    | Stock               | Retro and modern MK3 Cockpit IVA             |      |
+| Optional    | Tundra Exploration               | ?       | TundraExploration   | With MAS has improved alternatives (?)       |      |
+| Optional    | Kerbal Flying Saucers            | ?       | KerbalFlyingSaucers | With MAS has improved alternatives (?)       |      |
+| Optional    | MOARdvPlus                       | ?       | MOARdvPlus          | With MAS, three BDB Kane/Sarnus IVA (Apollo) |      |
+| Optional    | NiceMK                           | ?       | ?                   | ?                                            |      |
+| Optional    | Falcon (?)                       | ?       | ?                   | ?                                            |      |
+| Optional    | ColdwarAerospace (?)             | ?       | ?                   | ?                                            |      |
+
+(*) You can have either RPM or MAS, or in fact both at the same time. MAS includes upgrade
+scripts that render some existing RPM IVAs at a high quality and performance (in my experience).
+
 
 
 
