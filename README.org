@@ -135,15 +135,14 @@ will be saved along with that ship only, this includes when the ship goes on rai
 |                    |                     |       | DE_IVAExtension | Done           |
 |                    |                     |       | ASET            | Done           |
 |--------------------+---------------------+-------+-----------------+----------------|
-| Mk1 Command Pod    | mk1pod_v2           | Stock | Stock           |                |
-|                    |                     |       | RPM             |                |
-|                    |                     |       | DE_IVAExtension |                |
-|                    |                     |       | Warbirds        |                |
+| Mk1 Command Pod    | mk1pod_v2           | Stock | Stock           | Done           |
+|                    |                     |       | RPM             | Done           |
+|                    |                     |       | DE_IVAExtension | Done           |
+|                    |                     |       | Warbirds        | Done           |
 |--------------------+---------------------+-------+-----------------+----------------|
 | Mk1 Inline Cockpit | Mark2Cockpit        | Stock | Stock           | Done           |
-|                    |                     |       | RPM             |                |
-|                    |                     |       | DE_IVAExtension |                |
-|                    |                     |       | Warbirds        | Bugs           |
+|                    |                     |       | DE_IVAExtension | Done           |
+|                    |                     |       | Warbirds        | Done           |
 |                    |                     |       | WarbirdsSI      | Bugs           |
 |--------------------+---------------------+-------+-----------------+----------------|
 | Mk1 Lander Can     | landerCabinSmall    | Stock | Stock           |                |
@@ -244,8 +243,9 @@ will be saved along with that ship only, this includes when the ship goes on rai
   - May need copy and paste.
 ** TODO Implement RPM Mk1 Inline
 ** TODO Implement DE_IVA Mk1 Inline
-** TODO Remove Mk1 Inline Warbird version (?)
+** TODO Hide Mk1 Inline Warbird version
   - Removing may cause issues if anyone has used this.
+  - Hide it by making tech node undefined (?)
 ** TODO Add assembly info
   - Get version from Makefile variable
   - Makefile version is from git tag
