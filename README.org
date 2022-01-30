@@ -140,11 +140,11 @@ will be saved along with that ship only, this includes when the ship goes on rai
 |                    |          | DE_IVAExtension |                |
 |                    |          | Warbirds        |                |
 |--------------------+----------+-----------------+----------------|
-| Mk1 Inline Cockpit | Stock    | Stock           |                |
+| Mk1 Inline Cockpit | Stock    | Stock           | Done           |
 |                    |          | RPM             |                |
 |                    |          | DE_IVAExtension |                |
-|                    |          | Warbirds        |                |
-|                    |          | WarbirdsSI      |                |
+|                    |          | Warbirds        | Bugs           |
+|                    |          | WarbirdsSI      | Bugs           |
 |--------------------+----------+-----------------+----------------|
 | Mk1 Lander Can     | Stock    | Stock           |                |
 |                    |          | RPM             |                |
@@ -246,6 +246,18 @@ will be saved along with that ship only, this includes when the ship goes on rai
 ** TODO Implement DE_IVA Mk1 Inline
 ** TODO Remove Mk1 Inline Warbird version (?)
   - Removing may cause issues if anyone has used this.
+** TODO Add assembly info
+  - Get version from Makefile variable
+  - Makefile version is from git tag
+** TODO Add license info/link (GitHub and README)
+** TODO Add thanks
+** TODO Add Spacedock, GitHub, CKAN and Curse download links
+  - N/A if not yet avail
+** TODO Add how to get support
+  - Link to forum
+  - Link to forum post on this subject
+  - Link to GitHub issues
+** TODO Add links to all mods supported
 ** TODO Add in-game option to allow in-flight switching
   - Default is enabled
   - If disabled, only affects career/science modes
@@ -260,3 +272,11 @@ will be saved along with that ship only, this includes when the ship goes on rai
   - Default are CTT nodes
   - Add in-game option to enable/disable
   - If enabled, only affects career/science modes
+** TODO Automatically add changes to README from git
+** TODO Add publish to GitHub, Spacedock, Curse, CKAN
+  - Various modders have tools to help do this already
+  - Auto update version from makefile
+  - Git tag sets version
+** TODO Add way to export README as forum post format
+  - Possible to totally automate
+

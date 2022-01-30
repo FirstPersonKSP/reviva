@@ -14,36 +14,73 @@ namespace Reviva
         public override void OnLoad(ConfigNode node)
         {
             base.OnLoad(node);
-            IVASwitch();
+            DetectIVASwitch();
+        }
+
+        public override void OnUpdate()
+        {
+            base.OnUpdate();
+	    if (needUpdate)
+                DoIVASwitch();
         }
 
         /*  -------------------------------------------------------------------------------- */
 
-	private void IVASwitch()
+        private bool needUpdate = false;
+
+        private void DetectIVASwitch()
         {
+	    /*
+	     * In order to reduce switching, detect if a change has been requested for each
+	     * load over one frame (this may be undone, or multiple loads may happen).
+	     * 
+	     * The actual update is done from OnUpdate() which means the IVA can be updated
+	     * over one or more frames (if required in the future).
+	     */
+            needUpdate = HasInternalNameChanged();
+        }
+
+        private void DoIVASwitch()
+        {
+            needUpdate = false;
+
             string oldName = GetCurrentInternalName();
             string newName = GetRequiredInternalName();
 
-            Log($"Switch IVA {oldName} -> {newName}");
-            if (newName == "")
+            if (oldName == newName || newName == "")
             {
-                LogError("internalName is null or empty, no switch");
-                return;
-            }
-            if (oldName == newName)
-            {
-                Log("internalName unchanged, no switch");
+                LogError($"Internal model unchanged oldName={oldName} newName={newName}");
                 return;
             }
 
+            Log($"Executing switch IVA {oldName} -> {newName}");
+
             UnloadIVA();
-            UpdateInternalConfig(oldName, newName);
+            UpdateInternalConfig(newName);
             RefreshInternalModel();
             LoadIVA();
         }
 
+        private bool HasInternalNameChanged()
+        {
+            string oldName = GetCurrentInternalName();
+            string newName = GetRequiredInternalName();
 
-        private string GetCurrentInternalName()
+            Log($"Detected switch IVA {oldName} -> {newName}");
+            if (newName == "")
+            {
+                LogError("internalName is null or empty, no switch");
+                return false;
+            }
+            if (oldName == newName)
+            {
+                Log("internalName unchanged, no switch");
+                return false;
+            }
+            return true;
+        }
+
+	private string GetCurrentInternalName()
         {
             ConfigNode internalConfig = this.part?.partInfo?.internalConfig;
             return GetConfigValue(internalConfig, "name");
@@ -73,7 +110,7 @@ namespace Reviva
             this.part.DespawnIVA();
         }
 
-        private void UpdateInternalConfig(string oldName, string newName)
+        private void UpdateInternalConfig(string newName)
         {
             if (this.part?.partInfo == null)
             {
