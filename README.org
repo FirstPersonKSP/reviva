@@ -61,7 +61,18 @@ For Reviva to be enabled there's a mimimum set of required mods (and their depen
 
 - Reviva - obviously, but this provides a small DLL that remembers the IVA selection and
   handles switching the IVA dynamically in the editor or in flight.
-- [[https://forum.kerbalspaceprogram.com/index.php?/topic/140541-1112-b9partswitch-v2180-march-17/][B9PartSwitch]] - this provides the main mechanism to define and switch IVA definitions.
+- [[https://forum.kerbalspaceprogram.com/index.php?/topic/140541-1112-b9partswitch-v2180-march-17/][B9PartSwitch]] - this provides mod authors with a generalized way to describe part switching.
+  This is used by Reviva to switch definitions in Reviva's ModuleIVASwitch: this small DLL
+  does the magic of actually switching the IVA in the editor or in-flight.
+- ModuleManager - this is pretty much always required for modded KSP. Used to provide
+  configuration for Reviva and B9PartSwitch depending on what other modules you
+  install.
+
+Note that each mod here (and below) may itself have required and optional mods (not listed
+here), check each mod's link carefully, or I recommend using CKAN. You may have to allow
+earlier game versions in CKAN to load older IVA mod packs.
+
+If you only install these you'll only see the stock or default IVAs, so read on.
 
 ** Recommended and Optional Mods
 
@@ -70,33 +81,39 @@ provide non-stock IVAs for stock and other mods. Some of these provide additiona
 other mods, and some only provide a single IVA (in which case Reviva is merely providing
 links and/or patches to ensure they work when installed).
 
+The first two mods (RPM and MAS) are usually required by other mods, as they actually
+provide the more complex IVA display modules and props. They are only recommended here (in
+CKAN terminology) because you can choose to have either (or both) RPM and/or MAS. If you
+install only the recommended mods you will have stock plus one or two extra IVAs for most
+stock.
+
 This table hopefully links to all the known functional (ie. for command/flying) IVA mods
 in existence that can work on KSP 1.12.x - if you know of more let the mod author know.
 
 
-| Status      | Mod                              | Quality | For                 | Provides                                     | Link |
-|-------------+----------------------------------+---------+---------------------+----------------------------------------------+------|
-| Recommended | RasterPropMonitor (RPM)          | ***     | Stock               | More complex IVA than stock                  |      |
-| Recommended | MOARdv's Avionics System (MAS)   | *****   | Stock               | Successor to RPM (*), includes low tech      |      |
-|             |                                  |         |                     | Mk1, Mk1-3 and Mk1 Lander.                   |      |
-| Recommended | DE_IVAExtension                  | ****    | Stock               | High tech IVA for all of Stock               |      |
-| Recommended | ASET IVA for Making History Pods | *****   | Making History      | High tech IVA for all of Making History      |      |
-| Optional    | ASET Mk1 Cockpit                 | *****   | Stock               | High tech analog Mk1 Cockpit                 |      |
-| Optional    | ASET Mk1 Lander Can              | *****   | Stock               | High tech Mk1 Lander                         |      |
-| Optional    | ASET Mk1-2 Command Pod           | *****   | Stock               | High tech Mk1-3 Command Pod                  |      |
-| Optional    | Probe Control Room               | ***     | PBC                 | Probe control room for probes                |      |
-| Optional    | Warbird Cockpits                 | *****   | Stock, SXT,         | Analog avaition cockpits for several mods    |      |
-|             |                                  |         | Airplane Plus,      |                                              |      |
-|             |                                  |         | Kerbonov            |                                              |      |
-| Optional    | ALCOR by ASET                    | *****   | Alcor               | High tech 3-man lander capsule               |      |
-| Optional    | Vexarp IVA                       | ****    | NFSpacecraft        | Near Future Spacecraft improved IVA          |      |
-| Optional    | Ultimate Shuttle IVA             | ****    | Stock               | Retro and modern MK3 Cockpit IVA             |      |
-| Optional    | Tundra Exploration               | ?       | TundraExploration   | With MAS has improved alternatives (?)       |      |
-| Optional    | Kerbal Flying Saucers            | ?       | KerbalFlyingSaucers | With MAS has improved alternatives (?)       |      |
-| Optional    | MOARdvPlus                       | ?       | MOARdvPlus          | With MAS, three BDB Kane/Sarnus IVA (Apollo) |      |
-| Optional    | NiceMK                           | ?       | ?                   | ?                                            |      |
-| Optional    | Falcon (?)                       | ?       | ?                   | ?                                            |      |
-| Optional    | ColdwarAerospace (?)             | ?       | ?                   | ?                                            |      |
+| Status      | Mod                              | For                 | Provides                                     | Link |
+|-------------+----------------------------------+---------------------+----------------------------------------------+------|
+| Recommended | RasterPropMonitor (RPM)          | Stock               | More complex IVA than stock                  |      |
+| Recommended | MOARdv's Avionics System (MAS)   | Stock               | Successor to RPM (*), includes low tech      |      |
+|             |                                  |                     | Mk1, Mk1-3 and Mk1 Lander.                   |      |
+| Recommended | DE_IVAExtension                  | Stock               | High tech IVA for all of Stock               |      |
+| Recommended | ASET IVA for Making History Pods | Making History      | High tech IVA for all of Making History      |      |
+| Optional    | ASET Mk1 Cockpit                 | Stock               | High tech analog Mk1 Cockpit                 |      |
+| Optional    | ASET Mk1 Lander Can              | Stock               | High tech Mk1 Lander                         |      |
+| Optional    | ASET Mk1-2 Command Pod           | Stock               | High tech Mk1-3 Command Pod                  |      |
+| Optional    | Probe Control Room               | PBC                 | Probe control room for probes                |      |
+| Optional    | Warbird Cockpits                 | Stock, SXT,         | Analog avaition cockpits for several mods    |      |
+|             |                                  | Airplane Plus,      |                                              |      |
+|             |                                  | Kerbonov            |                                              |      |
+| Optional    | ALCOR by ASET                    | Alcor               | High tech 3-man lander capsule               |      |
+| Optional    | Vexarp IVA                       | NFSpacecraft        | Near Future Spacecraft improved IVA          |      |
+| Optional    | Ultimate Shuttle IVA             | Stock               | Retro and modern MK3 Cockpit IVA             |      |
+| Optional    | Tundra Exploration               | TundraExploration   | With MAS has improved alternatives (?)       |      |
+| Optional    | Kerbal Flying Saucers            | KerbalFlyingSaucers | With MAS has improved alternatives (?)       |      |
+| Optional    | MOARdvPlus                       | MOARdvPlus          | With MAS, three BDB Kane/Sarnus IVA (Apollo) |      |
+| Optional    | NiceMK                           | ?                   | ?                                            |      |
+| Optional    | Falcon (?)                       | ?                   | ?                                            |      |
+| Optional    | ColdwarAerospace (?)             | ?                   | ?                                            |      |
 
 (*) You can have either RPM or MAS, or in fact both at the same time. MAS includes upgrade
 scripts that render some existing RPM IVAs at a high quality and performance (in my experience).
@@ -133,7 +150,15 @@ For already in-flight vessels, you can change the selection (while not in the IV
 will be saved along with that ship only, this includes when the ship goes on rails
 (switching away to another vessel), and when saving the game.
 
+* Support
+
+Either respond in the forum or on GitHub. If it's a bug, you should always provide logs
+with the bug report, otherwise it's even more unlikely that the author will respond or be
+able to help.
+
 * Support Progress
+
+The following table lists the current progression on supporting mods and IVA mods.
 
 | Name               | CFG Name            | From  | IVA             | Tech   | Support Status |
 |--------------------+---------------------+-------+-----------------+--------+----------------|
@@ -204,97 +229,3 @@ will be saved along with that ship only, this includes when the ship goes on rai
 | Probe Control Room |                     | PCR   | PCR             |        |                |
 |                    |                     |       | DE_IVAExtension |        |                |
 |--------------------+---------------------+-------+-----------------+--------+----------------|
-
-* [6/18] Tasks
-
-** DONE Check internalConfig / part for null to stop exceptions
-** DONE Initial selection from editor did not work (may be above)
-** DONE Implement RPM Mk1 Inline
-** DONE Implement DE_IVA Mk1 Inline
-** DONE Hide Mk1 Inline Warbird version
-  - Removing may cause issues if anyone has used this.
-  - Hide it by making tech node undefined (?)
-** DONE Add switching of RPM computer with correct fields.
-  - May need copy and paste.
-** TODO Stop and start RPM computer correctly
-  - Place the RPM data in the ModuleIVASwitch DATA { RPM { ... here ... } }
-  - On detecting a switch:
-    - Find the rpmConfig in DATA { RPM } in OnLoad()
-    - Put most of below in RPMComputer.cs      
-    - Find the RPMComputer (from PartModule, makes RPMComputer wrapper)
-    - RPMComputer.Reload(rpmConfig}
-      - rpmConfig is editted into part.partInfo.partConfig itself (?)
-      - destroy RPM computer
-      - create new one (see computer-reboot)
-** TODO Only start RPM computer if IVA requires
-  - Not sure how to detect this.
-** TODO Switching Warbirds causing errors
-
-#+begin_example
-[LOG 22:28:02.614] [Reviva] Switch IVA Mk1InlineInternalASET_WB -> mk1InlineInternal
-[LOG 22:28:02.614] [Reviva] Unload in-flight IVA
-[LOG 22:28:02.615] [Reviva] Refresh IVA interal model
-[LOG 22:28:02.628] [Reviva] Load in-flight IVA
-[LOG 22:28:02.629] [Reviva] Switch IVA mk1InlineInternal -> Mk1InlineInternalASET_WB_SI
-[LOG 22:28:02.629] [Reviva] Unload in-flight IVA
-[LOG 22:28:02.629] [Reviva] Refresh IVA interal model
-[LOG 22:28:02.678] [Reviva] Load in-flight IVA
-[LOG 22:28:02.681] [Part Mark2Cockpit] [ModuleB9PartSwitch 'IVASwitch'] Switched subtype to WarbirdsSI
-[ERR 22:28:02.754] Cannot find an InternalModule of typename 'DPAI_RPM'
-[ERR 22:28:02.754] Cannot find an InternalModule of typename 'DPAI_RPM'
-[ERR 22:28:02.754] Cannot find an InternalModule of typename 'JSISCANsatRPM'
-[ERR 22:28:02.754] Cannot find an InternalModule of typename 'JSISCANsatRPM'
-[ERR 22:28:02.756] Cannot find an InternalModule of typename 'AstrogatorMenu'
-[ERR 22:28:02.757] Cannot find an InternalModule of typename 'InternalVesselView'
-[ERR 22:28:02.757] Cannot find an InternalModule of typename 'InternalVesselView'
-[WRN 22:28:02.893] WARNING: Color entry is not formatted properly! Proper format for Colors is r,g,b{,a}
-[WRN 22:28:02.921] WARNING: Vector3 entry is not formatted properly! Proper format for Vector3 is x,y,z
-[ERR 22:28:02.962] [JSICallbackAnimator]: INITIALIZATION ERROR, CHECK CONFIGURATION.
-[EXC 22:28:02.966] NullReferenceException: Object reference not set to an instance of an object
-	JSI.CallbackAnimationSet..ctor (ConfigNode node, System.String variableName, InternalProp thisProp) (at <05eb104d0dd24f118b48a18639af1146>:0)
-	JSI.JSICallbackAnimator.Start () (at <05eb104d0dd24f118b48a18639af1146>:0)
-	UnityEngine.DebugLogHandler:LogException(Exception, Object)
-	ModuleManager.UnityLogHandle.InterceptLogHandler:LogException(Exception, Object)
-	UnityEngine.Debug:CallOverridenDebugHandler(Exception, Object)
-[ERR 22:28:03.063] Cannot find an InternalModule of typename 'JSISCANsatRPM'
-[ERR 22:28:03.068] Cannot find an InternalModule of typename 'InternalVesselView'
-[ERR 22:28:03.068] Cannot find an InternalModule of typename 'InternalVesselView'
-[ERR 22:28:03.068] Cannot find an InternalModule of typename 'EngineIgnitorRPM'
-[ERR 22:28:03.069] Cannot find an InternalModule of typename 'DPAI_RPM'
-[ERR 22:28:03.069] Cannot find an InternalModule of typename 'DPAI_RPM'
-#+end_example
-
-** TODO Add assembly info
-  - Get version from Makefile variable
-  - Makefile version is from git tag
-** TODO Add license info/link (GitHub and README)
-** TODO Add thanks
-** TODO Add Spacedock, GitHub, CKAN and Curse download links
-  - N/A if not yet avail
-** TODO Add how to get support
-  - Link to forum
-  - Link to forum post on this subject
-  - Link to GitHub issues
-** TODO Add links to all mods supported
-** TODO Add in-game option to allow in-flight switching
-  - Default is enabled
-  - If disabled, only affects career/science modes
-** TODO Add support for part upgrades
-  - Default to off
-  - Start nodes are defined in common .cfg
-    - LowTechNode :: roughly equivalent to 1950-1969
-    - MediumTechNode :: roughly equivalent to 1970-1989,
-    - HighTechNode :: roughly equivalent to 1990-now,
-    - NearFutureTechNode :: roughly equivalent to in-development now
-    - FarFutureTechNode :: sci-fi
-  - Default are CTT nodes
-  - Add in-game option to enable/disable
-  - If enabled, only affects career/science modes
-** TODO Automatically add changes to README from git
-** TODO Add publish to GitHub, Spacedock, Curse, CKAN
-  - Various modders have tools to help do this already
-  - Auto update version from makefile
-  - Git tag sets version
-** TODO Add way to export README as forum post format
-  - Possible to totally automate
-
