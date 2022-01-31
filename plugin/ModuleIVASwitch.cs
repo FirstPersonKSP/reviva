@@ -6,7 +6,7 @@ namespace Reviva
     /*
      * Fairly simple part module which can switch an INTERNAL module on loading a vessel.
      */
-    public class IVASwitchPart : PartModule
+    public class ModuleIVASwitch : PartModule
     {
         [KSPField(isPersistant = true)]
         public string internalName = null;

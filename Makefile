@@ -8,7 +8,7 @@ ROOT	= .
 SRC	= $(ROOT)/plugin
 BUILD	= $(ROOT)/build
 GAMEDATA= $(ROOT)/GameData
-SRCS	= $(SRC)/IVASwitchPart.cs
+SRCS	= $(SRC)/ModuleIVASwitch.cs
 DLL	= $(BUILD)/Reviva.dll
 
 build: $(DLL)
@@ -31,8 +31,6 @@ install: build
 	find "$(GAMEDATA)/Reviva" -name '*~' -print0 | xargs -0 rm -f
 	cp -a "$(GAMEDATA)/Reviva" "$(KSP)/GameData"
 	cp "$(DLL)" "$(KSP)/GameData/Reviva"
-
-# find "$(KSP)/GameData/JSI/RPMPodPatches" -name '*.cfg' -print0 | xargs -0 egrep -n '^[ \\t]*[@+]?INTERNAL'
 
 list-internals:
 	@find "$(KSP)/GameData" -name '*.cfg' -print0 | xargs -0 cat | unix2dos |	\

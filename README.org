@@ -25,7 +25,7 @@ Features:
   - Note that this mod doesn't include the IVAs, but provides links for recommended or
     optional IVA mods, plus patches to allow them to run and be switched dynamically.
 
-- Very low overhead on performance: command modules get an extra IVASwitchPart, and switch
+- Very low overhead on performance: command modules get an extra ModuleIVASwitch, and switch
   detection only happens when changes are made.
 
 - The different IVA selection does not change the characteristics, mass, cost or other
@@ -43,7 +43,7 @@ selection. Module Manager is your friend, see the provided examples in Reviva an
 the pattern.
 
 - If Reviva already has support for the command module mod and provides other IVAs, it is
-  preferable that additional SUBTYPE are added to the standard IVASwitch Module provided
+  preferable that additional SUBTYPE are added to the standard ModuleIVASwitch provided
   by Reviva.
 - If there's no existing support in Reviva, you should copy the similar part style whole for
   Reviva itself in your own mod (eg. Stock/mk1Cockpit.cfg).
@@ -204,13 +204,21 @@ will be saved along with that ship only, this includes when the ship goes on rai
 | Probe Control Room |                     | PCR   | PCR             |        |                |
 |                    |                     |       | DE_IVAExtension |        |                |
 |--------------------+---------------------+-------+-----------------+--------+----------------|
-| ALCOR              |                     | ALCOR | ALCOR           |        |                |
-|--------------------+---------------------+-------+-----------------+--------+----------------|
-|                    |                     |       |                 |        |                |
 
-* [0/1] Tasks
+* [6/18] Tasks
 
-** TODO Check internalConfig / part for null to stop exceptions
+** DONE Check internalConfig / part for null to stop exceptions
+** DONE Initial selection from editor did not work (may be above)
+** DONE Implement RPM Mk1 Inline
+** DONE Implement DE_IVA Mk1 Inline
+** DONE Hide Mk1 Inline Warbird version
+  - Removing may cause issues if anyone has used this.
+  - Hide it by making tech node undefined (?)
+** DONE Add switching of RPM computer with correct fields.
+  - May need copy and paste.
+** TODO Stop and start RPM computer
+** TODO Only start RPM computer if IVA requires
+  - Not sure how to detect this.
 ** TODO Switching Warbirds causing errors
 
 #+begin_example
@@ -247,14 +255,6 @@ will be saved along with that ship only, this includes when the ship goes on rai
 [ERR 22:28:03.069] Cannot find an InternalModule of typename 'DPAI_RPM'
 #+end_example
 
-** TODO Initial selection from editor did not work (may be above)
-** TODO Add switching of RPM computer with correct fields.
-  - May need copy and paste.
-** TODO Implement RPM Mk1 Inline
-** TODO Implement DE_IVA Mk1 Inline
-** TODO Hide Mk1 Inline Warbird version
-  - Removing may cause issues if anyone has used this.
-  - Hide it by making tech node undefined (?)
 ** TODO Add assembly info
   - Get version from Makefile variable
   - Makefile version is from git tag
