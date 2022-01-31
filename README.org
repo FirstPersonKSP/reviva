@@ -216,7 +216,16 @@ will be saved along with that ship only, this includes when the ship goes on rai
   - Hide it by making tech node undefined (?)
 ** DONE Add switching of RPM computer with correct fields.
   - May need copy and paste.
-** TODO Stop and start RPM computer
+** TODO Stop and start RPM computer correctly
+  - Place the RPM data in the ModuleIVASwitch DATA { RPM { ... here ... } }
+  - On detecting a switch:
+    - Find the rpmConfig in DATA { RPM } in OnLoad()
+    - Put most of below in RPMComputer.cs      
+    - Find the RPMComputer (from PartModule, makes RPMComputer wrapper)
+    - RPMComputer.Reload(rpmConfig}
+      - rpmConfig is editted into part.partInfo.partConfig itself (?)
+      - destroy RPM computer
+      - create new one (see computer-reboot)
 ** TODO Only start RPM computer if IVA requires
   - Not sure how to detect this.
 ** TODO Switching Warbirds causing errors
