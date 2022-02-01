@@ -3,7 +3,7 @@
 #+STARTUP: indent overview
 #+TODO: TODO DEFER | DONE
 
-* [6/18] Tasks
+* [7/21] Tasks
 
 ** DONE Check internalConfig / part for null to stop exceptions
 ** DONE Initial selection from editor did not work (may be above)
@@ -14,20 +14,12 @@
   - Hide it by making tech node undefined (?)
 ** DONE Add switching of RPM computer with correct fields.
   - May need copy and paste.
-** TODO Stop and start RPM computer correctly
-  - Place the RPM data in the ModuleIVASwitch DATA { RPM { ... here ... } }
-  - On detecting a switch:
-    - Find the rpmConfig in DATA { RPM } in OnLoad()
-    - Put most of below in RPMComputer.cs      
-    - Find the RPMComputer (from PartModule, makes RPMComputer wrapper)
-    - RPMComputer.Reload(rpmConfig}
-      - rpmConfig is editted into part.partInfo.partConfig itself (?)
-      - destroy RPM computer
-      - create new one (see computer-reboot)
+** DONE Stop and start RPM computer correctly
+** TODO Refactor reboot to take update config
 ** TODO Only start RPM computer if IVA requires
-  - Not sure how to detect this.
+  - Determine if RasterPropMonitor assembly is present, if so, assume needed
 ** TODO Switching Warbirds causing errors
-
+- Possibly the actual IVA, not Reviva?
 #+begin_example
 [LOG 22:28:02.614] [Reviva] Switch IVA Mk1InlineInternalASET_WB -> mk1InlineInternal
 [LOG 22:28:02.614] [Reviva] Unload in-flight IVA

@@ -14,7 +14,7 @@ namespace Reviva
         public override void OnLoad(ConfigNode node)
         {
             base.OnLoad(node);
-            DetectIVASwitch();
+            DetectIVASwitch(node);
         }
 
         public override void OnUpdate()
@@ -27,8 +27,10 @@ namespace Reviva
         /*  -------------------------------------------------------------------------------- */
 
         private bool needUpdate = false;
+        private ConfigNode updateConfig = null;
+        private RPMComputer rpmComputer = null;
 
-        private void DetectIVASwitch()
+        private void DetectIVASwitch(ConfigNode node)
         {
 	    /*
 	     * In order to reduce switching, detect if a change has been requested for each
@@ -38,6 +40,7 @@ namespace Reviva
 	     * over one or more frames (if required in the future).
 	     */
             needUpdate = HasInternalNameChanged();
+            updateConfig = needUpdate ? node : null;
         }
 
         private void DoIVASwitch()
@@ -57,6 +60,7 @@ namespace Reviva
 
             UnloadIVA();
             UpdateInternalConfig(newName);
+            RebootRPMComputer();
             RefreshInternalModel();
             LoadIVA();
         }
@@ -121,6 +125,33 @@ namespace Reviva
             ConfigNode newInternalConfig = new ConfigNode("INTERNAL");
             newInternalConfig.AddValue("name", newName);
             this.part.partInfo.internalConfig = newInternalConfig;
+        }
+
+        private void RebootRPMComputer()
+        {
+	    if (this.rpmComputer == null)
+                this.rpmComputer = new RPMComputer(this);
+
+            if (this.updateConfig == null)
+            {
+                LogError("No updateConfig present, cannot reboot RPM computer");
+                return;
+            }
+
+            ConfigNode rpmComputerData = this.updateConfig.GetNode(RPMComputer.ModuleName);
+	    if (rpmComputerData == null)
+	    {
+                /* 
+                 * This means the subtype is not configured, usually stock or does not need
+                 * RPM computer. Assume nothing is needed.
+                 */
+                Log($"No {RPMComputer.ModuleName} ConfigNode in B9PartSwitch MODULE DATA: assume empty");
+                rpmComputerData = new ConfigNode();
+                rpmComputerData.AddValue("name", RPMComputer.ModuleName);
+                return;
+            }
+
+            this.rpmComputer.Reboot(rpmComputerData);
         }
 
         private void RefreshInternalModel()
