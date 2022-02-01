@@ -62,7 +62,9 @@
 [ERR 22:28:03.069] Cannot find an InternalModule of typename 'DPAI_RPM'
 [ERR 22:28:03.069] Cannot find an InternalModule of typename 'DPAI_RPM'
 #+end_example
-
+** TODO Add missing RPM computer data
+*** TODO mk1pod.cfg
+*** TODO mk1cockpit.cfg
 ** TODO Add assembly info
   - Get version from Makefile variable
   - Makefile version is from git tag
