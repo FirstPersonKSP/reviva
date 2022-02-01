@@ -13,85 +13,111 @@ namespace Reviva
             this.ivaSwitch = ivaSwitch;
             this.part = this.ivaSwitch?.part;
             this.rpmComputer = null;
+            this.rpmComputerData = null;
+            this.rpmComputerConfig = null;
             Log($"Created {ModuleName} proxy for ModuleIVASwitch");
         }
 
         public ModuleIVASwitch ivaSwitch;
         public Part part;
         public PartModule rpmComputer;
+        public ConfigNode rpmComputerData; // ConfigNode in updateConfig
+        public ConfigNode rpmComputerConfig; // Duplicated MODULE ConfigNode for RPM computer
 
-        public void Reboot(ConfigNode moduleData)
+        public void Reboot(ConfigNode updateConfig)
+        {
+	    if (!ValidateRPMComputer())
+                return;
+
+            FindRPMComputerData(updateConfig);
+            BuildNewConfig();
+            RecreateRPMComputer();
+        }
+
+        /*  -------------------------------------------------------------------------------- */
+
+        private bool ValidateRPMComputer()
         {
             if (this.ivaSwitch == null)
             {
                 LogError($"{ModuleName} has null ModuleIVASwitch");
-                return;
+                return false;
             }
             if (this.part == null)
             {
                 LogError($"{ModuleName} has null ModuleIVASwitch part");
-                return;
+                return false;
             }
             if (this.part.partInfo == null)
             {
                 LogError($"{ModuleName} has null ModuleIVASwitch part.partInfo");
-                return;
+                return false;
             }
             if (this.part.partInfo.partConfig == null)
             {
                 LogError($"{ModuleName} has null ModuleIVASwitch part.partInfo.partConfig");
-                return;
+                return false;
             }
 
 	    this.rpmComputer = this.part.Modules?.GetModule(ModuleName);
             if (this.rpmComputer == null)
 	    {
                 Log($"No {ModuleName} found, strange but not impossible, adding one");
-                return;
+		// This is ok, will create new one
             }
 
-            ConfigNode newConfig = new ConfigNode("MODULE");
-            newConfig.AddValue("name", ModuleName);
-            moduleData.CopyTo(newConfig);
+            return true;
+        }
+
+        private void FindRPMComputerData(ConfigNode updateConfig)
+        {
+            this.rpmComputerData = updateConfig.GetNode(RPMComputer.ModuleName);
+            if (this.rpmComputerData == null)
+            {
+                /* 
+                 * This means the subtype is not configured, usually stock or does not need
+                 * RPM computer. Assume nothing is needed.
+                 */
+                Log($"No {RPMComputer.ModuleName} ConfigNode in B9PartSwitch MODULE DATA: assume empty");
+                this.rpmComputerData = new ConfigNode();
+            }
+        }
+
+        private void BuildNewConfig()
+        {
+            this.rpmComputerConfig = new ConfigNode("MODULE");
+            this.rpmComputerConfig.AddValue("name", ModuleName);
+            this.rpmComputerData.CopyTo(this.rpmComputerConfig);
+        }
+
+        private void RecreateRPMComputer()
+        {
+            ConfigNode oldConfig = FindModuleConfig(this.rpmComputer) ?? new ConfigNode();
+            ConfigNode newConfig = this.rpmComputerConfig;
+
+            Log($"Rebooting {ModuleName} with changed configuration");
+            Log($"OldConfig: {oldConfig}");
+            Log($"NewConifg: {newConfig}");
 
             int index = -1;
             if (this.rpmComputer != null)
             {
-                ChangeModuleConfig(this.rpmComputer, newConfig);
                 index = DestroyModule(this.rpmComputer);
             }
             AddModuleAt(index, newConfig);
         }
 
-        /*  -------------------------------------------------------------------------------- */
-
         private ConfigNode FindModuleConfig(PartModule module)
         {
             ConfigNode[] modules = this.part.partInfo.partConfig.GetNodes("MODULE");
             if (modules == null)
-            {
-                LogError($"Cannot find {module.moduleName} ConfigNode, part or partConfig null");
                 return null;
-            }
             foreach (ConfigNode m in modules)
 	    {
                 if (m.GetValue("name") == module.moduleName)
                     return m;
             }
-
-	    LogError($"Cannot find {module.moduleName} ConfigNode, module not in partConfig");
             return null;
-        }
-
-        private void ChangeModuleConfig(PartModule module, ConfigNode newConfig)
-        {
-            ConfigNode oldConfig = FindModuleConfig(module) ?? new ConfigNode();
-
-            Log($"Updating {module.moduleName} configuration");
-            Log($"OldConfig: {oldConfig}");
-            Log($"NewConifg: {newConfig}");
-
-	    // Nothing needed here, the RPM computer is reloaded with the new data.
         }
 
         private int DestroyModule(PartModule module)

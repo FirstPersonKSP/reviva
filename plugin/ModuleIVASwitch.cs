@@ -19,6 +19,12 @@ namespace Reviva
 
         public override void OnUpdate()
         {
+	    /*
+	     * Note this is only done when not in editor. This is fine because the
+	     * important piece of information, which internal name to use, is saved with
+	     * the vessel. The non-editor game will load the ship and detect a switch is
+	     * need first time (or dynamically) and do the right things.
+	     */
             base.OnUpdate();
 	    if (needUpdate)
                 DoIVASwitch();
@@ -138,20 +144,7 @@ namespace Reviva
                 return;
             }
 
-            ConfigNode rpmComputerData = this.updateConfig.GetNode(RPMComputer.ModuleName);
-	    if (rpmComputerData == null)
-	    {
-                /* 
-                 * This means the subtype is not configured, usually stock or does not need
-                 * RPM computer. Assume nothing is needed.
-                 */
-                Log($"No {RPMComputer.ModuleName} ConfigNode in B9PartSwitch MODULE DATA: assume empty");
-                rpmComputerData = new ConfigNode();
-                rpmComputerData.AddValue("name", RPMComputer.ModuleName);
-                return;
-            }
-
-            this.rpmComputer.Reboot(rpmComputerData);
+            this.rpmComputer.Reboot(this.updateConfig);
         }
 
         private void RefreshInternalModel()
