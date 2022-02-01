@@ -203,9 +203,9 @@ The following table lists the current progression on supporting mods and IVA mod
 |                    |                     |       | ASET            | High   | Done           |
 |                    |                     |       | MAS             | Low    | Done           |
 |--------------------+---------------------+-------+-----------------+--------+----------------|
-| Mk2 Cockpit        | mk2Cockpit_Standard | Stock | Stock           | Low    |                |
-|                    |                     |       | RPM             | Med    |                |
-|                    |                     |       | DE_IVAExtension | High   |                |
+| Mk2 Cockpit        | mk2Cockpit_Standard | Stock | Stock           | Low    | Done           |
+|                    |                     |       | RPM             | Med    | Done           |
+|                    |                     |       | DE_IVAExtension | High   | Done           |
 |--------------------+---------------------+-------+-----------------+--------+----------------|
 | Mk2 Inline Cockpit | mk2Cockpit_Inline   | Stock | Stock           | Low    |                |
 |                    |                     |       | RPM             | Med    |                |
