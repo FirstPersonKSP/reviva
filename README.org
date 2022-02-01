@@ -207,11 +207,9 @@ The following table lists the current progression on supporting mods and IVA mod
 |                    |                     |       | RPM             | Med    | Done           |
 |                    |                     |       | DE_IVAExtension | High   | Done           |
 |--------------------+---------------------+-------+-----------------+--------+----------------|
-| Mk2 Inline Cockpit | mk2Cockpit_Inline   | Stock | Stock           | Low    |                |
-|                    |                     |       | RPM             | Med    |                |
-|                    |                     |       | DE_IVAExtension | High   |                |
-|                    |                     |       | Warbirds        | High   |                |
-|                    |                     |       | WarbirdsSI      | High   |                |
+| Mk2 Inline Cockpit | mk2Cockpit_Inline   | Stock | Stock           | Low    | Done           |
+|                    |                     |       | DE_IVAExtension | High   | Done           |
+|                    |                     |       | WarbirdsSI      | High   | Done           |
 |--------------------+---------------------+-------+-----------------+--------+----------------|
 | Mk2 Lander Can     | mk2LanderCabin_v2   | Stock | Stock           | Low    |                |
 |                    |                     |       | RPM             | Med    |                |
