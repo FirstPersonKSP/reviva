@@ -184,7 +184,7 @@ The following table lists the current progression on supporting mods and IVA mod
 |                    |                     |       | RPM             | Med    | Done           |
 |                    |                     |       | DE_IVAExtension | High   | Done           |
 |                    |                     |       | ASET            | Low    | Done           |
-|                    |                     |       | MAS             | Low    |                |
+|                    |                     |       | MAS             | Low    | Done           |
 |--------------------+---------------------+-------+-----------------+--------+----------------|
 | Mk1-3 Command Pod  | mk1-3pod            | Stock | Stock           | Low    |                |
 |                    |                     |       | RPM             | Med    |                |
