@@ -3,7 +3,7 @@
 #+STARTUP: indent overview
 #+TODO: TODO DEFER | DONE
 
-* [10/23] Tasks
+* [12/26] Tasks
 
 ** DONE Check internalConfig / part for null to stop exceptions
 ** DONE Initial selection from editor did not work (may be above)
@@ -23,6 +23,10 @@
 *** DONE Add RPMComputer as sub-class
 *** DONE Add MASComputer as sub-class
 *** DONE Better RPM+MAS defaults in MAS
+** DONE Add REVIVA_DEBUG makefile option, enables more logging
+** DONE Add assembly info
+  - Get version from Makefile variable
+  - Makefile version is from git tag
 ** TODO Add MAS options for various stock IVA
 *** DONE Mk1 Command Pod
 *** TODO Mk1 Lander Can
@@ -65,9 +69,10 @@
 ** TODO Add missing RPM computer data
 *** TODO mk1pod.cfg
 *** TODO mk1cockpit.cfg
-** TODO Add assembly info
-  - Get version from Makefile variable
-  - Makefile version is from git tag
+** TODO Add ability to use flaps and spoilers without FAR
+- Map Flaps Up/Down to AG9/AG0
+- Map Spoilers Up/Down to AG7/AG8
+- Takes up some room, are there other custom places for this?
 ** TODO Add license info/link (GitHub and README)
 ** TODO Add thanks
 ** TODO Add Spacedock, GitHub, CKAN and Curse download links
