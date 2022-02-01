@@ -59,41 +59,51 @@ know game development well enough to be dangerous/helpful.
 
 For Reviva to be enabled there's a mimimum set of required mods (and their dependencies):
 
-- Reviva - obviously, but this provides a small DLL that remembers the IVA selection and
+- Reviva :: obviously, but this provides a small DLL that remembers the IVA selection and
   handles switching the IVA dynamically in the editor or in flight.
-- [[https://forum.kerbalspaceprogram.com/index.php?/topic/140541-1112-b9partswitch-v2180-march-17/][B9PartSwitch]] - this provides mod authors with a generalized way to describe part switching.
+- [[https://forum.kerbalspaceprogram.com/index.php?/topic/140541-1112-b9partswitch-v2180-march-17/][B9PartSwitch]] :: this provides mod authors with a generalized way to describe part switching.
   This is used by Reviva to switch definitions in Reviva's ModuleIVASwitch: this small DLL
   does the magic of actually switching the IVA in the editor or in-flight.
-- ModuleManager - this is pretty much always required for modded KSP. Used to provide
+- ModuleManager :: this is pretty much always required for modded KSP. Used to provide
   configuration for Reviva and B9PartSwitch depending on what other modules you
   install.
+- RasterPropMonitor :: most IVA (other than stock) use this to provide the more complex
+  IVA dials and switches. Technically you could install just MAS, though this isn't well
+  tested.
 
 Note that each mod here (and below) may itself have required and optional mods (not listed
 here), check each mod's link carefully, or I recommend using CKAN. You may have to allow
 earlier game versions in CKAN to load older IVA mod packs.
 
-If you only install these you'll only see the stock or default IVAs, so read on.
+If you only install these you'll only see the stock and some basic IVAs with
+multi-function displays (MFD) provided by RasterPropMonitor, you should probably install
+the recommended and optional mods to get even more. More IVA do take up memory resources,
+and slow down loading.
 
 ** Recommended and Optional Mods
 
-The following table shows recommended mods and optional mods that can be installed to
-provide non-stock IVAs for stock and other mods. Some of these provide additional IVA for
-other mods, and some only provide a single IVA (in which case Reviva is merely providing
-links and/or patches to ensure they work when installed).
+Recommended mods and optional mods that can be installed to provide more complex IVAs for
+stock and other mods. Reviva also provides the links and possibly patches to ensure they
+work when installed.
 
-The first two mods (RPM and MAS) are usually required by other mods, as they actually
-provide the more complex IVA display modules and props. They are only recommended here (in
-CKAN terminology) because you can choose to have either (or both) RPM and/or MAS. If you
-install only the recommended mods you will have stock plus one or two extra IVAs for most
-stock.
+The first recommended mod (MAS) can be installed as well as RPM, it actually upgrades
+most IVA to use the MAS system, and RPM is a backup. MAS also allows for much more complex
+IVA and MFDs, some part and IVA mods take advantage of this.
 
-This table hopefully links to all the known functional (ie. for command/flying) IVA mods
-in existence that can work on KSP 1.12.x - if you know of more let the mod author know.
+The other recommend mods will provide enough IVA for stock KSP and the Missing History
+expansion (if installed) for stock or vanilla/lightly modded games.
 
+This table tries to link to all the known functional (ie. for command/flying) IVA mods in
+existence that can work on KSP 1.12.x - if you know of more let the mod author know.
+
+** Dependency Summary
 
 | Status      | Mod                              | For                 | Provides                                     | Link |
 |-------------+----------------------------------+---------------------+----------------------------------------------+------|
-| Recommended | RasterPropMonitor (RPM)          | Stock               | More complex IVA than stock                  |      |
+| Required    | Reviva                           | Stock               | IVA switching and 1.12.x compatibility       |      |
+| Required    | B9PartSwitch                     | Stock               | General part switching mechanics             |      |
+| Required    | ModuleManager                    | Stock               | Patching mod configuration                   |      |
+| Required    | RasterPropMonitor (RPM)          | Stock               | More complex IVA than stock                  |      |
 | Recommended | MOARdv's Avionics System (MAS)   | Stock               | Successor to RPM (*), includes low tech      |      |
 |             |                                  |                     | Mk1, Mk1-3 and Mk1 Lander.                   |      |
 | Recommended | DE_IVAExtension                  | Stock               | High tech IVA for all of Stock               |      |
@@ -117,6 +127,7 @@ in existence that can work on KSP 1.12.x - if you know of more let the mod autho
 
 (*) You can have either RPM or MAS, or in fact both at the same time. MAS includes upgrade
 scripts that render some existing RPM IVAs at a high quality and performance (in my experience).
+
 
 * User Manual
 

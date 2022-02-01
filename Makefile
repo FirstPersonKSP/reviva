@@ -25,7 +25,8 @@ VER		= $(subst -, ,$(subst ., ,$(VER_GIT)))
 VER_MAJOR	= $(word 1,$(VER))
 VER_MINOR	= $(word 2,$(VER))
 VER_PATCH	= $(word 3,$(VER))
-VER_BUILD	= $(word 5,$(VER))
+VER_BUILD	= $(word 4,$(VER))
+VER_SHA		= $(word 5,$(VER))
 
 build: $(DLL)
 
@@ -56,6 +57,7 @@ $(BUILD)/AssemblyInfo.cs: $(SRC)/AssemblyInfo.cs.in $(DEPS)
 	    -e 's/%%VER_MINOR%%/$(VER_MINOR)/g' \
 	    -e 's/%%VER_PATCH%%/$(VER_PATCH)/g' \
 	    -e 's/%%VER_BUILD%%/$(VER_BUILD)/g' \
+	    -e 's/%%VER_SHA%%/$(VER_SHA)/g' \
 	    < $(SRC)/AssemblyInfo.cs.in > $@
 
 clean:
