@@ -1,12 +1,14 @@
 using System;
+using System.Reflection;
+using System.Linq;
 using UnityEngine;
 
 namespace Reviva
 {
-    
     public class RPMComputer : object
     {
-	public static string ModuleName = "RasterPropMonitorComputer";
+        public static string AssemblyName = "RasterPropMonitor";
+        public static string ModuleName = "RasterPropMonitorComputer";
 
 	public RPMComputer(ModuleIVASwitch ivaSwitch)
 	{
@@ -26,7 +28,16 @@ namespace Reviva
 
         public void Reboot(ConfigNode updateConfig)
         {
-	    if (!ValidateRPMComputer())
+	    if (!rpmEnabled)
+                return;
+
+            if (updateConfig == null)
+            {
+                LogError("No updateConfig present, cannot reboot RPM computer");
+                return;
+            }
+
+            if (!ValidateRPMComputer())
                 return;
 
             FindRPMComputerData(updateConfig);
@@ -34,7 +45,18 @@ namespace Reviva
             RecreateRPMComputer();
         }
 
-        /*  -------------------------------------------------------------------------------- */
+        /* ------------------------------------------------------------------------------- */
+        private static readonly bool rpmEnabled;
+
+        static RPMComputer()
+        {
+            var rpmAssembly = AssemblyLoader.loadedAssemblies.FirstOrDefault(a => a.name == AssemblyName);
+            rpmEnabled = (rpmAssembly != null);
+
+            Log($"Detected {AssemblyName}: {rpmEnabled}");
+        }
+
+        /* -------------------------------------------------------------------------------- */
 
         private bool ValidateRPMComputer()
         {
@@ -165,12 +187,12 @@ namespace Reviva
             }
         }
 
-        private void Log(string text)
+        private static void Log(string text)
         {
             Debug.Log($"[Reviva] {text}");
         }
 
-        private void LogError(string text)
+        private static void LogError(string text)
         {
             Debug.LogError($"[Reviva] {text}");
         }

@@ -138,12 +138,6 @@ namespace Reviva
 	    if (this.rpmComputer == null)
                 this.rpmComputer = new RPMComputer(this);
 
-            if (this.updateConfig == null)
-            {
-                LogError("No updateConfig present, cannot reboot RPM computer");
-                return;
-            }
-
             this.rpmComputer.Reboot(this.updateConfig);
         }
 
