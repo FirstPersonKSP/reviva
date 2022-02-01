@@ -243,3 +243,21 @@ The following table lists the current progression on supporting mods and IVA mod
 | Probe Control Room |                     | PCR   | PCR             |        |                |
 |                    |                     |       | DE_IVAExtension |        |                |
 |--------------------+---------------------+-------+-----------------+--------+----------------|
+
+* Building
+
+If you want to build the DLL and packages, just be aware that the provided source assume
+use of Unix make and mono.
+
+I personally work on Ubuntu 20.04 (running on WSL2 in Windows 10). You will need to
+install mono-complete and know how to use make and Unix. If not, it's likely you could
+generate a Visual Studio project and fill in some sensible details.
+
+The Makefile "build" target will build the DLL.
+
+The "install" target will copy the DLL and GameData to the KSP directory specified in the
+Makefile, you should modify that (the default Steam install on WSL2 on Windows is
+commented out).
+
+Happy to recieve pull requests on GitHub for improvements, more IVA support, etc.
+
