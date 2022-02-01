@@ -170,7 +170,8 @@ The following table lists the current progression on supporting mods and IVA mod
 | Mk1 Command Pod    | mk1pod_v2           | Stock | Stock           | Low    | Done           |
 |                    |                     |       | RPM             | Med    | Done           |
 |                    |                     |       | DE_IVAExtension | High   | Done           |
-|                    |                     |       | Warbirds        | Low    | Done           |
+|                    |                     |       | Warbirds        | Med    | Done           |
+|                    |                     |       | MAS             | Low    | Done           |
 |--------------------+---------------------+-------+-----------------+--------+----------------|
 | Mk1 Inline Cockpit | Mark2Cockpit        | Stock | Stock           | Low    | Done           |
 |                    |                     |       | DE_IVAExtension | High   | Done           |
@@ -183,11 +184,13 @@ The following table lists the current progression on supporting mods and IVA mod
 |                    |                     |       | RPM             | Med    |                |
 |                    |                     |       | DE_IVAExtension | High   |                |
 |                    |                     |       | ASET            | Low    |                |
+|                    |                     |       | MAS             | Low    |                |
 |--------------------+---------------------+-------+-----------------+--------+----------------|
-| Mk1-3 Command Pod  | mk1-3pod            | Stock | Stock           |        |                |
-|                    |                     |       | RPM             |        |                |
-|                    |                     |       | DE_IVAExtension |        |                |
-|                    |                     |       | ASET            |        |                |
+| Mk1-3 Command Pod  | mk1-3pod            | Stock | Stock           | Low    |                |
+|                    |                     |       | RPM             | Med    |                |
+|                    |                     |       | DE_IVAExtension | High   |                |
+|                    |                     |       | ASET            | High   |                |
+|                    |                     |       | MAS             | Low    |                |
 |--------------------+---------------------+-------+-----------------+--------+----------------|
 | Mk2 Cockpit        | mk2Cockpit_Standard | Stock | Stock           |        |                |
 |                    |                     |       | RPM             |        |                |

@@ -3,7 +3,7 @@
 #+STARTUP: indent overview
 #+TODO: TODO DEFER | DONE
 
-* [9/21] Tasks
+* [10/23] Tasks
 
 ** DONE Check internalConfig / part for null to stop exceptions
 ** DONE Initial selection from editor did not work (may be above)
@@ -18,10 +18,15 @@
 ** DONE Refactor reboot to take update config
 ** DONE Only start RPM computer if IVA requires
   - Determine if RasterPropMonitor assembly is present, if so, assume needed
-** TODO Support MAS computer
+** DONE Support MAS computer
 *** DONE Refactor RPMComputer to BaseComputer
 *** DONE Add RPMComputer as sub-class
-*** TODO Add MASComputer as sub-class
+*** DONE Add MASComputer as sub-class
+*** DONE Better RPM+MAS defaults in MAS
+** TODO Add MAS options for various stock IVA
+*** DONE Mk1 Command Pod
+*** TODO Mk1 Lander Can
+*** TODO Mk1-3 Command Pod
 ** TODO Switching Warbirds causing errors
 - Possibly the actual IVA, not Reviva?
 #+begin_example
