@@ -30,6 +30,9 @@ namespace Reviva
                 DoIVASwitch();
         }
 
+        public RPMComputer RPMComputer => this.rpmComputer;
+        public MASComputer MASComputer => this.masComputer;
+
         /*  -------------------------------------------------------------------------------- */
 
         private bool needUpdate = false;

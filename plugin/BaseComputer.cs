@@ -26,9 +26,21 @@ namespace Reviva
             RecreateComputer();
         }
 
-	/* -------------------------------------------------------------------------------- */
+        public ModuleIVASwitch ModuleIVASwitch => this.ivaSwitch;
 
-	protected BaseComputer(ModuleIVASwitch ivaSwitch)
+	public abstract bool IsEnabled
+        {
+            get;
+        }
+
+        public abstract string ModuleName
+	{
+            get;
+	}
+
+        /* -------------------------------------------------------------------------------- */
+
+        protected BaseComputer(ModuleIVASwitch ivaSwitch)
 	{
             this.ivaSwitch = ivaSwitch;
             this.part = this.ivaSwitch?.part;
@@ -38,17 +50,9 @@ namespace Reviva
             Log($"Created {ModuleName} proxy for ModuleIVASwitch");
         }
 
-	protected abstract bool IsEnabled
-        {
-            get;
-        }
+        protected abstract ConfigNode CreateDefaultData();
 
-        protected abstract string ModuleName
-	{
-            get;
-	}
-
-	protected static bool DetectAssembly(string assemblyName)
+        protected static bool DetectAssembly(string assemblyName)
         {
             var assembly = AssemblyLoader.loadedAssemblies.FirstOrDefault(a => a.name == assemblyName);
             bool enabled = (assembly != null);
@@ -108,8 +112,8 @@ namespace Reviva
                  * This means the subtype is not configured, usually stock or does not need
                  * RPM computer. Assume nothing is needed.
                  */
-                Log($"No {ModuleName} ConfigNode in B9PartSwitch MODULE DATA: assume empty");
-                this.computerData = new ConfigNode();
+                Log($"No {ModuleName} ConfigNode in B9PartSwitch MODULE DATA: assume default");
+                this.computerData = CreateDefaultData();
             }
         }
 
