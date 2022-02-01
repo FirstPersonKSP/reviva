@@ -35,6 +35,7 @@ namespace Reviva
         private bool needUpdate = false;
         private ConfigNode updateConfig = null;
         private RPMComputer rpmComputer = null;
+        private MASComputer masComputer = null;
 
         private void DetectIVASwitch(ConfigNode node)
         {
@@ -137,8 +138,11 @@ namespace Reviva
         {
 	    if (this.rpmComputer == null)
                 this.rpmComputer = new RPMComputer(this);
+	    if (this.masComputer == null)
+                this.masComputer = new MASComputer(this);
 
             this.rpmComputer.Reboot(this.updateConfig);
+            this.masComputer.Reboot(this.updateConfig);
         }
 
         private void RefreshInternalModel()

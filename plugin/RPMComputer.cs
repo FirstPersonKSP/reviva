@@ -15,11 +15,11 @@ namespace Reviva
         /* ------------------------------------------------------------------------------- */
 
         protected override bool IsEnabled => rpmEnabled;
-        protected override string ModuleName => "RasterPropMonitor";
+        protected override string ModuleName => "RasterPropMonitorComputer";
 
         /* ------------------------------------------------------------------------------- */
         private static readonly bool rpmEnabled;
-        private static readonly string rpmAssembly = "RasterPropMonitorComputer";
+        private static readonly string rpmAssembly = "RasterPropMonitor";
 
         static RPMComputer()
         {

@@ -10,7 +10,8 @@ BUILD	= $(ROOT)/build
 GAMEDATA= $(ROOT)/GameData
 SRCS	= $(SRC)/ModuleIVASwitch.cs \
 	  $(SRC)/BaseComputer.cs \
-	  $(SRC)/RPMComputer.cs
+	  $(SRC)/RPMComputer.cs \
+	  $(SRC)/MASComputer.cs
 DLL	= $(BUILD)/Reviva.dll
 
 build: $(DLL)
