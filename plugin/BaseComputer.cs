@@ -130,8 +130,9 @@ namespace Reviva
             ConfigNode newConfig = this.computerConfig;
 
             Log($"Rebooting {ModuleName} with changed configuration");
-            Log($"OldConfig: {oldConfig}");
-            Log($"NewConifg: {newConfig}");
+	    // Uncomment for debugging
+            // Log($"OldConfig: {oldConfig}");
+            // Log($"NewConifg: {newConfig}");
 
             int index = -1;
             if (this.computer != null)
