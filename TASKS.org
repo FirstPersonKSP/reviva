@@ -3,7 +3,7 @@
 #+STARTUP: indent overview
 #+TODO: TODO DEFER | DONE
 
-* [13/27] Tasks
+* [14/27] Tasks
 
 ** DONE Check internalConfig / part for null to stop exceptions
 ** DONE Initial selection from editor did not work (may be above)
@@ -28,9 +28,9 @@
   - Get version from Makefile variable
   - Makefile version is from git tag
 ** DONE Fix NEEDS to be properly specific
-** TODO Add missing RPM computer data
-*** TODO mk1pod.cfg
-*** TODO mk1cockpit.cfg
+** DONE Add missing RPM computer data
+*** DONE mk1pod.cfg
+*** DONE mk1cockpit.cfg
 ** TODO Add MAS options for various stock IVA
 *** DONE Mk1 Command Pod
 *** DONE Mk1 Lander Can
