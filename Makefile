@@ -9,6 +9,7 @@ SRC	= $(ROOT)/plugin
 BUILD	= $(ROOT)/build
 GAMEDATA= $(ROOT)/GameData
 SRCS	= $(SRC)/ModuleIVASwitch.cs \
+	  $(SRC)/BaseComputer.cs \
 	  $(SRC)/RPMComputer.cs
 DLL	= $(BUILD)/Reviva.dll
 

@@ -18,6 +18,10 @@
 ** DONE Refactor reboot to take update config
 ** DONE Only start RPM computer if IVA requires
   - Determine if RasterPropMonitor assembly is present, if so, assume needed
+** TODO Support MAS computer
+*** DONE Refactor RPMComputer to BaseComputer
+*** DONE Add RPMComputer as sub-class
+*** TODO Add MASComputer as sub-class
 ** TODO Switching Warbirds causing errors
 - Possibly the actual IVA, not Reviva?
 #+begin_example
