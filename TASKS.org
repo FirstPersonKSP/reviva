@@ -3,7 +3,7 @@
 #+STARTUP: indent overview
 #+TODO: TODO DEFER | DONE
 
-* [14/27] Tasks
+* [15/27] Tasks
 
 ** DONE Check internalConfig / part for null to stop exceptions
 ** DONE Initial selection from editor did not work (may be above)
@@ -31,10 +31,11 @@
 ** DONE Add missing RPM computer data
 *** DONE mk1pod.cfg
 *** DONE mk1cockpit.cfg
-** TODO Add MAS options for various stock IVA
+** DONE Add MAS options for various stock IVA
 *** DONE Mk1 Command Pod
 *** DONE Mk1 Lander Can
-*** TODO Mk1-3 Command Pod
+*** DONE Mk1-3 Command Pod
+** TODO Provde DE+MAS options for most stock IVA
 ** TODO Switching Warbirds causing errors
 - Possibly the actual IVA, not Reviva?
 #+begin_example
