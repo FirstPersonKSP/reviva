@@ -220,12 +220,12 @@ are replaced by the superb MAS_ALCOR_MFD2 which simulates a near future avionics
 | Mk2 Inline Cockpit | mk2Cockpit_Inline   | Stock        | Stock           | Low    | Done           |
 |                    |                     |              | DE_IVAExtension | High   | Done           |
 |                    |                     |              | WarbirdsSI      | High   | Done           |
-|                    |                     |              | DE+MAS          | Near   |                |
+|                    |                     |              | DE+MAS          | Near   | Done           |
 |--------------------+---------------------+--------------+-----------------+--------+----------------|
-| Mk2 Lander Can     | mk2LanderCabin_v2   | Stock        | Stock           | Low    |                |
-|                    |                     |              | RPM             | Med    |                |
-|                    |                     |              | DE_IVAExtension | High   |                |
-|                    |                     |              | DE+MAS          | Near   |                |
+| Mk2 Lander Can     | mk2LanderCabin_v2   | Stock        | Stock           | Low    | Done           |
+|                    |                     |              | RPM             | Med    | Done           |
+|                    |                     |              | DE_IVAExtension | High   | Done           |
+|                    |                     |              | DE+MAS          | Near   | Done           |
 |--------------------+---------------------+--------------+-----------------+--------+----------------|
 | Mk3 Cockpit        | mk3Cockpit_Shuttle  | Stock        | Stock           | Low    |                |
 |                    |                     |              | RPM             | Med    |                |
