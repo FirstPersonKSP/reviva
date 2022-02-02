@@ -103,8 +103,8 @@ existence that can work on KSP 1.12.x - if you know of more let the mod author k
 | Required    | Reviva                           | Stock                 | -       | IVA switching and 1.12.x compatibility       |      |
 | Required    | B9PartSwitch                     | Stock                 | -       | General part switching mechanics             |      |
 | Required    | ModuleManager                    | Stock                 | -       | Patching mod configuration                   |      |
-| Required    | RasterPropMonitor (RPM)          | Stock                 | Partial | More complex IVA than stock, includes IVA    |      |
-| Recommended | MOARdv's Avionics System (MAS)   | Stock                 | Partial | Successor to RPM (1), includes low tech      |      |
+| Required    | RasterPropMonitor (RPM)          | Stock                 | Done    | More complex IVA than stock, includes IVA    |      |
+| Recommended | MOARdv's Avionics System (MAS)   | Stock                 | Done    | Successor to RPM (1), includes low tech      |      |
 |             |                                  |                       |         | Mk1, Mk1-3 and Mk1 Lander.                   |      |
 | Recommended | DE_IVAExtension                  | Stock                 | Done    | High tech IVA for all of Stock               |      |
 | Recommended | ASET IVA for Making History Pods | Making History        | Planned | High tech IVA for all of Making History      |      |
@@ -198,7 +198,7 @@ are replaced by the superb MAS_ALCOR_MFD2 which simulates a near future avionics
 | Mk1 Inline Cockpit | Mark2Cockpit        | Stock        | Stock           | Low    | Done           |
 |                    |                     |              | DE_IVAExtension | High   | Done           |
 |                    |                     |              | Warbirds        | Medium | Done           |
-|                    |                     |              | WarbirdsSI      | Medium | Done           |
+|                    |                     |              | WarbirdsSI      | Medium | Done (1)       |
 |                    |                     |              | WarbirdsRetro   | Low    | Done           |
 |                    |                     |              | WarbirdsRetroSI | Low    | Done           |
 |                    |                     |              | DE+MAS          | Near   | Done           |
@@ -235,7 +235,7 @@ are replaced by the superb MAS_ALCOR_MFD2 which simulates a near future avionics
 | Mk3 Cockpit        | mk3Cockpit_Shuttle  | Stock        | Stock           | Low    | Done           |
 |                    |                     |              | RPM             | Med    | Done           |
 |                    |                     |              | DE_IVAExtension | High   | Done           |
-|                    |                     |              | UltimateRetro   | Med    | Done           |
+|                    |                     |              | UltimateRetro   | Med    | Done (2)       |
 |                    |                     |              | UltimateGlass   | High   | Done           |
 |                    |                     |              | DE+MAS          | Near   | Done           |
 |--------------------+---------------------+--------------+-----------------+--------+----------------|
@@ -267,6 +267,10 @@ are replaced by the superb MAS_ALCOR_MFD2 which simulates a near future avionics
 | Alcor              |                     | Alcor        | Alcor           | High   |                |
 |                    |                     |              | Alcor+MAS       | Near   |                |
 |--------------------+---------------------+--------------+-----------------+--------+----------------|
+
+- (1) :: Mk1 Inline WarbirdsSI variant display "INITIALIZATION ERROR", but seems benign.
+  Will eventually try to fix.
+- (2) :: Mk3 Ultimate Retro variant CRT do not seem to work. Will eventually try to fix.
 
 * Building
 
