@@ -210,7 +210,7 @@ are replaced by the superb MAS_ALCOR_MFD2 which simulates a near future avionics
 |                    |                     |              | DE_IVAExtension | High   | Done           |
 |                    |                     |              | ASET            | High   | Done           |
 |                    |                     |              | MAS             | Low    | Done           |
-|                    |                     |              | DE+MAS          | Near   |                |
+|                    |                     |              | DE+MAS          | Near   | Done           |
 |--------------------+---------------------+--------------+-----------------+--------+----------------|
 | Mk2 Cockpit        | mk2Cockpit_Standard | Stock        | Stock           | Low    | Done           |
 |                    |                     |              | RPM             | Med    | Done           |
