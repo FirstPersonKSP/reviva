@@ -242,7 +242,6 @@ are replaced by the superb MAS_ALCOR_MFD2 which simulates a near future avionics
 | PPD-12 Cupola      | cupola              | Stock        | Stock           | Low    |                |
 |                    |                     |              | RPM             | Med    |                |
 |                    |                     |              | DE_IVAExtension | High   |                |
-|                    |                     |              | DE+MAS          | Near   |                |
 |--------------------+---------------------+--------------+-----------------+--------+----------------|
 | KV-1               | kv1Pod              | MH           | MH              | Low    |                |
 |                    |                     |              | ASET for MH     | High   |                |
