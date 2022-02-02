@@ -3,7 +3,7 @@
 #+STARTUP: indent overview
 #+TODO: TODO DEFER | DONE
 
-* [15/27] Tasks
+* [16/29] 1.0 Tasks
 
 ** DONE Check internalConfig / part for null to stop exceptions
 ** DONE Initial selection from editor did not work (may be above)
@@ -35,8 +35,28 @@
 *** DONE Mk1 Command Pod
 *** DONE Mk1 Lander Can
 *** DONE Mk1-3 Command Pod
-** TODO Provde DE+MAS options for most stock IVA
+** DONE Provde DE+MAS options for most stock IVA
+** TODO Add license info/link (GitHub and README)
+** TODO Add thanks
+** TODO Add Spacedock, GitHub, CKAN and Curse download links
+  - N/A if not yet avail
+** TODO Add how to get support
+  - Link to forum
+  - Link to forum post on this subject
+  - Link to GitHub issues
+** TODO Add links to all mods supported
+** TODO Create mod picture
+** TODO Test CKAN install
+** TODO Investigate deploy scripts
+** TODO Create GitHub release
+** TODO Create KSP Forum post
+** TODO Upload to Spacedock
+** TODO Upload to Curse
+** TODO Push CKAN change
+
+* [0/2] 1.1 Tasks
 ** TODO Switching Warbirds causing errors
+
 - Possibly the actual IVA, not Reviva?
 #+begin_example
 [LOG 22:28:02.614] [Reviva] Switch IVA Mk1InlineInternalASET_WB -> mk1InlineInternal
@@ -71,15 +91,19 @@
 [ERR 22:28:03.069] Cannot find an InternalModule of typename 'DPAI_RPM'
 [ERR 22:28:03.069] Cannot find an InternalModule of typename 'DPAI_RPM'
 #+end_example
-** TODO Add license info/link (GitHub and README)
-** TODO Add thanks
-** TODO Add Spacedock, GitHub, CKAN and Curse download links
-  - N/A if not yet avail
-** TODO Add how to get support
-  - Link to forum
-  - Link to forum post on this subject
-  - Link to GitHub issues
-** TODO Add links to all mods supported
+** TODO Support popular mods
+*** TODO Warbirds - SXT
+*** TODO Warbirds - AirplanePlus
+*** TODO Warbirds - Kerbonov
+*** TODO ProbeControlRoom
+*** TODO Alcor
+*** TODO Opt Spaceplane
+*** TODO Vexarp IVA - NFSpacecraft
+
+* [0/1] 1.2 Tasks
+** TODO Support most IVA mods that work
+
+* [0/5] Future Ideas
 ** TODO Add in-game option to allow in-flight switching
   - Default is enabled
   - If disabled, only affects career/science modes
@@ -95,10 +119,6 @@
   - Add in-game option to enable/disable
   - If enabled, only affects career/science modes
 ** TODO Automatically add changes to README from git
-** TODO Add publish to GitHub, Spacedock, Curse, CKAN
-  - Various modders have tools to help do this already
-  - Auto update version from makefile
-  - Git tag sets version
 ** TODO Add way to export README as forum post format
   - Possible to totally automate
 ** TODO General IVA improvement ideas
@@ -116,4 +136,5 @@
   - Experiment Status (invalid, avail, done)
   - Experiment Activate
 - RPM warp buttons patch?
+
 
