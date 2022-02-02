@@ -98,32 +98,32 @@ existence that can work on KSP 1.12.x - if you know of more let the mod author k
 
 ** Dependency Summary
 
-| Status      | Mod                              | For                   | Provides                                     | Link |
-|-------------+----------------------------------+-----------------------+----------------------------------------------+------|
-| Required    | Reviva                           | Stock                 | IVA switching and 1.12.x compatibility       |      |
-| Required    | B9PartSwitch                     | Stock                 | General part switching mechanics             |      |
-| Required    | ModuleManager                    | Stock                 | Patching mod configuration                   |      |
-| Required    | RasterPropMonitor (RPM)          | Stock                 | More complex IVA than stock                  |      |
-| Recommended | MOARdv's Avionics System (MAS)   | Stock                 | Successor to RPM (*), includes low tech      |      |
-|             |                                  |                       | Mk1, Mk1-3 and Mk1 Lander.                   |      |
-| Recommended | DE_IVAExtension                  | Stock                 | High tech IVA for all of Stock               |      |
-| Recommended | ASET IVA for Making History Pods | Making History        | High tech IVA for all of Making History      |      |
-| Optional    | ASET Mk1 Cockpit                 | Stock                 | High tech analog Mk1 Cockpit                 |      |
-| Optional    | ASET Mk1 Lander Can              | Stock                 | High tech Mk1 Lander                         |      |
-| Optional    | ASET Mk1-2 Command Pod           | Stock                 | High tech Mk1-3 Command Pod                  |      |
-| Optional    | Warbird Cockpits                 | Stock, SXT,           | Analog avaition cockpits for several mods    |      |
-|             |                                  | AirplanePlus,         |                                              |      |
-|             |                                  | Kerbonov              |                                              |      |
-| Optional    | Ultimate Shuttle IVA             | Stock                 | Retro and modern MK3 Cockpit IVA             |      |
-| Optional    | Probe Control Room               | PBC                   | Probe control room for probes                |      |
-| Optional    | ALCOR by ASET                    | Alcor                 | High tech 3-man lander capsule               |      |
-| Optional    | Vexarp IVA                       | NFSpacecraft          | Near Future Spacecraft improved IVA          |      |
-| Optional    | Tundra Exploration               | TundraExploration     | With MAS has improved alternatives (?)       |      |
-| Optional    | Kerbal Flying Saucers            | KerbalFlyingSaucers   | With MAS has improved alternatives (?)       |      |
-| Optional    | MOARdvPlus                       | BDB                   | With MAS, three BDB Kane/Sarnus IVA (Apollo) |      |
-| Optional    | NiceMK (?)                       | NiceMK (?)            | ?                                            |      |
-| Optional    | Falcon (?)                       | AirplanePlus (?)      | ?                                            |      |
-| Optional    | ColdwarAerospace (?)             | ColdwareAerospace (?) | ?                                            |      |
+| Status      | Mod                              | For                   | Status  | Provides                                     | Link |
+|-------------+----------------------------------+-----------------------+---------+----------------------------------------------+------|
+| Required    | Reviva                           | Stock                 | -       | IVA switching and 1.12.x compatibility       |      |
+| Required    | B9PartSwitch                     | Stock                 | -       | General part switching mechanics             |      |
+| Required    | ModuleManager                    | Stock                 | -       | Patching mod configuration                   |      |
+| Required    | RasterPropMonitor (RPM)          | Stock                 | Partial | More complex IVA than stock, includes IVA    |      |
+| Recommended | MOARdv's Avionics System (MAS)   | Stock                 | Partial | Successor to RPM (*), includes low tech      |      |
+|             |                                  |                       |         | Mk1, Mk1-3 and Mk1 Lander.                   |      |
+| Recommended | DE_IVAExtension                  | Stock                 | Done    | High tech IVA for all of Stock               |      |
+| Recommended | ASET IVA for Making History Pods | Making History        | Planned | High tech IVA for all of Making History      |      |
+| Optional    | ASET Mk1 Cockpit                 | Stock                 | Done    | High tech analog Mk1 Cockpit                 |      |
+| Optional    | ASET Mk1 Lander Can              | Stock                 | Done    | High tech Mk1 Lander                         |      |
+| Optional    | ASET Mk1-2 Command Pod           | Stock                 | Done    | High tech Mk1-3 Command Pod                  |      |
+| Optional    | Warbird Cockpits                 | Stock, SXT,           | Partial | Analog avaition cockpits for several mods    |      |
+|             |                                  | AirplanePlus,         |         |                                              |      |
+|             |                                  | Kerbonov              |         |                                              |      |
+| Optional    | Ultimate Shuttle IVA             | Stock                 | Planned | Retro and modern MK3 Cockpit IVA             |      |
+| Optional    | Probe Control Room               | PBC                   | Planned | Probe control room for probes                |      |
+| Optional    | ALCOR by ASET                    | Alcor                 | Planned | High tech 3-man lander capsule               |      |
+| Optional    | Vexarp IVA                       | NFSpacecraft          | Planned | Near Future Spacecraft improved IVA          |      |
+| Optional    | Tundra Exploration               | TundraExploration     |         | With MAS has improved alternatives (?)       |      |
+| Optional    | Kerbal Flying Saucers            | KerbalFlyingSaucers   |         | With MAS has improved alternatives (?)       |      |
+| Optional    | MOARdvPlus                       | BDB                   |         | With MAS, three BDB Kane/Sarnus IVA (Apollo) |      |
+| Optional    | NiceMK (?)                       | NiceMK (?)            |         | ?                                            |      |
+| Optional    | Falcon (?)                       | AirplanePlus (?)      |         | ?                                            |      |
+| Optional    | ColdwarAerospace (?)             | ColdwareAerospace (?) |         | ?                                            |      |
 
 (*) You can have either RPM or MAS, or in fact both at the same time. MAS includes upgrade
 scripts that render some existing RPM IVAs at a high quality and performance (in my experience).
