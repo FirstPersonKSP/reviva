@@ -117,6 +117,7 @@ existence that can work on KSP 1.12.x - if you know of more let the mod author k
 | Optional    | Ultimate Shuttle IVA             | Stock                 | Planned | Retro and modern MK3 Cockpit IVA             |      |
 | Optional    | Probe Control Room               | PBC                   | Planned | Probe control room for probes                |      |
 | Optional    | ALCOR by ASET                    | Alcor                 | Planned | High tech 3-man lander capsule               |      |
+| Optional    | OPT Spaceplane                   | Opt                   | Planned | Near and Far Future Spacecraft               |      |
 | Optional    | Vexarp IVA                       | NFSpacecraft          | Planned | Near Future Spacecraft improved IVA          |      |
 | Optional    | Tundra Exploration               | TundraExploration     |         | With MAS has improved alternatives (?)       |      |
 | Optional    | Kerbal Flying Saucers            | KerbalFlyingSaucers   |         | With MAS has improved alternatives (?)       |      |

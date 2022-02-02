@@ -101,11 +101,19 @@
   - Git tag sets version
 ** TODO Add way to export README as forum post format
   - Possible to totally automate
-
-** TODO Add ability to use flaps and spoilers without FAR
+** TODO General IVA improvement ideas
+*** TODO Add ability to use flaps and spoilers without FAR
 - Patch only if FAR not present
 - Map Flaps Up/Down to AG9/AG0
 - Map Spoilers Up/Down to AG7/AG8
 - Takes up some room, are there other custom places for this?
 - Perhaps use custom axis to save action groups
-  
+*** TODO Add MFD (JSI, ASET, MAS) support for more features
+- Call Recovery
+- Science Info
+  - Current Biome
+  - Science Store Usage
+  - Experiment Status (invalid, avail, done)
+  - Experiment Activate
+- RPM warp buttons patch?
+
