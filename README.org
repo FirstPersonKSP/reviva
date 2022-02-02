@@ -196,14 +196,14 @@ are replaced by the superb MAS_ALCOR_MFD2 which simulates a near future avionics
 |                    |                     |              | WarbirdsSI      | Medium | Done           |
 |                    |                     |              | WarbirdsRetro   | Low    | Done           |
 |                    |                     |              | WarbirdsRetroSI | Low    | Done           |
-|                    |                     |              | DE+MAS          | Near   |                |
+|                    |                     |              | DE+MAS          | Near   | Done           |
 |--------------------+---------------------+--------------+-----------------+--------+----------------|
 | Mk1 Lander Can     | landerCabinSmall    | Stock        | Stock           | Low    | Done           |
 |                    |                     |              | RPM             | Med    | Done           |
 |                    |                     |              | DE_IVAExtension | High   | Done           |
 |                    |                     |              | ASET            | Low    | Done           |
 |                    |                     |              | MAS             | Low    | Done           |
-|                    |                     |              | DE+MAS          | Near   |                |
+|                    |                     |              | DE+MAS          | Near   | Done           |
 |--------------------+---------------------+--------------+-----------------+--------+----------------|
 | Mk1-3 Command Pod  | mk1-3pod            | Stock        | Stock           | Low    | Done           |
 |                    |                     |              | RPM             | Med    | Done           |
