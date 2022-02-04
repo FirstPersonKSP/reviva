@@ -3,7 +3,7 @@
 #+STARTUP: indent overview
 #+TODO: TODO DEFER | DONE
 
-* [21/29] 1.0 Tasks
+* [23/29] 0.7 Tasks
 
 ** DONE Check internalConfig / part for null to stop exceptions
 ** DONE Initial selection from editor did not work (may be above)
@@ -41,8 +41,10 @@
 ** DONE Create mod picture
 ** DONE Add thanks
 ** DONE Create GitHub release
-** TODO Add links to all mods supported
-** TODO Create KSP Forum post
+** DONE Add links to all mods supported
+** DONE Create KSP Forum post
+
+* [0/2] 0.8 Tasks
 ** TODO Add Spacedock, GitHub, CKAN and Curse download links
   - N/A if not yet avail
 ** TODO Test CKAN install
@@ -50,8 +52,6 @@
 ** TODO Upload to Spacedock
 ** TODO Upload to Curse
 ** TODO Push CKAN change
-
-* [0/2] 1.1 Tasks
 ** TODO Switching Warbirds causing errors
 
 - Possibly the actual IVA, not Reviva?
@@ -97,8 +97,12 @@
 *** TODO Opt Spaceplane
 *** TODO Vexarp IVA - NFSpacecraft
 
-* [0/1] 1.2 Tasks
+
+* [0/1] 0.9 Tasks
 ** TODO Support most IVA mods that work
+
+* [/] 1.0 Tasks
+** TODO Publish on "Add-on Releases" section of KSP forums
 
 * [0/5] Future Ideas
 ** TODO Add in-game option to allow in-flight switching
