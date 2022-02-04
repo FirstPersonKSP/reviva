@@ -1,6 +1,14 @@
-* KSP Reviva
+* KSP 1.12.x - Reviva - The IVA Revival!
+
+[[file:Reviva.png][Reviva Screenshot]]
 
 KSP Reviva is the IVA Revival!
+
+- Supports multiple IVA mods at once! (IVA mods not included)
+- Supports RPM and MAS
+- Allows IVA internal switch via B9PartSwitch
+  - Allows selecting different IVA on each command module in editor/saves.
+  - Event allows for on-the-fly IVA switch while in flight!
 
 ** For Players
 
@@ -31,7 +39,19 @@ Features:
 - The different IVA selection does not change the characteristics, mass, cost or other
   data on the actual command pod: it's all visual for IVA. This means you can change at
   any time without penalty, by design.
-  
+
+** License
+
+[[LICENSE][MIT License]] - (C) 2022 Harvey Thompson
+
+** Source
+
+** Download Links
+
+- GitHub
+- CKAN :: Soon
+- Curse :: Soon
+
 ** For Modders
 
 You can provide multiple IVAs for your modded crewed command modules: this might allow for
