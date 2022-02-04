@@ -15,6 +15,7 @@ GENS		= $(BUILD)/AssemblyInfo.cs
 CFGS		= $(shell find $(GAMEDATA) -type f -print)
 DEPS		= $(SRCS) $(CFGS) $(ROOT)/Makefile
 
+PKG		= $(BUILD)/GameData/Reviva
 DLL		= $(BUILD)/Reviva.dll
 FLAGS		= -optimize+ -debug-
 DEFS		=
@@ -27,6 +28,8 @@ VER_MINOR	= $(word 2,$(VER))
 VER_PATCH	= $(word 3,$(VER))
 VER_BUILD	= $(word 4,$(VER))
 VER_SHA		= $(word 5,$(VER))
+GIT_TAG		= $(VER_MAJOR).$(VER_MINOR).$(VER_PATCH)
+PKG_ZIP		= Reviva-$(GIT_TAG).zip
 
 build: $(DLL)
 
@@ -63,11 +66,18 @@ $(BUILD)/AssemblyInfo.cs: $(SRC)/AssemblyInfo.cs.in $(DEPS)
 clean:
 	rm -rf "$(BUILD)"
 
-install: build
+package: build
+	rm -rf $(PKG)
+	mkdir -p $(BUILD)/GameData
+	cp -a $(GAMEDATA)/Reviva $(BUILD)/GameData
+	cp $(DLL) $(PKG)
+	find "$(PKG)" -name '*~' -print0 | xargs -0 rm -f
+	rm -f $(BUILD)/$(PKG_ZIP)
+	cd $(BUILD); zip $(PKG_ZIP) -r GameData
+
+install: package
 	rm -rf "$(KSP)/GameData/Reviva"
-	find "$(GAMEDATA)/Reviva" -name '*~' -print0 | xargs -0 rm -f
-	cp -a "$(GAMEDATA)/Reviva" "$(KSP)/GameData"
-	cp "$(DLL)" "$(KSP)/GameData/Reviva"
+	cp -a "$(PKG)" "$(KSP)/GameData"
 
 list-internals:
 	@find "$(KSP)/GameData" -name '*.cfg' -print0 | xargs -0 cat | unix2dos |	\
@@ -94,3 +104,7 @@ list-parts:
 		part = 0;								\
 		print name;								\
 	}' | sort -u
+
+github-release: package
+	gh release create $(GIT_TAG) --title "$(GIT_TAG)" --notes "" --prerelease
+	gh release upload $(GIT_TAG) $(BUILD)/$(PKG_ZIP)

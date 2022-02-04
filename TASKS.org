@@ -3,7 +3,7 @@
 #+STARTUP: indent overview
 #+TODO: TODO DEFER | DONE
 
-* [16/29] 1.0 Tasks
+* [21/29] 1.0 Tasks
 
 ** DONE Check internalConfig / part for null to stop exceptions
 ** DONE Initial selection from editor did not work (may be above)
@@ -36,20 +36,17 @@
 *** DONE Mk1 Lander Can
 *** DONE Mk1-3 Command Pod
 ** DONE Provde DE+MAS options for most stock IVA
-** TODO Add license info/link (GitHub and README)
-** TODO Add thanks
+** DONE Add license info/link (GitHub and README)
+** DONE Add how to get support
+** DONE Create mod picture
+** DONE Add thanks
+** DONE Create GitHub release
+** TODO Add links to all mods supported
+** TODO Create KSP Forum post
 ** TODO Add Spacedock, GitHub, CKAN and Curse download links
   - N/A if not yet avail
-** TODO Add how to get support
-  - Link to forum
-  - Link to forum post on this subject
-  - Link to GitHub issues
-** TODO Add links to all mods supported
-** TODO Create mod picture
 ** TODO Test CKAN install
 ** TODO Investigate deploy scripts
-** TODO Create GitHub release
-** TODO Create KSP Forum post
 ** TODO Upload to Spacedock
 ** TODO Upload to Curse
 ** TODO Push CKAN change

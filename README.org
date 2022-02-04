@@ -2,13 +2,24 @@
 
 [[file:Reviva.png][Reviva Screenshot]]
 
-KSP Reviva is the IVA Revival!
+KSP Reviva is the IVA Revival! For Kerbals who like to fly first person.
 
-- Supports multiple IVA mods at once! (IVA mods not included)
-- Supports RPM and MAS
-- Allows IVA internal switch via B9PartSwitch
+- Supports multiple IVA mods at once (IVA mods not included).
+- Supports RPM and MAS.
+- Allows IVA internal switch via B9PartSwitch:
   - Allows selecting different IVA on each command module in editor/saves.
-  - Event allows for on-the-fly IVA switch while in flight!
+  - Allows for on-the-fly IVA switching while in flight.
+
+** Warning
+
+This mod is *BETA*, do not use for career gameplay unless you like living on the edge.
+
+** Download Links
+
+- GitHub :: 
+- SpaceDock :: Soon  
+- CKAN :: Soon
+- Curse :: Soon
 
 ** For Players
 
@@ -40,17 +51,30 @@ Features:
   data on the actual command pod: it's all visual for IVA. This means you can change at
   any time without penalty, by design.
 
+** Thanks
+
+- blowfish :: For B9PartSwitch which provides all the clever part switching and UI.
+- sarbian :: For Module Manager which provides ways to reconfigure everything.
+- alexustas :: For the amazing ASET IVAs and props.
+- MOARdv, JonnyOThan :: For Raster Prop Monitor (RPM), making IVAs look all fancy.
+- MOARdv :: For Avionics System (MAS), making IVAs look even more fancy.
+- DemonEin :: For DE_IVAExtension which provides decent IVA for all of stock.
+- Honk Hogan :: For IVA_ASET_MAKING_HISTORY which provides decent IVA for Missing History.
+- theonegalen :: For Warbird Cockpits IVA, and forum posts that inspired that this is
+  possible.
+- linuxgurugamer :: For the hopeful adoption of this mod if I wander off in the future.
+
 ** License
 
 [[LICENSE][MIT License]] - (C) 2022 Harvey Thompson
 
 ** Source
 
-** Download Links
+Repository on [[https://github.com/harveyt/reviva][GitHub]]
 
-- GitHub
-- CKAN :: Soon
-- Curse :: Soon
+** For More Information
+
+See the [[https://github.com/harveyt/reviva/blob/main/README.org][GitHub README.org]]
 
 ** For Modders
 
@@ -73,7 +97,7 @@ the pattern.
 Feel free to ask questions in the forum, I'm not super experienced with KSP modding, but I
 know game development well enough to be dangerous/helpful.
 
-* Installation
+* Detailed Installation
 
 ** Required Mods
 
@@ -154,7 +178,7 @@ experience).
 
 - (2) :: Only copy UltimateShuttleIVA into GameData, ignore the top level USIVA-xxx.cfg files.
 
-* User Manual
+* Detailed User Manual
 
 Once you have installed all the mods needed, once you've restarted the game, right
 clicking on supported command modules will show the PAW UI with a group called "IVA
@@ -192,7 +216,9 @@ Either respond in the forum or on GitHub. If it's a bug, you should always provi
 with the bug report, otherwise it's even more unlikely that the author will respond or be
 able to help.
 
-* Support Progress
+- [[https://github.com/harveyt/reviva/issues][GitHub Issues for Reviva]]
+
+** Support Progress
 
 The following table lists the current progression on supporting mods and IVA mods.
 
