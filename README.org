@@ -22,28 +22,28 @@ the coverage over time.
 ** Required Mods
 
 - Reviva - note that this does not include any other mods below in the download.
-  - Forum :: [[https://forum.kerbalspaceprogram.com/index.php?/topic/206744-wip112x-reviva-the-iva-revival-and-editorflight-switcher-070-pre-release-3rd-feb-2022/][KSP Forums]]
-  - GitHub :: https://github.com/harveyt/reviva/releases/latest
+  - Forum - [[https://forum.kerbalspaceprogram.com/index.php?/topic/206744-wip112x-reviva-the-iva-revival-and-editorflight-switcher-070-pre-release-3rd-feb-2022/][KSP Forums]]
+  - GitHub - https://github.com/harveyt/reviva/releases/latest
     - Download and extract the Reviva-x.x.x.zip file at the root of your KSP installation.
-  - SpaceDock :: Soon  
-  - CKAN :: Soon
-  - Curse :: Soon
-- B9PartSwitch :: https://forum.kerbalspaceprogram.com/index.php?/topic/140541-1112-b9partswitch-v2180-march-17/
-- ModuleManager :: https://forum.kerbalspaceprogram.com/index.php?/topic/50533-18x-112x-module-manager-421-august-1st-2021-locked-inside-edition/
-- RasterPropMonitor (RPM) :: https://forum.kerbalspaceprogram.com/index.php?/topic/190737-18x-112x-rasterpropmonitor-adopted/
+  - SpaceDock - Soon  
+  - CKAN - Soon
+  - Curse - Soon
+- B9PartSwitch - https://forum.kerbalspaceprogram.com/index.php?/topic/140541-1112-b9partswitch-v2180-march-17/
+- ModuleManager - https://forum.kerbalspaceprogram.com/index.php?/topic/50533-18x-112x-module-manager-421-august-1st-2021-locked-inside-edition/
+- RasterPropMonitor (RPM) - https://forum.kerbalspaceprogram.com/index.php?/topic/190737-18x-112x-rasterpropmonitor-adopted/
 
 ** Recommended Mods
 
-- MOARdv's Avionics System (MAS) :: https://forum.kerbalspaceprogram.com/index.php?/topic/160856-wip-111x-moardvs-avionics-systems-mas-interactive-iva-v123-21-may-2021/
-- DE_IVAExtension :: https://forum.kerbalspaceprogram.com/index.php?/topic/186715-18x-de_ivaextension-for-all-the-stock-pod-ivas/
+- MOARdv's Avionics System (MAS) - https://forum.kerbalspaceprogram.com/index.php?/topic/160856-wip-111x-moardvs-avionics-systems-mas-interactive-iva-v123-21-may-2021/
+- DE_IVAExtension - https://forum.kerbalspaceprogram.com/index.php?/topic/186715-18x-de_ivaextension-for-all-the-stock-pod-ivas/
 
 ** Optional Mods
 
-- ASET Mk1 Cockpit :: https://forum.kerbalspaceprogram.com/index.php?/topic/156130-mk1-cockpit-iva-replacement-by-asetv11/
-- ASET Mk1 Lander Can :: https://forum.kerbalspaceprogram.com/index.php?/topic/156131-mk1-lander-can-iva-replacement-by-aset11/
-- ASET Mk1-2 Command Pod :: https://forum.kerbalspaceprogram.com/index.php?/topic/116440-mk1-2-pod-iva-replacement-by-asetv03/
-- Warbird Cockpits :: https://forum.kerbalspaceprogram.com/index.php?/topic/160720-wip131-warbird-cockpits-03pre-mk1-capsule-mk1-inline-cockpit-mk2-inline-cockpit/
-- Ultimate Shuttle IVA :: https://forum.kerbalspaceprogram.com/index.php?/topic/174898-14x-ultimate-shuttle-iva-10-woop-woop/
+- ASET Mk1 Cockpit - https://forum.kerbalspaceprogram.com/index.php?/topic/156130-mk1-cockpit-iva-replacement-by-asetv11/
+- ASET Mk1 Lander Can - https://forum.kerbalspaceprogram.com/index.php?/topic/156131-mk1-lander-can-iva-replacement-by-aset11/
+- ASET Mk1-2 Command Pod - https://forum.kerbalspaceprogram.com/index.php?/topic/116440-mk1-2-pod-iva-replacement-by-asetv03/
+- Warbird Cockpits - https://forum.kerbalspaceprogram.com/index.php?/topic/160720-wip131-warbird-cockpits-03pre-mk1-capsule-mk1-inline-cockpit-mk2-inline-cockpit/
+- Ultimate Shuttle IVA - https://forum.kerbalspaceprogram.com/index.php?/topic/174898-14x-ultimate-shuttle-iva-10-woop-woop/
 
 ** For Players
 
