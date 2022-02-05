@@ -91,7 +91,7 @@ Features:
 
 ** License
 
-[[LICENSE][MIT License]] - (C) 2022 Harvey Thompson
+MIT License - (C) 2022 Harvey Thompson
 
 ** Source
 
