@@ -1,5 +1,5 @@
 # KSP	= /mnt/c/Program Files (x86)/Steam/steamapps/common/Kerbal Space Program
-KSP		= /mnt/c/Games/KSP Dev
+KSP		= /mnt/c/Games/KSP-Dev
 MANAGED		= $(KSP)/KSP_x64_Data/Managed
 
 CSC		= csc
