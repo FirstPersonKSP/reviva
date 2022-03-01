@@ -44,6 +44,22 @@ the coverage over time.
 - ASET Mk1-2 Command Pod - https://forum.kerbalspaceprogram.com/index.php?/topic/116440-mk1-2-pod-iva-replacement-by-asetv03/
 - Warbird Cockpits - https://forum.kerbalspaceprogram.com/index.php?/topic/160720-wip131-warbird-cockpits-03pre-mk1-capsule-mk1-inline-cockpit-mk2-inline-cockpit/
 - Ultimate Shuttle IVA - https://forum.kerbalspaceprogram.com/index.php?/topic/174898-14x-ultimate-shuttle-iva-10-woop-woop/
+- ASET IVA for Making History Pods - https://forum.kerbalspaceprogram.com/index.php?/topic/187162-17xaset-iva-for-making-history-pods/
+
+** Changes
+
+*** 0.7.1 Initial Release
+
+- Support Missing History KV-1, KV-2, KV-3, MK2 command pod and M.E.M. lander.
+- Configurations for Stock, ASET IVA for Making History Pods, and MAS alternatives for Mk2
+  and M.E.M (the KV pods are meant to be low to medium tech only).
+  
+*** 0.7.0 Initial Release
+
+- Support for RasterPropMonitor (RPM) and/or Avionics System (MAS) IVA.
+- Covers stock command pods, cockpits, landers and cuppola only.
+- Configurations for Stock, RPM, MAS, ASET, DE_IVAExtension, Warbird Cokcpits and Ultimate
+  Shuttle IVA variants.
 
 ** For Players
 
