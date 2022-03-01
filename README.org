@@ -48,13 +48,13 @@ the coverage over time.
 
 ** Changes
 
-*** 0.7.1 Initial Release
+*** 0.7.1 Pre-Release (28th Feb 2022)
 
 - Support Missing History KV-1, KV-2, KV-3, MK2 command pod and M.E.M. lander.
 - Configurations for Stock, ASET IVA for Making History Pods, and MAS alternatives for Mk2
   and M.E.M (the KV pods are meant to be low to medium tech only).
   
-*** 0.7.0 Initial Release
+*** 0.7.0 Pre-Release (3rd Feb 2022)
 
 - Support for RasterPropMonitor (RPM) and/or Avionics System (MAS) IVA.
 - Covers stock command pods, cockpits, landers and cuppola only.

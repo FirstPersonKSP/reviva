@@ -49,6 +49,8 @@
 ** DONE Support Missing History
 * TODO [0/8] 0.8 Tasks
 ** TODO Support ALCOR
+** TODO Convert README.org to README.md
+- Use view on GitHub to update post.
 ** TODO Add Spacedock, GitHub, CKAN and Curse download links
   - N/A if not yet avail
 ** TODO Test CKAN install
