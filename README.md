@@ -2,7 +2,7 @@
 
 ![Reviva Screenshot][url:Screenshot]
 
-KSP Reviva is the IVA Revival! For Kerbals who like to fly first person.
+# KSP Reviva is the IVA Revival! For Kerbals who like to fly first person.
 
 - Supports multiple IVA mods at once (IVA mods not included).
 - Supports RPM and MAS.
