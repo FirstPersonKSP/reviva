@@ -78,6 +78,7 @@ Features:
 ** Thanks
 
 - blowfish :: For B9PartSwitch which provides all the clever part switching and UI.
+- electrocutor :: For ideas in WPF and KSP forum that inspired idea.
 - sarbian :: For Module Manager which provides ways to reconfigure everything.
 - alexustas :: For the amazing ASET IVAs and props.
 - MOARdv, JonnyOThan :: For Raster Prop Monitor (RPM), making IVAs look all fancy.

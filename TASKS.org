@@ -44,8 +44,8 @@
 ** DONE Add links to all mods supported
 ** DONE Create KSP Forum post
 
-* TODO [0/2] 0.8 Tasks
-** TODO Add thanks to electrocutor
+* TODO [1/10] 0.8 Tasks
+** DONE Add thanks to electrocutor
 ** TODO Seperate out iva into sub-dirs ckan modid
 Each sub-directory named after the mod that provides the IVA (not the command
 module affected):
