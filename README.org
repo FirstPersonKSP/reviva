@@ -311,18 +311,18 @@ are replaced by the superb MAS_ALCOR_MFD2 which simulates a near future avionics
 |                    |                     |              | UltimateGlass   | High   | Done           |
 |                    |                     |              | DE+MAS          | Near   | Done           |
 |--------------------+---------------------+--------------+-----------------+--------+----------------|
-| PPD-12 Cupola      | cupola              | Stock        | Stock           | Low    |                |
-|                    |                     |              | RPM             | Med    |                |
-|                    |                     |              | DE_IVAExtension | High   |                |
+| PPD-12 Cupola      | cupola              | Stock        | Stock           | Low    | Done           |
+|                    |                     |              | RPM             | Med    | Done           |
+|                    |                     |              | DE_IVAExtension | High   | Done           |
 |--------------------+---------------------+--------------+-----------------+--------+----------------|
-| KV-1               | kv1Pod              | MH           | MH              | Low    |                |
-|                    |                     |              | ASET for MH     | High   |                |
+| KV-1               | kv1Pod              | MH           | MH              | Low    | Done           |
+|                    |                     |              | ASET for MH     | High   | Done           |
 |--------------------+---------------------+--------------+-----------------+--------+----------------|
-| KV-2               | kv2Pod              | MH           | MH              | Low    |                |
-|                    |                     |              | ASET for MH     | High   |                |
+| KV-2               | kv2Pod              | MH           | MH              | Low    | Done           |
+|                    |                     |              | ASET for MH     | High   | Done           |
 |--------------------+---------------------+--------------+-----------------+--------+----------------|
-| KV-3               | kv3Pod              | MH           | MH              | Low    |                |
-|                    |                     |              | ASET for MH     | High   |                |
+| KV-3               | kv3Pod              | MH           | MH              | Low    | Done           |
+|                    |                     |              | ASET for MH     | High   | Done           |
 |--------------------+---------------------+--------------+-----------------+--------+----------------|
 | Mk2 Command Pod    | Mk2Pod              | MH           | MH              | Low    |                |
 |                    |                     |              | ASET for MH     | High   |                |
