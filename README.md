@@ -268,92 +268,75 @@ Note: DE+MAS is an Reviva specialized combination of `DE_IVAExtension` where one
 are replaced by the superb `MAS_ALCOR_MFD2` which simulates a near future avionics upgrade.
 
 
-| Name               | CFG Name            | From         | IVA             | Tech   | Support Status |
-|--------------------|---------------------|--------------|-----------------|--------|----------------|
-| Mk1 Cockpit        | Mark1Cockpit        | Stock        | Stock           | Low    | Done           |
-|                    |                     |              | RPM             | Med    | Done           |
-|                    |                     |              | DE_IVAExtension | High   | Done           |
-|                    |                     |              | ASET            | High   | Done           |
-|                    |                     |              | DE+MAS          | Near   | Done           |
-|--------------------|---------------------|--------------|-----------------|--------|----------------|
-| Mk1 Command Pod    | mk1pod_v2           | Stock        | Stock           | Low    | Done           |
-|                    |                     |              | RPM             | Med    | Done           |
-|                    |                     |              | DE_IVAExtension | High   | Done           |
-|                    |                     |              | Warbirds        | Med    | Done           |
-|                    |                     |              | MAS             | Low    | Done           |
-|                    |                     |              | DE+MAS          | Near   | Done           |
-|--------------------|---------------------|--------------|-----------------|--------|----------------|
-| Mk1 Inline Cockpit | Mark2Cockpit        | Stock        | Stock           | Low    | Done           |
-|                    |                     |              | DE_IVAExtension | High   | Done           |
-|                    |                     |              | Warbirds        | Medium | Done           |
-|                    |                     |              | WarbirdsSI      | Medium | Done (1)       |
-|                    |                     |              | WarbirdsRetro   | Low    | Done           |
-|                    |                     |              | WarbirdsRetroSI | Low    | Done           |
-|                    |                     |              | DE+MAS          | Near   | Done           |
-|--------------------|---------------------|--------------|-----------------|--------|----------------|
-| Mk1 Lander Can     | landerCabinSmall    | Stock        | Stock           | Low    | Done           |
-|                    |                     |              | RPM             | Med    | Done           |
-|                    |                     |              | DE_IVAExtension | High   | Done           |
-|                    |                     |              | ASET            | Low    | Done           |
-|                    |                     |              | MAS             | Low    | Done           |
-|                    |                     |              | DE+MAS          | Near   | Done           |
-|--------------------|---------------------|--------------|-----------------|--------|----------------|
-| Mk1-3 Command Pod  | mk1-3pod            | Stock        | Stock           | Low    | Done           |
-|                    |                     |              | RPM             | Med    | Done           |
-|                    |                     |              | DE_IVAExtension | High   | Done           |
-|                    |                     |              | ASET            | High   | Done           |
-|                    |                     |              | MAS             | Low    | Done           |
-|                    |                     |              | DE+MAS          | Near   | Done           |
-|--------------------|---------------------|--------------|-----------------|--------|----------------|
-| Mk2 Cockpit        | mk2Cockpit_Standard | Stock        | Stock           | Low    | Done           |
-|                    |                     |              | RPM             | Med    | Done           |
-|                    |                     |              | DE_IVAExtension | High   | Done           |
-|                    |                     |              | DE+MAS          | Near   | Done           |
-|--------------------|---------------------|--------------|-----------------|--------|----------------|
-| Mk2 Inline Cockpit | mk2Cockpit_Inline   | Stock        | Stock           | Low    | Done           |
-|                    |                     |              | DE_IVAExtension | High   | Done           |
-|                    |                     |              | WarbirdsSI      | High   | Done           |
-|                    |                     |              | DE+MAS          | Near   | Done           |
-|--------------------|---------------------|--------------|-----------------|--------|----------------|
-| Mk2 Lander Can     | mk2LanderCabin_v2   | Stock        | Stock           | Low    | Done           |
-|                    |                     |              | RPM             | Med    | Done           |
-|                    |                     |              | DE_IVAExtension | High   | Done           |
-|                    |                     |              | DE+MAS          | Near   | Done           |
-|--------------------|---------------------|--------------|-----------------|--------|----------------|
-| Mk3 Cockpit        | mk3Cockpit_Shuttle  | Stock        | Stock           | Low    | Done           |
-|                    |                     |              | RPM             | Med    | Done           |
-|                    |                     |              | DE_IVAExtension | High   | Done           |
-|                    |                     |              | UltimateRetro   | Med    | Done (2)       |
-|                    |                     |              | UltimateGlass   | High   | Done           |
-|                    |                     |              | DE+MAS          | Near   | Done           |
-|--------------------|---------------------|--------------|-----------------|--------|----------------|
-| PPD-12 Cupola      | cupola              | Stock        | Stock           | Low    | Done           |
-|                    |                     |              | RPM             | Med    | Done           |
-|                    |                     |              | DE_IVAExtension | High   | Done           |
-|--------------------|---------------------|--------------|-----------------|--------|----------------|
-| KV-1               | kv1Pod              | MH           | MH              | Low    | Done           |
-|                    |                     |              | ASET for MH     | High   | Done           |
-|--------------------|---------------------|--------------|-----------------|--------|----------------|
-| KV-2               | kv2Pod              | MH           | MH              | Low    | Done           |
-|                    |                     |              | ASET for MH     | High   | Done           |
-|--------------------|---------------------|--------------|-----------------|--------|----------------|
-| KV-3               | kv3Pod              | MH           | MH              | Low    | Done           |
-|                    |                     |              | ASET for MH     | High   | Done           |
-|--------------------|---------------------|--------------|-----------------|--------|----------------|
-| Mk2 Command Pod    | Mk2Pod              | MH           | MH              | Low    | Done           |
-|                    |                     |              | ASET for MH     | High   | Done           |
-|                    |                     |              | ASET for MH+MAS | Near   | Done           |
-|--------------------|---------------------|--------------|-----------------|--------|----------------|
-| M.E.M.             | MEMLander           | MH           | MH              | Low    | Done           |
-|                    |                     |              | ASET for MH     | High   | Done           |
-|                    |                     |              | ASET for MH+MAS | Near   | Done           |
-|--------------------|---------------------|--------------|-----------------|--------|----------------|
-| Probe Control Room |                     | PCR          | PCR             | Med    |                |
-|                    |                     |              | DE_IVAExtension | High   |                |
-|--------------------|---------------------|--------------|-----------------|--------|----------------|
-| Alcor              |                     | Alcor        | Alcor           | High   |                |
-|                    |                     |              | Alcor+MAS       | Near   |                |
-|--------------------|---------------------|--------------|-----------------|--------|----------------|
+| Name               | CFG Name             | From  | IVA              | Tech   | Support Status |
+|--------------------|----------------------|-------|------------------|--------|----------------|
+| Mk1 Cockpit        | Mark1Cockpit         | Stock | Stock            | Low    | Done           |
+|                    |                      |       | RPM              | Med    | Done           |
+|                    |                      |       | DE\_IVAExtension | High   | Done           |
+|                    |                      |       | ASET             | High   | Done           |
+|                    |                      |       | DE+MAS           | Near   | Done           |
+| Mk1 Command Pod    | mk1pod\_v2           | Stock | Stock            | Low    | Done           |
+|                    |                      |       | RPM              | Med    | Done           |
+|                    |                      |       | DE\_IVAExtension | High   | Done           |
+|                    |                      |       | Warbirds         | Med    | Done           |
+|                    |                      |       | MAS              | Low    | Done           |
+|                    |                      |       | DE+MAS           | Near   | Done           |
+| Mk1 Inline Cockpit | Mark2Cockpit         | Stock | Stock            | Low    | Done           |
+|                    |                      |       | DE\_IVAExtension | High   | Done           |
+|                    |                      |       | Warbirds         | Medium | Done           |
+|                    |                      |       | WarbirdsSI       | Medium | Done (1)       |
+|                    |                      |       | WarbirdsRetro    | Low    | Done           |
+|                    |                      |       | WarbirdsRetroSI  | Low    | Done           |
+|                    |                      |       | DE+MAS           | Near   | Done           |
+| Mk1 Lander Can     | landerCabinSmall     | Stock | Stock            | Low    | Done           |
+|                    |                      |       | RPM              | Med    | Done           |
+|                    |                      |       | DE\_IVAExtension | High   | Done           |
+|                    |                      |       | ASET             | Low    | Done           |
+|                    |                      |       | MAS              | Low    | Done           |
+|                    |                      |       | DE+MAS           | Near   | Done           |
+| Mk1-3 Command Pod  | mk1-3pod             | Stock | Stock            | Low    | Done           |
+|                    |                      |       | RPM              | Med    | Done           |
+|                    |                      |       | DE\_IVAExtension | High   | Done           |
+|                    |                      |       | ASET             | High   | Done           |
+|                    |                      |       | MAS              | Low    | Done           |
+|                    |                      |       | DE+MAS           | Near   | Done           |
+| Mk2 Cockpit        | mk2Cockpit\_Standard | Stock | Stock            | Low    | Done           |
+|                    |                      |       | RPM              | Med    | Done           |
+|                    |                      |       | DE\_IVAExtension | High   | Done           |
+|                    |                      |       | DE+MAS           | Near   | Done           |
+| Mk2 Inline Cockpit | mk2Cockpit\_Inline   | Stock | Stock            | Low    | Done           |
+|                    |                      |       | DE\_IVAExtension | High   | Done           |
+|                    |                      |       | WarbirdsSI       | High   | Done           |
+|                    |                      |       | DE+MAS           | Near   | Done           |
+| Mk2 Lander Can     | mk2LanderCabin\_v2   | Stock | Stock            | Low    | Done           |
+|                    |                      |       | RPM              | Med    | Done           |
+|                    |                      |       | DE\_IVAExtension | High   | Done           |
+|                    |                      |       | DE+MAS           | Near   | Done           |
+| Mk3 Cockpit        | mk3Cockpit\_Shuttle  | Stock | Stock            | Low    | Done           |
+|                    |                      |       | RPM              | Med    | Done           |
+|                    |                      |       | DE\_IVAExtension | High   | Done           |
+|                    |                      |       | UltimateRetro    | Med    | Done (2)       |
+|                    |                      |       | UltimateGlass    | High   | Done           |
+|                    |                      |       | DE+MAS           | Near   | Done           |
+| PPD-12 Cupola      | cupola               | Stock | Stock            | Low    | Done           |
+|                    |                      |       | RPM              | Med    | Done           |
+|                    |                      |       | DE\_IVAExtension | High   | Done           |
+| KV-1               | kv1Pod               | MH    | MH               | Low    | Done           |
+|                    |                      |       | ASET for MH      | High   | Done           |
+| KV-2               | kv2Pod               | MH    | MH               | Low    | Done           |
+|                    |                      |       | ASET for MH      | High   | Done           |
+| KV-3               | kv3Pod               | MH    | MH               | Low    | Done           |
+|                    |                      |       | ASET for MH      | High   | Done           |
+| Mk2 Command Pod    | Mk2Pod               | MH    | MH               | Low    | Done           |
+|                    |                      |       | ASET for MH      | High   | Done           |
+|                    |                      |       | ASET for MH+MAS  | Near   | Done           |
+| M.E.M.             | MEMLander            | MH    | MH               | Low    | Done           |
+|                    |                      |       | ASET for MH      | High   | Done           |
+|                    |                      |       | ASET for MH+MAS  | Near   | Done           |
+| Probe Control Room |                      | PCR   | PCR              | Med    |                |
+|                    |                      |       | DE\_IVAExtension | High   |                |
+| Alcor              |                      | Alcor | Alcor            | High   |                |
+|                    |                      |       | Alcor+MAS        | Near   |                |
 
 - (1) :: Mk1 Inline WarbirdsSI variant display "INITIALIZATION ERROR", but seems benign.
   Will eventually try to fix.
