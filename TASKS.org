@@ -47,9 +47,9 @@
 * DONE [2/2] 0.7.1 Tasks
 ** DONE Add thanks to electrocutor
 ** DONE Support Missing History
-* TODO [0/8] 0.8 Tasks
+* TODO [1/9] 0.8 Tasks
 ** TODO Support ALCOR
-** TODO Convert README.org to README.md
+** DONE Convert README.org to README.md
 - Use view on GitHub to update post.
 ** TODO Add Spacedock, GitHub, CKAN and Curse download links
   - N/A if not yet avail
