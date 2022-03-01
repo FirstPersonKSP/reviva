@@ -324,13 +324,13 @@ are replaced by the superb MAS_ALCOR_MFD2 which simulates a near future avionics
 | KV-3               | kv3Pod              | MH           | MH              | Low    | Done           |
 |                    |                     |              | ASET for MH     | High   | Done           |
 |--------------------+---------------------+--------------+-----------------+--------+----------------|
-| Mk2 Command Pod    | Mk2Pod              | MH           | MH              | Low    |                |
-|                    |                     |              | ASET for MH     | High   |                |
-|                    |                     |              | ASET for MH+MAS | Near   |                |
+| Mk2 Command Pod    | Mk2Pod              | MH           | MH              | Low    | Done           |
+|                    |                     |              | ASET for MH     | High   | Done           |
+|                    |                     |              | ASET for MH+MAS | Near   | Done           |
 |--------------------+---------------------+--------------+-----------------+--------+----------------|
-| M.E.M.             | MEMLander           | MH           | MH              | Low    |                |
-|                    |                     |              | ASET for MH     | High   |                |
-|                    |                     |              | ASET for MH+MAS | Near   |                |
+| M.E.M.             | MEMLander           | MH           | MH              | Low    | Done           |
+|                    |                     |              | ASET for MH     | High   | Done           |
+|                    |                     |              | ASET for MH+MAS | Near   | Done           |
 |--------------------+---------------------+--------------+-----------------+--------+----------------|
 | Probe Control Room |                     | PCR          | PCR             | Med    |                |
 |                    |                     |              | DE_IVAExtension | High   |                |
