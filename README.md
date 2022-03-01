@@ -34,7 +34,7 @@ the coverage over time.
 
 ## Recommended Mods
 
-- [MOARdv's Avionics System (MAS)][url:AvionicsSystems]
+- [MOARdV's Avionics System (MAS)][url:AvionicsSystems]
 - [DEIVAExtension][url:DEIVAExtension]
 
 ## Optional Mods
@@ -93,18 +93,18 @@ Features:
 
 ## Thanks
 
-- blowfish :: For B9PartSwitch which provides all the clever part switching and UI.
-- electrocutor :: For ideas in WPF and KSP forum that inspired idea.
-- sarbian :: For Module Manager which provides ways to reconfigure everything.
-- alexustas :: For the amazing ASET IVAs and props.
-- MOARdv, JonnyOThan :: For Raster Prop Monitor (RPM), making IVAs look all fancy.
-- MOARdv :: For Avionics System (MAS), making IVAs look even more fancy.
-- DemonEin :: For DE_IVAExtension which provides decent IVA for all of stock.
-- Honk Hogan :: For IVA_ASET_MAKING_HISTORY which provides decent IVA for Missing History.
-- theonegalen :: For Warbird Cockpits IVA, and forum posts that inspired that this is
+- [blowfish][kspf:blowfish] :: For B9PartSwitch which provides all the clever part switching and UI.
+- [Electrocutor][kspf:Electrocutor] :: For ideas in WPF and KSP forum that inspired idea.
+- [sarbian][kspf:sarbian] :: For Module Manager which provides ways to reconfigure everything.
+- [alexustas][kspf:alexustas] :: For the amazing ASET IVAs and props.
+- [MOARdV][kspf:MOARdV], [JonnyOThan][kspf:JonnyOThan] :: For Raster Prop Monitor (RPM), making IVAs look all fancy.
+- [MOARdV][kspf:MOARdV] :: For Avionics System (MAS), making IVAs look even more fancy.
+- [DemonEin][kspf:DemonEin] :: For DE_IVAExtension which provides decent IVA for all of stock.
+- [Honk Hogan][kspf:HonkHogan] :: For IVA_ASET_MAKING_HISTORY which provides decent IVA for Missing History.
+- [theonegalen][kspf:theonegalen] :: For Warbird Cockpits IVA, and forum posts that inspired that this is
   possible.
-- G'th :: For the Ultimate Shuttle IVA.
-- linuxgurugamer :: For the hopeful adoption of this mod if I wander off in the future.
+- [G'th][kspf:Gth] :: For the Ultimate Shuttle IVA.
+- [linuxgurugamer][kspf:linuxgurugamer] :: For the hopeful adoption of this mod if I wander off in the future.
 
 ## License
 
@@ -190,7 +190,7 @@ existence that can work on KSP 1.12.x - if you know of more let the mod author k
 | Required    | B9PartSwitch                     | Stock                 | -       | General part switching mechanics             |
 | Required    | ModuleManager                    | Stock                 | -       | Patching mod configuration                   |
 | Required    | RasterPropMonitor (RPM)          | Stock                 | Done    | More complex IVA than stock, includes IVA    |
-| Recommended | MOARdv's Avionics System (MAS)   | Stock                 | Done    | Successor to RPM (1), includes low tech      |
+| Recommended | MOARdV's Avionics System (MAS)   | Stock                 | Done    | Successor to RPM (1), includes low tech      |
 |             |                                  |                       |         | Mk1, Mk1-3 and Mk1 Lander.                   |
 | Recommended | DE_IVAExtension                  | Stock                 | Done    | High tech IVA for all of Stock               |
 | Recommended | ASET IVA for Making History Pods | Making History        | Planned | High tech IVA for all of Making History      |
@@ -209,7 +209,7 @@ existence that can work on KSP 1.12.x - if you know of more let the mod author k
 | Optional    | Kerbal Flying Saucers            | KerbalFlyingSaucers   |         | With MAS has improved alternatives (?)       |
 | Optional    | Kermantech                       | Stock                 |         | Mk3 Shuttle IVA                              |
 | Optional    | Apex                             | Stock                 |         | Mk3 Shuttle IVA                              |
-| Optional    | MOARdvPlus                       | BDB                   |         | With MAS, three BDB Kane/Sarnus IVA (Apollo) |
+| Optional    | MOARdVPlus                       | BDB                   |         | With MAS, three BDB Kane/Sarnus IVA (Apollo) |
 | Optional    | NiceMK (?)                       | NiceMK (?)            |         | ?                                            |
 | Optional    | Falcon (?)                       | AirplanePlus (?)      |         | ?                                            |
 | Optional    | ColdwarAerospace (?)             | ColdwareAerospace (?) |         | ?                                            |
@@ -376,3 +376,13 @@ Happy to recieve pull requests on GitHub for improvements, more IVA support, etc
 [url:WarbirdCockpits]: https://forum.kerbalspaceprogram.com/index.php?/topic/160720-wip131-warbird-cockpits-03pre-mk1-capsule-mk1-inline-cockpit-mk2-inline-cockpit/
 [url:UltimateShuttleIVA]: https://forum.kerbalspaceprogram.com/index.php?/topic/174898-14x-ultimate-shuttle-iva-10-woop-woop/
 [url:ASETIVAforMakingHistoryPods]: https://forum.kerbalspaceprogram.com/index.php?/topic/187162-17xaset-iva-for-making-history-pods/
+[kspf:blowfish]: https://forum.kerbalspaceprogram.com/index.php?/profile/119688-blowfish/
+[kspf:Electrocutor]: https://forum.kerbalspaceprogram.com/index.php?/profile/109593-electrocutor/
+[kspf:sarbian]: https://forum.kerbalspaceprogram.com/index.php?/profile/57146-sarbian/
+[kspf:alexustas]: https://forum.kerbalspaceprogram.com/index.php?/profile/78632-alexustas/
+[kspf:MOARdV]: https://forum.kerbalspaceprogram.com/index.php?/profile/60950-moardv/
+[kspf:DemonEin]: https://forum.kerbalspaceprogram.com/index.php?/profile/199038-demonein/
+[kspf:HonkHogan]: https://forum.kerbalspaceprogram.com/index.php?/profile/199383-honkhogan/
+[kspf:theonegalen]: https://forum.kerbalspaceprogram.com/index.php?/profile/71012-theonegalen/
+[kspf:Gth]: https://forum.kerbalspaceprogram.com/index.php?/profile/98595-gth/
+[kspf:linuxgurugamer]: https://forum.kerbalspaceprogram.com/index.php?/profile/129964-linuxgurugamer/
