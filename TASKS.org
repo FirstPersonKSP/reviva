@@ -46,14 +46,8 @@
 
 * TODO [1/10] 0.8 Tasks
 ** DONE Add thanks to electrocutor
-** TODO Seperate out iva into sub-dirs ckan modid
-Each sub-directory named after the mod that provides the IVA (not the command
-module affected):
-- Squad :: Only squad command pods, and only RPM and/or MAS provided IVA
-- MissingHistory :: Similar for missing history.
-- Warbirds :: Only IVA provided by Warbirds, some of these modify Squad
-- Alcor :: ALCOR mod, only affects itself
-- VexarpIVA :: ...
+** TODO Support Missing History
+** TODO Support ALCOR
 ** TODO Add Spacedock, GitHub, CKAN and Curse download links
   - N/A if not yet avail
 ** TODO Test CKAN install
@@ -97,6 +91,15 @@ module affected):
 [ERR 22:28:03.069] Cannot find an InternalModule of typename 'DPAI_RPM'
 [ERR 22:28:03.069] Cannot find an InternalModule of typename 'DPAI_RPM'
 #+end_example
+* TODO [0/2] 0.9 Tasks
+** TODO Separate out iva into sub-dirs ckan modid
+Each sub-directory named after the mod that provides the IVA (not the command
+module affected):
+- Squad :: Only squad command pods, and only RPM and/or MAS provided IVA
+- MissingHistory :: Similar for missing history.
+- Warbirds :: Only IVA provided by Warbirds, some of these modify Squad
+- Alcor :: ALCOR mod, only affects itself
+- VexarpIVA :: ...
 ** TODO Support popular mods
 *** TODO Warbirds - SXT
 *** TODO Warbirds - AirplanePlus
@@ -105,13 +108,10 @@ module affected):
 *** TODO Alcor
 *** TODO Opt Spaceplane
 *** TODO Vexarp IVA - NFSpacecraft
-
-* TODO [0/1] 0.9 Tasks
-** TODO Support most IVA mods that work
-
-* TODO [/] 1.0 Tasks
+* TODO [0/2] 1.0 Tasks
 ** TODO Publish on "Add-on Releases" section of KSP forums
 
+** TODO Support most IVA mods that work
 * TODO [0/5] Future Ideas
 ** TODO Add in-game option to allow in-flight switching
   - Default is enabled
