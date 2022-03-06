@@ -26,7 +26,7 @@ the coverage over time.
   - [GitHub Latest Release][url:GitHubLatest]
     - Download and extract the Reviva-x.x.x.zip file at the root of your KSP installation.
   - SpaceDock - Soon
-  - CKAN - Soon
+  - CKAN - Available
   - Curse - Soon
 - [B9PartSwitch][url:B9PartSwitch]
 - [ModuleManager][url:ModuleManager]
@@ -34,11 +34,11 @@ the coverage over time.
 
 ## Recommended Mods
 
-- [MOARdV's Avionics System (MAS)][url:AvionicsSystems]
 - [DEIVAExtension][url:DEIVAExtension]
 
 ## Optional Mods
 
+- [MOARdV's Avionics System (MAS)][url:AvionicsSystems]
 - [ASET Mk1 Cockpit][url:ASETMk1Cockpit]
 - [ASET Mk1 Lander Can][url:ASETMk1LanderCan]
 - [ASET Mk1-2 Command Pod][url:ASETMk1-2CommandPod]
@@ -190,10 +190,10 @@ existence that can work on KSP 1.12.x - if you know of more let the mod author k
 | Required    | B9PartSwitch                     | Stock                 | -       | General part switching mechanics             |
 | Required    | ModuleManager                    | Stock                 | -       | Patching mod configuration                   |
 | Required    | RasterPropMonitor (RPM)          | Stock                 | Done    | More complex IVA than stock, includes IVA    |
-| Recommended | MOARdV's Avionics System (MAS)   | Stock                 | Done    | Successor to RPM (1), includes low tech      |
-|             |                                  |                       |         | Mk1, Mk1-3 and Mk1 Lander.                   |
 | Recommended | DE_IVAExtension                  | Stock                 | Done    | High tech IVA for all of Stock               |
 | Recommended | ASET IVA for Making History Pods | Making History        | Planned | High tech IVA for all of Making History      |
+| Optional    | MOARdV's Avionics System (MAS)   | Stock                 | Done    | Successor to RPM (1), includes low tech      |
+|             |                                  |                       |         | Mk1, Mk1-3 and Mk1 Lander.                   |
 | Optional    | ASET Mk1 Cockpit                 | Stock                 | Done    | High tech analog Mk1 Cockpit                 |
 | Optional    | ASET Mk1 Lander Can              | Stock                 | Done    | High tech Mk1 Lander                         |
 | Optional    | ASET Mk1-2 Command Pod           | Stock                 | Done    | High tech Mk1-3 Command Pod                  |
