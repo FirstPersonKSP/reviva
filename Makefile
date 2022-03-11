@@ -106,5 +106,5 @@ list-parts:
 	}' | sort -u
 
 github-release: package
-	gh release create $(GIT_TAG) --title "$(GIT_TAG)" --notes "" --prerelease
+	gh release create $(GIT_TAG) --title "$(GIT_TAG)" --notes ""
 	gh release upload $(GIT_TAG) $(BUILD)/$(PKG_ZIP)
