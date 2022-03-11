@@ -96,16 +96,8 @@ namespace Reviva
             needUpdate = false;
             canUpdate = false;
 
-            string oldName = GetCurrentInternalName();
             string newName = GetRequiredInternalName();
-
-            if (oldName == newName || newName == "")
-            {
-                LogError($"Internal model unchanged oldName={oldName} newName={newName}");
-                return;
-            }
-
-            Log($"Executing switch IVA {oldName} -> {newName}");
+            Log($"Switching IVA to {newName}");
 
             UnloadIVA();
             UpdateInternalConfig(newName);
@@ -116,35 +108,58 @@ namespace Reviva
 
         private bool HasInternalNameChanged()
         {
-            string oldName = GetCurrentInternalName();
+            string oldConfigName = GetCurrentInternalConfigName();
+            string oldModelName = GetCurrentInternalModelName();
             string newName = GetRequiredInternalName();
 
-#if REVIVA_DEBUG
-            Log($"Detecting switch IVA {oldName} -> {newName}");
-#endif
+            Log($"HasInternalNameChanged: oldConfigName={oldConfigName} oldModelName={oldModelName} newName={newName}");
             if (newName == "")
             {
-#if REVIVA_DEBUG
-                LogError("internalName is null or empty, no switch");
-#endif
-                return false;
-            }
-            if (oldName == newName)
-            {
-#if REVIVA_DEBUG
-                Log("internalName unchanged, no switch");
-#endif
+                LogError("InternalName is null or empty, no switch");
                 return false;
             }
 
-            Log($"Detected switch IVA {oldName} -> {newName}");
-            return true;
+            /*
+             * If oldModelName is non-null, then use this to check differences as that is
+             * the currently loaded in-flight dynamic IVA name.
+             */
+            if (oldModelName != null)
+            {
+                if (oldModelName != newName)
+                {
+                    Log($"InternalModel switch IVA {oldModelName} -> {newName}");
+                    return true;
+                }
+
+                Log("InternalModel unchanged, no in-flight dynamic IVA switch needed");
+                return false;
+            }
+
+	    /*
+	     * Otherwise the use the partInfo name.
+	     */
+            if (oldConfigName != newName)
+            {
+		Log($"InternalConfig switch IVA {oldConfigName} -> {newName}");
+                return true;
+            }
+
+	    Log("InternalConfig unchanged, no IVA switch needed");
+            return false;
         }
 
-	private string GetCurrentInternalName()
+	// Name of the part's partInfo internalConfig, used to spawn correct IVA
+	private string GetCurrentInternalConfigName()
         {
             ConfigNode internalConfig = this.part?.partInfo?.internalConfig;
             return GetConfigValue(internalConfig, "name");
+        }
+
+	// Name of the part's current internal model IVA, dynamically changes in flight
+	// Returns null if none available
+        private string GetCurrentInternalModelName()
+        {
+            return this.part?.internalModel?.name;
         }
 
         private string GetConfigValue(ConfigNode node, string id)
