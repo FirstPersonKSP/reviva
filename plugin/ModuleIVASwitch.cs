@@ -20,13 +20,26 @@ namespace Reviva
         public override void OnUpdate()
         {
 	    /*
-	     * Note this is only done when not in editor. This is fine because the
-	     * important piece of information, which internal name to use, is saved with
-	     * the vessel. The non-editor game will load the ship and detect a switch is
-	     * need first time (or dynamically) and do the right things.
+	     * DetectIVASwitch() is called when loading the ModuleIVASwitch, which happens
+	     * in several scenarios:
+	     * 
+	     * - When the vessel is loaded, and so all the part modules are loaded.
+	     * - When the module is modified by B9PartSwitch itself.
+	     * 
+	     * needUpdate: Has change has been detected?
+	     *		If true, should switch IVA when possible, additionally updateConfig is set to
+	     *		the ModuleIVASwitch config node.
+	     * 
+	     * canUpdate: Can change be made in this frame?
+	     *		If true, changing the IVA is safe to do.
+	     *		If false, not currently possible (currently in the IVA that is switching for
+	     *		example), the actual update is deferred until this becomes true
+	     *		(or needUpdate becomes false).
 	     */
             base.OnUpdate();
 	    if (needUpdate)
+		CanIVASwitch();
+            if (needUpdate && canUpdate)
                 DoIVASwitch();
         }
 
@@ -36,6 +49,7 @@ namespace Reviva
         /*  -------------------------------------------------------------------------------- */
 
         private bool needUpdate = false;
+        private bool canUpdate = false;
         private ConfigNode updateConfig = null;
         private RPMComputer rpmComputer = null;
         private MASComputer masComputer = null;
@@ -53,9 +67,34 @@ namespace Reviva
             updateConfig = needUpdate ? node : null;
         }
 
+        private void CanIVASwitch()
+        {
+            canUpdate = true;
+
+            /*
+             * Disallow switching IVA if in the active vessel, and viewing the IVA.
+	     * 
+	     * Logic here is based on ideas from AvionicsSystem:
+	     * - https://github.com/MOARdV/AvionicsSystems
+	     *   Source/MASVesselComputer.cs - ActiveVessel()
+             */
+            if (this.vessel.isActiveVessel)
+            {
+                var mode = CameraManager.Instance.currentCameraMode;
+		if (mode == CameraManager.CameraMode.IVA || mode == CameraManager.CameraMode.Internal)
+                {
+#if REVIVA_DEBUG
+		    Log($"Defer switch IVA, active vessel IVA in view");
+#endif
+                    canUpdate = false;
+                }
+            }
+        }
+
         private void DoIVASwitch()
         {
             needUpdate = false;
+            canUpdate = false;
 
             string oldName = GetCurrentInternalName();
             string newName = GetRequiredInternalName();
@@ -80,17 +119,25 @@ namespace Reviva
             string oldName = GetCurrentInternalName();
             string newName = GetRequiredInternalName();
 
-            Log($"Detected switch IVA {oldName} -> {newName}");
+#if REVIVA_DEBUG
+            Log($"Detecting switch IVA {oldName} -> {newName}");
+#endif
             if (newName == "")
             {
+#if REVIVA_DEBUG
                 LogError("internalName is null or empty, no switch");
+#endif
                 return false;
             }
             if (oldName == newName)
             {
+#if REVIVA_DEBUG
                 Log("internalName unchanged, no switch");
+#endif
                 return false;
             }
+
+            Log($"Detected switch IVA {oldName} -> {newName}");
             return true;
         }
 
