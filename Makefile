@@ -1,5 +1,6 @@
 # KSP	= /mnt/c/Program Files (x86)/Steam/steamapps/common/Kerbal Space Program
 KSP		= /mnt/c/Games/KSP-Dev
+KSP_VER		= 1.12.3
 MANAGED		= $(KSP)/KSP_x64_Data/Managed
 
 CSC		= csc
@@ -30,6 +31,9 @@ VER_BUILD	= $(word 4,$(VER))
 VER_SHA		= $(word 5,$(VER))
 GIT_TAG		= $(VER_MAJOR).$(VER_MINOR).$(VER_PATCH)
 PKG_ZIP		= Reviva-$(GIT_TAG).zip
+
+SD_USER		= 610yesnolovely
+SD_MODID	= 2990
 
 build: $(DLL)
 
@@ -105,6 +109,29 @@ list-parts:
 		print name;								\
 	}' | sort -u
 
-github-release: package
-	gh release create $(GIT_TAG) --title "$(GIT_TAG)" --notes ""
+CHANGES	= Release $(GIT_TAG)
+
+github-release:
+	gh auth status
+	gh release create $(GIT_TAG) --title "$(GIT_TAG)" --notes "$(CHANGES)"
 	gh release upload $(GIT_TAG) $(BUILD)/$(PKG_ZIP)
+
+spacedock-login:
+	1pass --login-valid
+	curl -F username=$(SD_USER) \
+		-F password=`1pass -p SpaceDock` \
+		-c ./cookies "https://spacedock.info/api/login"
+
+spacedock-release:
+	curl -c ./cookies -F "version=$(GIT_TAG)" \
+		-F "changelog=$(CHANGES)" \
+		-F "game-version=$(KSP_VER)" \
+		-F "notify-followers=yes" \
+		-F "zipball=@$(BUILD)/$(PKG_ZIP)" \
+		"https://spacedock.info/api/mod/$(SD_MODID)/update"
+
+release:
+	$(MAKE) package
+	$(MAKE) github-release
+	$(MAKE) spacedock-login
+	$(MAKE) spacedock-release
