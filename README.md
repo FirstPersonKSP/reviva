@@ -48,7 +48,14 @@ the coverage over time.
 
 ## Changes
 
-### 0.7.1 Pre-Release (28th Feb 2022)
+### 0.7.2 Release (11th Mar 2022)
+
+Fixes:
+
+- Undocking two of same craft causing crash ([url:GitHubIssue3])
+- Correctly switch IVA for in-flight craft where multiple similar craft present ([url:GitHubIssue4])
+
+### 0.7.1 Release (28th Feb 2022)
 
 - Support Missing History KV-1, KV-2, KV-3, MK2 command pod and M.E.M. lander.
 - Configurations for Stock, ASET IVA for Making History Pods, and MAS alternatives for Mk2
@@ -365,6 +372,8 @@ Happy to recieve pull requests on GitHub for improvements, more IVA support, etc
 [url:GitHubLatest]: https://github.com/harveyt/reviva/releases/latest
 [url:GitHubREADME]: https://github.com/harveyt/reviva/blob/main/README.md
 [url:GitHubIssues]: https://github.com/harveyt/reviva/issues
+[url:GitHubIssue3]: https://github.com/harveyt/reviva/issues/3 "GitHub Issue 3"
+[url:GitHubIssue4]: https://github.com/harveyt/reviva/issues/4 "GitHub Issue 4"
 [url:B9PartSwitch]: https://forum.kerbalspaceprogram.com/index.php?/topic/140541-1112-b9partswitch-v2180-march-17/
 [url:ModuleManager]: https://forum.kerbalspaceprogram.com/index.php?/topic/50533-18x-112x-module-manager-421-august-1st-2021-locked-inside-edition/
 [url:RasterPropMonitor]: https://forum.kerbalspaceprogram.com/index.php?/topic/190737-18x-112x-rasterpropmonitor-adopted/
