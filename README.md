@@ -52,8 +52,8 @@ the coverage over time.
 
 Fixes:
 
-- Undocking two of same craft causing crash ([url:GitHubIssue3])
-- Correctly switch IVA for in-flight craft where multiple similar craft present ([url:GitHubIssue4])
+- Undocking two of same craft causing crash ([3][url:GitHubIssue3])
+- Correctly switch IVA for in-flight craft where multiple similar craft present ([4][url:GitHubIssue4])
 
 ### 0.7.1 Release (28th Feb 2022)
 
