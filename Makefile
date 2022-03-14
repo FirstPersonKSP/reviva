@@ -123,7 +123,7 @@ spacedock-login:
 		-c ./cookies "https://spacedock.info/api/login"
 
 spacedock-release:
-	curl -c ./cookies -F "version=$(GIT_TAG)" \
+	curl -c ./cookies -b ./cookies -F "version=$(GIT_TAG)" \
 		-F "changelog=$(CHANGES)" \
 		-F "game-version=$(KSP_VER)" \
 		-F "notify-followers=yes" \
