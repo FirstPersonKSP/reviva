@@ -96,13 +96,31 @@ namespace Reviva
             needUpdate = false;
             canUpdate = false;
 
+            string oldName = GetCurrentInternalConfigName();
             string newName = GetRequiredInternalName();
             Log($"Switching IVA to {newName}");
 
-            UnloadIVA();
-            UpdateInternalConfig(newName);
+            if (!UnloadIVA())
+            {
+                return;
+            }
+
+            if (!UpdateInternalConfig(newName))
+            {
+                LogError($"Error recovery, remaining with IVA {oldName}");
+                LoadIVA();
+                return;
+            }
+
             RebootRPMComputer();
-            RefreshInternalModel();
+
+            if (!RefreshInternalModel())
+            {
+		// Hopefully revert to old IVA if something goes wrong
+                LogError($"Error recovery, remaining with IVA {oldName}");
+                UpdateInternalConfig(oldName);
+            }
+
             LoadIVA();
         }
 
@@ -162,7 +180,7 @@ namespace Reviva
             return this.part?.internalModel?.name;
         }
 
-        private string GetConfigValue(ConfigNode node, string id)
+	private string GetConfigValue(ConfigNode node, string id)
         {
             if (node == null || !node.HasValue(id))
                 return "";
@@ -174,29 +192,31 @@ namespace Reviva
             return this.internalName ?? "";
         }
 
-        private void UnloadIVA()
+        private bool UnloadIVA()
         {
             if (!HighLogic.LoadedSceneIsFlight)
             {
                 Log("Not in flight scene, IVA not unloaded");
-                return;
+                return false;
             }
 
             Log("Unload in-flight IVA");
             this.part.DespawnIVA();
+            return true;
         }
 
-        private void UpdateInternalConfig(string newName)
+        private bool UpdateInternalConfig(string newName)
         {
             if (this.part?.partInfo == null)
             {
                 LogError("No part or partinfo, cannot switch");
-                return;
+                return false;
             }
 
             ConfigNode newInternalConfig = new ConfigNode("INTERNAL");
             newInternalConfig.AddValue("name", newName);
             this.part.partInfo.internalConfig = newInternalConfig;
+            return true;
         }
 
         private void RebootRPMComputer()
@@ -210,21 +230,24 @@ namespace Reviva
             this.masComputer.Reboot(this.updateConfig);
         }
 
-        private void RefreshInternalModel()
+        private bool RefreshInternalModel()
         {
             if (!HighLogic.LoadedSceneIsFlight)
             {
                 Log("Not in flight scene, internal model not refreshed");
-                return;
+                return false;
             }
             if (this.part == null)
             {
                 LogError("No current part, internal model not refreshed");
-                return;
+                return false;
             }
 
             Log("Refresh IVA interal model");
             this.part.CreateInternalModel();
+
+            // Check internal model is valid, fail if not. Usually configuration error.
+            return (this.part.internalModel != null);
         }
 
         private void LoadIVA()
