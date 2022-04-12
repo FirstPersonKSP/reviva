@@ -25,7 +25,7 @@ the coverage over time.
   - [KSP Forums][url:Forum]
   - [GitHub Latest Release][url:GitHubLatest]
     - Download and extract the Reviva-x.x.x.zip file at the root of your KSP installation.
-  - SpaceDock - [url:SpaceDock]
+  - SpaceDock - [SpaceDock][url:SpaceDock]
   - CKAN - Available
   - Curse - Soon
 - [B9PartSwitch][url:B9PartSwitch]
