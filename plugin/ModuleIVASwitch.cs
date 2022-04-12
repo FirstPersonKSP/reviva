@@ -15,6 +15,23 @@ namespace Reviva
         {
             base.OnLoad(node);
             DetectIVASwitch(node);
+
+            /*
+             * To support QuickIVA and for sanity, if loading vessel before flight scene
+	     * is ready, can do the internal configuration update which will cause the
+	     * right IVA to be loaded when QuickIVA goes direct to IVA.
+             */
+            if (needUpdate && this.vessel != null)
+            {
+		Log($"Trying to switch IVA to for newly loaded vessel");
+                CanIVASwitch();
+                if (canUpdate)
+                {
+                    string newName = GetRequiredInternalName();
+                    Log($"Switching IVA to {newName} before vessel loads (for QuickIVA support)");
+                    DoIVASwitch();
+                }
+            }
         }
 
         public override void OnUpdate()
@@ -78,7 +95,7 @@ namespace Reviva
 	     * - https://github.com/MOARdV/AvionicsSystems
 	     *   Source/MASVesselComputer.cs - ActiveVessel()
              */
-            if (this.vessel.isActiveVessel)
+            if (this.vessel != null && this.vessel.isActiveVessel)
             {
                 var mode = CameraManager.Instance.currentCameraMode;
 		if (mode == CameraManager.CameraMode.IVA || mode == CameraManager.CameraMode.Internal)
