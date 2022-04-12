@@ -25,7 +25,7 @@ the coverage over time.
   - [KSP Forums][url:Forum]
   - [GitHub Latest Release][url:GitHubLatest]
     - Download and extract the Reviva-x.x.x.zip file at the root of your KSP installation.
-  - SpaceDock - Soon
+  - SpaceDock - [url:SpaceDock]
   - CKAN - Available
   - Curse - Soon
 - [B9PartSwitch][url:B9PartSwitch]
@@ -383,6 +383,7 @@ Happy to recieve pull requests on GitHub for improvements, more IVA support, etc
 [url:GitHubIssue4]: https://github.com/harveyt/reviva/issues/4 "GitHub Issue 4"
 [url:GitHubIssue5]: https://github.com/harveyt/reviva/issues/5 "GitHub Issue 5"
 [url:GitHubIssue6]: https://github.com/harveyt/reviva/issues/6 "GitHub Issue 6"
+[url:SpaceDock]: https://spacedock.info/mod/2990/Reviva "SpaceDock"
 [url:B9PartSwitch]: https://forum.kerbalspaceprogram.com/index.php?/topic/140541-1112-b9partswitch-v2180-march-17/
 [url:ModuleManager]: https://forum.kerbalspaceprogram.com/index.php?/topic/50533-18x-112x-module-manager-421-august-1st-2021-locked-inside-edition/
 [url:RasterPropMonitor]: https://forum.kerbalspaceprogram.com/index.php?/topic/190737-18x-112x-rasterpropmonitor-adopted/
