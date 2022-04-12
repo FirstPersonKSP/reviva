@@ -48,12 +48,19 @@ the coverage over time.
 
 ## Changes
 
+### 0.7.3 Release (12th Apr 2022)
+
+Fixes:
+
+- Support QuickIVA when loading strait to IVA ([GitHub Issue #6][url:GitHubIssue6])
+- Handle any configuration errors by remaining on same IVA ([GitHub Issue #5][url:GitHubIssue5])
+
 ### 0.7.2 Release (11th Mar 2022)
 
 Fixes:
 
-- Undocking two of same craft causing crash ([3][url:GitHubIssue3])
-- Correctly switch IVA for in-flight craft where multiple similar craft present ([4][url:GitHubIssue4])
+- Undocking two of same craft causing crash ([GitHub Issue #3][url:GitHubIssue3])
+- Correctly switch IVA for in-flight craft where multiple similar craft present ([GitHub Issue #4][url:GitHubIssue4])
 
 ### 0.7.1 Release (28th Feb 2022)
 
@@ -374,6 +381,8 @@ Happy to recieve pull requests on GitHub for improvements, more IVA support, etc
 [url:GitHubIssues]: https://github.com/harveyt/reviva/issues
 [url:GitHubIssue3]: https://github.com/harveyt/reviva/issues/3 "GitHub Issue 3"
 [url:GitHubIssue4]: https://github.com/harveyt/reviva/issues/4 "GitHub Issue 4"
+[url:GitHubIssue5]: https://github.com/harveyt/reviva/issues/5 "GitHub Issue 5"
+[url:GitHubIssue6]: https://github.com/harveyt/reviva/issues/6 "GitHub Issue 6"
 [url:B9PartSwitch]: https://forum.kerbalspaceprogram.com/index.php?/topic/140541-1112-b9partswitch-v2180-march-17/
 [url:ModuleManager]: https://forum.kerbalspaceprogram.com/index.php?/topic/50533-18x-112x-module-manager-421-august-1st-2021-locked-inside-edition/
 [url:RasterPropMonitor]: https://forum.kerbalspaceprogram.com/index.php?/topic/190737-18x-112x-rasterpropmonitor-adopted/
