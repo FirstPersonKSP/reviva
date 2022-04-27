@@ -239,6 +239,7 @@ existence that can work on KSP 1.12.x - if you know of more let the mod author k
 | Untested    | MK3 Space Shuttle IVA              | RPM     | Stock                 |         | Mk3 Cockpit                                |
 | Untested    | Firespitter Apache IVA Upgrade     | MAS     | Firespitter           |         | Apache Cockpit                             |
 | Untested    | ColdwarAerospace (?)               | ?       | ColdwareAerospace     |         | ?                                          |
+| Untested    | HorizonsIVA-Project                | RPM     | KAX, BDB              |         | C2B Cockpit, BDB LM                        |
 |             |                                    |         |                       |         |                                            |
 
 - (1) :: You can have either RPM or MAS, or in fact both at the same time. MAS includes upgrade
