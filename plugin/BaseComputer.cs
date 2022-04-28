@@ -124,6 +124,11 @@ namespace Reviva
             this.computerData.CopyTo(this.computerConfig);
         }
 
+        protected virtual void RecreateComputerPreAddHook(Part ownerPart, ConfigNode newConfig)
+        {
+	    // Sub-classes may hook here to do something before the Computer is added back.
+        }
+
         private void RecreateComputer()
         {
             ConfigNode oldConfig = FindModuleConfig(this.computer) ?? new ConfigNode();
@@ -140,6 +145,10 @@ namespace Reviva
             {
                 index = DestroyModule(this.computer);
             }
+
+	    // Sub-classes may need to do more with the config: MAS needs to update partInfo.
+            RecreateComputerPreAddHook(this.part, newConfig);
+
             AddModuleAt(index, newConfig);
         }
 
@@ -201,12 +210,12 @@ namespace Reviva
             }
         }
 
-        private static void Log(string text)
+        protected static void Log(string text)
         {
             Debug.Log($"[Reviva] {text}");
         }
 
-        private static void LogError(string text)
+        protected static void LogError(string text)
         {
             Debug.LogError($"[Reviva] {text}");
         }

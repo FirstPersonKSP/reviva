@@ -44,6 +44,37 @@ namespace Reviva
 ");
         }
 
+	/*
+	 * MASFlightComputer does not use OnLoad() to get PERSISTENT_VARIABLES,
+	 * RPM_COLOROVERRIDE, or MAS_ACTION_GROUP.  These have to be updated in the
+	 * part.partInfo - which is sort of sketchy, but essentially Reviva is taking
+	 * control of INTERNAL anyway, so now also MASFlightComputer config.
+	 */
+        protected override void RecreateComputerPreAddHook(Part ownerPart, ConfigNode newConfig)
+        {
+            base.RecreateComputerPreAddHook(ownerPart, newConfig);
+
+            /*
+             * Find the existing FlightComputer in partInfo and change it to the new one.
+             */
+            ConfigNode[] oldComputerNodes = ownerPart.partInfo.partConfig.GetNodes("MODULE", "name", this.ModuleName);
+            foreach (ConfigNode oldComputerNode in oldComputerNodes)
+            {
+#if REVIVA_DEBUG
+                Log($"Removing: {oldComputerNode}");
+#endif
+                ownerPart.partInfo.partConfig.RemoveNode(oldComputerNode);
+            }
+
+	    ConfigNode newComputerNode = new ConfigNode("MODULE");
+	    newConfig.CopyTo(newComputerNode);
+
+#if REVIVA_DEBUG
+	    Log($"Adding: {newComputerNode}");
+#endif
+	    ownerPart.partInfo.partConfig.AddNode(newComputerNode);
+        }
+
         /* ------------------------------------------------------------------------------- */
         private static readonly bool masEnabled;
         private static readonly string masAssembly = "AvionicsSystems";

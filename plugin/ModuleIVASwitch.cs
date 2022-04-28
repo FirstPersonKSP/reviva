@@ -116,6 +116,9 @@ namespace Reviva
             string oldName = GetCurrentInternalConfigName();
             string newName = GetRequiredInternalName();
             Log($"Switching IVA to {newName}");
+#if REVIVA_DEBUG
+	    Log($"updateConfig={updateConfig}");
+#endif
 
             if (!UnloadIVA())
             {
