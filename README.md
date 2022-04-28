@@ -211,9 +211,7 @@ existence that can work on KSP 1.12.x - if you know of more let the mod author k
 | Optional    | [ASET Mk1 Cockpit][url:ASETMk1Cockpit]                              | CKAN      | RPM     | Stock                 | Done    | High tech analog Mk1 Cockpit               |
 | Optional    | [ASET Mk1 Lander Can][url:ASETMk1LanderCan]                         | CKAN      | RPM     | Stock                 | Done    | High tech Mk1 Lander                       |
 | Optional    | [ASET Mk1-2 Command Pod][url:ASETMk1-2CommandPod]                   | CKAN      | RPM     | Stock                 | Done    | High tech Mk1-3 Command Pod                |
-| Optional    | [Warbird Cockpits][url:WarbirdCockpits]                             | SpaceDock | RPM     | Stock, SXT,           | Partial | Analog avaition cockpits for several mods  |
-|             |                                                                     |           |         | AirplanePlus,         |         |                                            |
-|             |                                                                     |           |         | Kerbonov              |         |                                            |
+| Optional    | [Warbird Cockpits][url:WarbirdCockpits]                             | SpaceDock | RPM     | Stock,SXT,AP,Kerbonov | Partial | Analog avaition cockpits for several mods  |
 | Optional    | [Ultimate Shuttle IVA][url:UltimateShuttleIVA]                      | SpaceDock | RPM+MAS | Stock                 | Done    | Retro and modern MK3 Cockpit IVA (2)       |
 | Optional    | [MOARdVPlus][url:MOARdVPlus]                                        | GitHub    | MAS     | BDB                   | Planned | BDB Kane/Sarnus IVA (Apollo)               |
 | Untested    | [Airplane Plus IVA Pack][url:APIP]                                  | GitHub    | RPM     | AirplanePlus          | Planned | Various plane/chopper cockpits             |
