@@ -48,6 +48,27 @@ the coverage over time.
 
 ## Changes
 
+### 0.7.4 Release (28th Apr 2022)
+
+Fixes:
+
+- Added "Experimental" support for MOARdvPlus BDB Kane (Apollo) CM:
+  - [MOARdV's Avionics System (MAS)][url:AvionicsSystems]
+  - Only covers the standard 3 crew Kane/Apollo CM.
+  - Original MOARdVPlus FASA variants still present and unmodified,
+    they're hidden, don't use them as they won't work as well.
+  - Reviva MM config changed to support BDB 1.10.x naming
+  - Specialized action group switches work (eg. EVA Light)
+  - Glass variant also seems to work.
+  - Interior model does not match exterior so "Interior Overlay" will not look great.
+  - Will improve when BDB updates the interior.
+  - Also even more "Experimental", all Mk1-3 IVA interiors also available and seem to be functional,
+    but definitely look even more silly with "Interior Overlay". Will not ever fix this.
+- Fix MASFlightComputer support to correctly update config data.
+  - This was required to get the MOARdVPlus special action groups to work.
+  - Probably helps make other IVA a little more accurate.
+- Updated README.md with more IVAs, and links to completed mods.
+
 ### 0.7.3 Release (12th Apr 2022)
 
 Fixes:
