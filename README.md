@@ -205,7 +205,7 @@ existence that can work on KSP 1.12.x - if you know of more let the mod author k
 | Required    | [ModuleManager][url:ModuleManager]                                  | CKAN      | -       | Stock                 | -       | Patching mod configuration                 |
 | Required    | [RasterPropMonitor (RPM)][url:RasterPropMonitor]                    | CKAN      | RPM     | Stock                 | Done    | More complex IVA than stock, includes IVA  |
 | Recommended | [DE_IVAExtension][url:DEIVAExtension]                               | CKAN      | RPM     | Stock                 | Done    | High tech IVA for all of Stock             |
-| Recommended | [ASET IVA for Making History Pods][url:ASETIVAforMakingHistoryPods] | GitHub    | RPM     | Making History        | Planned | High tech IVA for all of Making History    |
+| Recommended | [ASET IVA for Making History Pods][url:ASETIVAforMakingHistoryPods] | GitHub    | RPM     | Making History        | Done    | High tech IVA for all of Making History    |
 | Optional    | [MOARdV's Avionics System (MAS)][url:AvionicsSystems]               | CKAN      | MAS     | Stock                 | Done    | Successor to RPM (1), includes low tech    |
 |             |                                                                     |           |         |                       |         | Mk1, Mk1-3 and Mk1 Lander.                 |
 | Optional    | [ASET Mk1 Cockpit][url:ASETMk1Cockpit]                              | CKAN      | RPM     | Stock                 | Done    | High tech analog Mk1 Cockpit               |
@@ -214,7 +214,7 @@ existence that can work on KSP 1.12.x - if you know of more let the mod author k
 | Optional    | [Warbird Cockpits][url:WarbirdCockpits]                             | SpaceDock | RPM     | Stock,SXT,AP,Kerbonov | Partial | Analog avaition cockpits for several mods  |
 | Optional    | [Ultimate Shuttle IVA][url:UltimateShuttleIVA]                      | SpaceDock | RPM+MAS | Stock                 | Done    | Retro and modern MK3 Cockpit IVA (2)       |
 | Optional    | [MOARdVPlus][url:MOARdVPlus]                                        | GitHub    | MAS     | BDB                   | Planned | BDB Kane/Sarnus IVA (Apollo)               |
-| Untested    | [Airplane Plus IVA Pack][url:APIP]                                  | GitHub    | RPM     | AirplanePlus          | Planned | Various plane/chopper cockpits             |
+| Untested    | [Airplane Plus IVA Pack][url:APIP]                                  | GitHub    | RPM     | AirplanePlus          | Done    | Various plane/chopper cockpits             |
 | Untested    | [ASET/RPM for Falcon cockpit][url:APF16]                            | KSPForum  | RPM     | AirplanePlus          | Planned | F-16/mk2 non-commerical IVA                |
 | Optional    | Probe Control Room                                                  | CKAN      | RPM     | PBC                   | Planned | Probe control room for probes              |
 | Optional    | ALCOR by ASET                                                       | CKAN      | RPM     | Alcor                 | Planned | High tech 3-man lander capsule             |
