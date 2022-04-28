@@ -213,8 +213,8 @@ existence that can work on KSP 1.12.x - if you know of more let the mod author k
 | Optional    | [ASET Mk1-2 Command Pod][url:ASETMk1-2CommandPod]                   | CKAN      | RPM     | Stock                 | Done    | High tech Mk1-3 Command Pod                |
 | Optional    | [Warbird Cockpits][url:WarbirdCockpits]                             | SpaceDock | RPM     | Stock,SXT,AP,Kerbonov | Partial | Analog avaition cockpits for several mods  |
 | Optional    | [Ultimate Shuttle IVA][url:UltimateShuttleIVA]                      | SpaceDock | RPM+MAS | Stock                 | Done    | Retro and modern MK3 Cockpit IVA (2)       |
-| Optional    | [MOARdVPlus][url:MOARdVPlus]                                        | GitHub    | MAS     | BDB                   | Planned | BDB Kane/Sarnus IVA (Apollo)               |
-| Untested    | [Airplane Plus IVA Pack][url:APIP]                                  | GitHub    | RPM     | AirplanePlus          | Done    | Various plane/chopper cockpits             |
+| Optional    | [MOARdVPlus][url:MOARdVPlus]                                        | GitHub    | MAS     | BDB                   | Done    | BDB Kane/Sarnus IVA (Apollo)               |
+| Untested    | [Airplane Plus IVA Pack][url:APIP]                                  | GitHub    | RPM     | AirplanePlus          | Planned | Various plane/chopper cockpits             |
 | Untested    | [ASET/RPM for Falcon cockpit][url:APF16]                            | KSPForum  | RPM     | AirplanePlus          | Planned | F-16/mk2 non-commerical IVA                |
 | Optional    | Probe Control Room                                                  | CKAN      | RPM     | PBC                   | Planned | Probe control room for probes              |
 | Optional    | ALCOR by ASET                                                       | CKAN      | RPM     | Alcor                 | Planned | High tech 3-man lander capsule             |
