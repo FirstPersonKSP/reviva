@@ -215,13 +215,13 @@ existence that can work on KSP 1.12.x - if you know of more let the mod author k
 |             |                                    |         | AirplanePlus,         |         |                                            |
 |             |                                    |         | Kerbonov              |         |                                            |
 | Optional    | Ultimate Shuttle IVA               | RPM+MAS | Stock                 | Done    | Retro and modern MK3 Cockpit IVA (2)       |
+| Optional    | MOARdVPlus                         | MAS     | BDB                   | Planned | BDB Kane/Sarnus IVA (Apollo)               |
+| Untested    | Airplane Plus IVA Pack             | RPM     | AirplanePlus          | Planned | Various plane/chopper cockpits             |
+| Untested    | ASET/RPM for Falcon cockpit        | RPM     | AirplanePlus          | Planned | F-16/mk2 non-commerical IVA                |
 | Optional    | Probe Control Room                 | RPM     | PBC                   | Planned | Probe control room for probes              |
 | Optional    | ALCOR by ASET                      | RPM     | Alcor                 | Planned | High tech 3-man lander capsule             |
 | Optional    | OPT Spaceplane                     | RPM     | Opt                   | Planned | Near and Far Future Spacecraft             |
 | Optional    | Vexarp IVA                         | MAS     | NFSpacecraft          | Planned | Near Future Spacecraft improved IVA        |
-| Untested    | ASET/RPM for Falcon cockpit        | RPM     | AirplanePlus          |         | F-16/mk2 non-commerical IVA                |
-| Untested    | Airplane Plus IVA Pack             | RPM     | AirplanePlus          |         | Various plane/chopper cockpits             |
-| Untested    | MOARdVPlus                         | MAS     | BDB                   |         | BDB Kane/Sarnus IVA (Apollo)               |
 | Untested    | Tundra Exploration                 | MAS     | TundraExploration     |         | Provides it's own MAS IVA alternatives (?) |
 | Untested    | Kerbal Flying Saucers              | MAS     | KerbalFlyingSaucers   |         | With MAS has improved alternatives (?)     |
 | Untested    | Kermantech MK3 IVA                 | RPM     | Stock                 |         | Mk3 Shuttle IVA                            |
