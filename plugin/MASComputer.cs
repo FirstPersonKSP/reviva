@@ -20,9 +20,6 @@ namespace Reviva
 
         protected override ConfigNode CreateDefaultData()
         {
-	    if (!this.ModuleIVASwitch.RPMComputer.IsEnabled)
-                return new ConfigNode();
-
             /*
 	     * If there is no MASFlightComputer data, the default is empty unless RPM is also
 	     * present in which case the best option is more likely some reasonable defaults
