@@ -392,18 +392,29 @@ are replaced by the superb `MAS_ALCOR_MFD2` which simulates a near future avioni
 |                            |                          |       | MAS              | Low    | Done           |
 |                            |                          |       | DE+MAS           | Near   | Done           |
 |----------------------------|--------------------------|-------|------------------|--------|----------------|
-| MK1 Viewer's Cockpit       | bellcockpit              | AP    | APIP             |        |                |
+| MK1 Viewer's Cockpit       | bellcockpit              | AP    | AP               |        |                |
+|                            |                          |       | APIP             |        |                |
 |                            |                          |       | Warbirds         |        |                |
-| Size 1.5 Cockpit           | bombardiercockpit        | AP    | APIP             |        |                |
-| MK1 Business Cockpit       | citationcockpit          | AP    | Warbirds         |        |                |
-| MK3S1 Cockpit              | cessnacockpit            | AP    | APIP             |        |                |
-| Mk2 Non-Commercial Cockpit | falconcockpit            | AP    | APF16            |        |                |
-| MK1 Non-Commerical Cockpit | fightercockpit           | AP    | APIP             |        |                |
-| MK3S1.5 Viewer's Cockpit   | hueycockpit              | AP    | APIP             |        |                |
-| MK1 Caged Inline Cockpit   | oldfightercockpit        | AP    | Warbirds         |        |                |
-| MK1 Supersonic Cockpit     | x1cockpit                | AP    | Warbirds         |        |                |
+| Size 1.5 Cockpit           | bombardiercockpit        | AP    | AP               |        |                |
+|                            |                          |       | APIP             |        |                |
+| MK1 Business Cockpit       | citationcockpit          | AP    | AP               |        |                |
+|                            |                          |       | Warbirds         |        |                |
+| MK3S1 Cockpit              | cessnacockpit            | AP    | AP               |        |                |
+|                            |                          |       | APIP             |        |                |
+| Mk2 Non-Commercial Cockpit | falconcockpit            | AP    | AP               |        |                |
+|                            |                          |       | APF16 RPM        |        |                |
+|                            |                          |       | APF16 ASET       |        |                |
+| MK1 Non-Commerical Cockpit | fightercockpit           | AP    | AP               |        |                |
+|                            |                          |       | APIP             |        |                |
+| MK3S1.5 Viewer's Cockpit   | hueycockpit              | AP    | AP               |        |                |
+|                            |                          |       | APIP             |        |                |
+| MK1 Caged Inline Cockpit   | oldfightercockpit        | AP    | AP               |        |                |
+|                            |                          |       | Warbirds         |        |                |
+| MK1 Supersonic Cockpit     | x1cockpit                | AP    | AP               |        |                |
+|                            |                          |       | Warbirds         |        |                |
 |                            |                          |       | WarbirdsSI       |        |                |
-| Size 2 Viewer's Cockpit II | b29cockpit               | AP    | Warbirds         |        |                |
+| Size 2 Viewer's Cockpit II | b29cockpit               | AP    | AP               |        |                |
+|                            |                          |       | Warbirds         |        |                |
 |----------------------------|--------------------------|-------|------------------|--------|----------------|
 | KN2?                       | KN2CabinAnalog           | KN    | Warbirds         |        |                |
 |                            |                          |       | WarbirdsSI       |        |                |
