@@ -45,6 +45,8 @@ the coverage over time.
 - [Warbird Cockpits][url:WarbirdCockpits]
 - [Ultimate Shuttle IVA][url:UltimateShuttleIVA]
 - [ASET IVA for Making History Pods][url:ASETIVAforMakingHistoryPods]
+- Many more, see [Support Progress][https://github.com/harveyt/reviva/blob/main/README.md#support-progress]
+  for the full list as more are supported.
 
 ## Changes
 
@@ -119,8 +121,16 @@ Features:
   - Note that this mod doesn't include the IVAs, but provides links for recommended or
     optional IVA mods, plus patches to allow them to run and be switched dynamically.
 
-- Very low overhead on performance: command modules get an extra ModuleIVASwitch, and switch
+- Very low overhead on in-game CPU/GPU performance: command modules get an extra ModuleIVASwitch, and switch
   detection only happens when changes are made.
+
+  - Note however that all the Internal modules are loaded into memory, so load times will be a little
+    slower, and memory usage a little higher for each IVA pack you install. Don't go too crazy. The
+    best way is to look at all the different IVA mods for a particular command pod or cockpit, try
+    them out and pick one or two.
+
+  - Note that the first option is usually the non-functional stock or original mod IVA, these
+    typically have less performance impact.
 
 - The different IVA selection does not change the characteristics, mass, cost or other
   data on the actual command pod: it's all visual for IVA. This means you can change at
@@ -513,6 +523,7 @@ Happy to recieve pull requests on GitHub for improvements, more IVA support, etc
 [kspf:sarbian]: https://forum.kerbalspaceprogram.com/index.php?/profile/57146-sarbian/
 [kspf:alexustas]: https://forum.kerbalspaceprogram.com/index.php?/profile/78632-alexustas/
 [kspf:MOARdV]: https://forum.kerbalspaceprogram.com/index.php?/profile/60950-moardv/
+[kspf:JonnyOThan]: https://forum.kerbalspaceprogram.com/index.php?/profile/40902-jonnyothan/
 [kspf:DemonEin]: https://forum.kerbalspaceprogram.com/index.php?/profile/199038-demonein/
 [kspf:HonkHogan]: https://forum.kerbalspaceprogram.com/index.php?/profile/199383-honkhogan/
 [kspf:theonegalen]: https://forum.kerbalspaceprogram.com/index.php?/profile/71012-theonegalen/
