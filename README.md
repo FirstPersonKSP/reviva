@@ -315,140 +315,149 @@ Note: DE+MAS is an Reviva specialized combination of `DE_IVAExtension` where one
 are replaced by the superb `MAS_ALCOR_MFD2` which simulates a near future avionics upgrade.
 
 
-| Name                       | CFG Name                 | From  | IVA              | Tech   | Style   | Support Status |
-|----------------------------|--------------------------|-------|------------------|--------|---------|----------------|
-| Mk1 Cockpit                | Mark1Cockpit             | Stock | Stock            | Low    | Stock   | Done           |
-|                            |                          |       | RPM              | Med    | RPM     | Done           |
-|                            |                          |       | DE\_IVAExtension | High   | RPM     | Done           |
-|                            |                          |       | ASET             | High   | RPM     | Done           |
-|                            |                          |       | DE+MAS           | Near   | RPM+MAS | Done           |
-| Mk1 Command Pod            | mk1pod\_v2               | Stock | Stock            | Low    | Stock   | Done           |
-|                            |                          |       | RPM              | Med    | RPM     | Done           |
-|                            |                          |       | DE\_IVAExtension | High   | RPM     | Done           |
-|                            |                          |       | Warbirds         | Med    | RPM     | Done           |
-|                            |                          |       | MAS              | Low    | MAS     | Done           |
-|                            |                          |       | DE+MAS           | Near   | RPM+MAS | Done           |
-| Mk1 Inline Cockpit         | Mark2Cockpit             | Stock | Stock            | Low    | Stock   | Done           |
-|                            |                          |       | DE\_IVAExtension | High   | RPM     | Done           |
-|                            |                          |       | Warbirds         | Medium | RPM     | Done           |
-|                            |                          |       | WarbirdsSI       | Medium | RPM     | Done (1)       |
-|                            |                          |       | WarbirdsRetro    | Low    | RPM     | Done           |
-|                            |                          |       | WarbirdsRetroSI  | Low    | RPM     | Done           |
-|                            |                          |       | DE+MAS           | Near   | RPM+MAS | Done           |
-| Mk1 Lander Can             | landerCabinSmall         | Stock | Stock            | Low    | Stock   | Done           |
-|                            |                          |       | RPM              | Med    | RPM     | Done           |
-|                            |                          |       | DE\_IVAExtension | High   | RPM     | Done           |
-|                            |                          |       | ASET             | Low    | RPM     | Done           |
-|                            |                          |       | MAS              | Low    | MAS     | Done           |
-|                            |                          |       | DE+MAS           | Near   | RPM+MAS | Done           |
-| Mk1-3 Command Pod          | mk1-3pod                 | Stock | Stock            | Low    | Stock   | Done           |
-|                            |                          |       | RPM              | Med    | RPM     | Done           |
-|                            |                          |       | DE\_IVAExtension | High   | RPM     | Done           |
-|                            |                          |       | ASET             | High   | RPM     | Done           |
-|                            |                          |       | MAS              | Low    | MAS     | Done           |
-|                            |                          |       | DE+MAS           | Near   | RPM+MAS | Done           |
-|                            |                          |       | Max-Ksp          | Low    | MAS     |                |
-| Mk2 Cockpit                | mk2Cockpit\_Standard     | Stock | Stock            | Low    | Stock   | Done           |
-|                            |                          |       | RPM              | Med    | RPM     | Done           |
-|                            |                          |       | DE\_IVAExtension | High   | RPM     | Done           |
-|                            |                          |       | DE+MAS           | Near   | RPM+MAS | Done           |
-| Mk2 Inline Cockpit         | mk2Cockpit\_Inline       | Stock | Stock            | Low    | Stock   | Done           |
-|                            |                          |       | DE\_IVAExtension | High   | RPM     | Done           |
-|                            |                          |       | WarbirdsSI       | High   | RPM     | Done           |
-|                            |                          |       | DE+MAS           | Near   | RPM+MAS | Done           |
-| Mk2 Lander Can             | mk2LanderCabin\_v2       | Stock | Stock            | Low    | Stock   | Done           |
-|                            |                          |       | RPM              | Med    | RPM     | Done           |
-|                            |                          |       | DE\_IVAExtension | High   | RPM     | Done           |
-|                            |                          |       | DE+MAS           | Near   | RPM     | Done           |
-| Mk3 Cockpit                | mk3Cockpit\_Shuttle      | Stock | Stock            | Low    | Stock   | Done           |
-|                            |                          |       | RPM              | Med    | RPM     | Done           |
-|                            |                          |       | DE\_IVAExtension | High   | RPM     | Done           |
-|                            |                          |       | UltimateRetro    | Med    | RPM+MAS | Done (2)       |
-|                            |                          |       | UltimateGlass    | High   | RPM+MAS | Done           |
-|                            |                          |       | DE+MAS           | Near   | RPM+MAS | Done           |
-| PPD-12 Cupola              | cupola                   | Stock | Stock            | Low    | Stock   | Done           |
-|                            |                          |       | RPM              | Med    | RPM     | Done           |
-|                            |                          |       | DE\_IVAExtension | High   | RPM     | Done           |
-|----------------------------|--------------------------|-------|------------------|--------|---------|----------------|
-| KV-1                       | kv1Pod                   | MH    | MH               | Low    | Stock   | Done           |
-|                            |                          |       | ASET for MH      | High   | RPM     | Done           |
-| KV-2                       | kv2Pod                   | MH    | MH               | Low    | Stock   | Done           |
-|                            |                          |       | ASET for MH      | High   | RPM     | Done           |
-| KV-3                       | kv3Pod                   | MH    | MH               | Low    | Stock   | Done           |
-|                            |                          |       | ASET for MH      | High   | RPM     | Done           |
-| Mk2 Command Pod            | Mk2Pod                   | MH    | MH               | Low    | Stock   | Done           |
-|                            |                          |       | ASET for MH      | High   | RPM     | Done           |
-|                            |                          |       | ASET for MH+MAS  | Near   | RPM+MAS | Done           |
-| M.E.M.                     | MEMLander                | MH    | MH               | Low    | Stock   | Done           |
-|                            |                          |       | ASET for MH      | High   | RPM     | Done           |
-|                            |                          |       | ASET for MH+MAS  | Near   | RPM+MAS | Done           |
-|                            |                          |       | Max-Ksp          | Low    | MAS     |                |
-|                            |                          |       | Max-Ksp HUD      | Low    | MAS     |                |
-|----------------------------|--------------------------|-------|------------------|--------|---------|----------------|
-| Mercury                    | ?                        | BDB   | BDB              | Low    | Stock   |                |
-|                            |                          |       | MAS              | Low    | MAS     |                |
-|                            |                          |       | Warbirds         | Med    | RPM     |                |
-|                            |                          |       | RPM              | Med    | RPM     |                |
-|                            |                          |       | DE               | High   | RPM     |                |
-| Gemini                     | ?                        | BDB   | BDB              | Low    | Stock   |                |
-|                            |                          |       |                  |        | MAS     | (5)            |
-| Kane Command Pod           | bluedog\_Apollo\_CrewPod | BDB   | BDB              | Low    | Stock   | Done           |
-|                            |                          |       | Retro            | Med    | MAS     | Done           |
-|                            |                          |       | Glass            | High   | MAS     | Done           |
-|                            |                          |       | Stock            | Low    | Stock   | Done           |
-|                            |                          |       | RPM              | Med    | RPM     | Done           |
-|                            |                          |       | DE\_IVAExtension | High   | RPM     | Done           |
-|                            |                          |       | ASET             | High   | RPM     | Done           |
-|                            |                          |       | MAS              | Low    | MAS     | Done           |
-|                            |                          |       | DE+MAS           | Near   | RPM+MAS | Done           |
-|                            |                          |       | Max-Ksp          | Low    | MAS     |                |
-| LEM                        | ?                        | BDB   | BDB              | Low    | Stock   |                |
-|                            |                          |       | Max-Ksp          | Low    | MAS     |                |
-|                            |                          |       | Max-Ksp HUD      | Low    | MAS     |                |
-|----------------------------|--------------------------|-------|------------------|--------|---------|----------------|
-| MK1 Viewer's Cockpit       | bellcockpit              | AP    | AP               | Low    | Stock   | Done           |
-|                            |                          |       | APIP             | Med    | RPM     | Done           |
-|                            |                          |       | Warbirds         | High   | RPM     | Done           |
-| Size 1.5 Cockpit           | bombardiercockpit        | AP    | AP               | Low    | Stock   | Done           |
-|                            |                          |       | APIP             | High   | RPM     | Done           |
-| MK1 Business Cockpit       | citationcockpit          | AP    | AP               | Low    | Stock   | Done           |
-|                            |                          |       | Warbirds         | Med    | RPM     | Done (3)       |
-| MK3S1 Cockpit              | cessnacockpit            | AP    | AP               | Low    | Stock   | Done           |
-|                            |                          |       | APIP             | Med    | RPM     | Done           |
-| Mk2 Non-Commercial Cockpit | falconcockpit            | AP    | AP               | Low    | Stock   | Done           |
-|                            |                          |       | APF16 RPM        | Med    | RPM     | Done           |
-|                            |                          |       | APF16 ASET       | Med    | RPM     | Done           |
-| MK1 Non-Commerical Cockpit | fightercockpit           | AP    | AP               | Low    | Stock   | Done           |
-|                            |                          |       | APIP             | Med    | RPM     | Done           |
-| MK3S1.5 Viewer's Cockpit   | hueycockpit              | AP    | AP               | Low    | Stock   | Done           |
-|                            |                          |       | APIP             | Med    | RPM     | Done           |
-| MK1 Caged Inline Cockpit   | oldfightercockpit        | AP    | AP               | Low    | Stock   | Done           |
-|                            |                          |       | Warbirds         | Med    | RPM     | Done (4)       |
-| MK1 Supersonic Cockpit     | x1cockpit                | AP    | AP               | Low    | Stock   | Done           |
-|                            |                          |       | Warbirds         | Med    | RPM     | Done           |
-|                            |                          |       | WarbirdsSI       | Med    | RPM     | Done           |
-| Size 2 Viewer's Cockpit II | b29cockpit               | AP    | AP               | Low    | Stock   | Done           |
-|                            |                          |       | Warbirds         | Med    | RPM     | Done (3)       |
-|----------------------------|--------------------------|-------|------------------|--------|---------|----------------|
-| KN2?                       | KN2CabinAnalog           | KN    | KN               |        | Stock   |                |
-|                            |                          |       | Warbirds         |        | RPM     |                |
-|                            |                          |       | WarbirdsSI       |        | RPM     |                |
-| KN7?                       | KN7CAbin                 | KN    | KN               |        | Stock   |                |
-|                            |                          |       | Warbirds         |        | RPM     |                |
-|----------------------------|--------------------------|-------|------------------|--------|---------|----------------|
-| Bonny?                     | 625mBonny                | SXT   | SXT              |        | Stock   |                |
-|                            |                          |       | Warbirds         |        | RPM     |                |
-|                            |                          |       | WarbirdsSI       |        | RPM     |                |
-| Clyde?                     | SXTClyde                 | SXT   | SXT              |        | Stock   |                |
-|                            |                          |       | Warbirds         |        | RPM     |                |
-|                            |                          |       | WarbirdsSI       |        | RPM     |                |
-|----------------------------|--------------------------|-------|------------------|--------|---------|----------------|
-| Probe Control Room         |                          | PCR   | PCR              | Med    | RPM     |                |
-|                            |                          |       | DE\_IVAExtension | High   | RPM     |                |
-|----------------------------|--------------------------|-------|------------------|--------|---------|----------------|
-| Alcor                      |                          | Alcor | Alcor            | High   | RPM     |                |
-|                            |                          |       | Alcor+MAS        | Near   | RPM+MAS |                |
-|----------------------------|--------------------------|-------|------------------|--------|---------|----------------|
+| Name                       | CFG Name                 | From  | IVA              | Tech   | Style   | Quality | Support Status |
+|----------------------------|--------------------------|-------|------------------|--------|---------|---------|----------------|
+| Mk1 Cockpit                | Mark1Cockpit             | Stock | Stock            | Low    | Stock   | Low     | Done           |
+|                            |                          |       | RPM              | Med    | RPM     | Med     | Done           |
+|                            |                          |       | DE\_IVAExtension | High   | RPM     | High    | Done           |
+|                            |                          |       | ASET             | High   | RPM     | V.High  | Done           |
+|                            |                          |       | DE+MAS           | Near   | RPM+MAS | High    | Done           |
+| Mk1 Command Pod            | mk1pod\_v2               | Stock | Stock            | Low    | Stock   | Low     | Done           |
+|                            |                          |       | RPM              | Med    | RPM     | Med     | Done           |
+|                            |                          |       | DE\_IVAExtension | High   | RPM     | High    | Done           |
+|                            |                          |       | Warbirds         | Med    | RPM     | V.High  | Done           |
+|                            |                          |       | MAS              | Low    | MAS     | V.High  | Done           |
+|                            |                          |       | DE+MAS           | Near   | RPM+MAS | High    | Done           |
+| Mk1 Inline Cockpit         | Mark2Cockpit             | Stock | Stock            | Low    | Stock   | Low     | Done           |
+|                            |                          |       | DE\_IVAExtension | High   | RPM     | High    | Done           |
+|                            |                          |       | Warbirds         | Medium | RPM     | V.High  | Done           |
+|                            |                          |       | WarbirdsSI       | Medium | RPM     | V.High  | Done (1)       |
+|                            |                          |       | WarbirdsRetro    | Low    | RPM     | V.High  | Done           |
+|                            |                          |       | WarbirdsRetroSI  | Low    | RPM     | V.High  | Done           |
+|                            |                          |       | DE+MAS           | Near   | RPM+MAS | High    | Done           |
+| Mk1 Lander Can             | landerCabinSmall         | Stock | Stock            | Low    | Stock   | Low     | Done           |
+|                            |                          |       | RPM              | Med    | RPM     | Med     | Done           |
+|                            |                          |       | DE\_IVAExtension | High   | RPM     | High    | Done           |
+|                            |                          |       | ASET             | Low    | RPM     | V.High  | Done           |
+|                            |                          |       | MAS              | Low    | MAS     | V.High  | Done           |
+|                            |                          |       | DE+MAS           | Near   | RPM+MAS | High    | Done           |
+| Mk1-3 Command Pod          | mk1-3pod                 | Stock | Stock            | Low    | Stock   | Low     | Done           |
+|                            |                          |       | RPM              | Med    | RPM     | Med     | Done           |
+|                            |                          |       | DE\_IVAExtension | High   | RPM     | High    | Done           |
+|                            |                          |       | ASET             | High   | RPM     | V.High  | Done           |
+|                            |                          |       | MAS              | Low    | MAS     | V.High  | Done           |
+|                            |                          |       | DE+MAS           | Near   | RPM+MAS | High    | Done           |
+|                            |                          |       | Max-Ksp          | Low    | MAS     | V.High  |                |
+| Mk2 Cockpit                | mk2Cockpit\_Standard     | Stock | Stock            | Low    | Stock   | Low     | Done           |
+|                            |                          |       | RPM              | Med    | RPM     | Med     | Done           |
+|                            |                          |       | DE\_IVAExtension | High   | RPM     | High    | Done           |
+|                            |                          |       | DE+MAS           | Near   | RPM+MAS | High    | Done           |
+| Mk2 Inline Cockpit         | mk2Cockpit\_Inline       | Stock | Stock            | Low    | Stock   | Low     | Done           |
+|                            |                          |       | DE\_IVAExtension | High   | RPM     | High    | Done           |
+|                            |                          |       | WarbirdsSI       | High   | RPM     | V.High  | Done           |
+|                            |                          |       | DE+MAS           | Near   | RPM+MAS | High    | Done           |
+| Mk2 Lander Can             | mk2LanderCabin\_v2       | Stock | Stock            | Low    | Stock   | Low     | Done           |
+|                            |                          |       | RPM              | Med    | RPM     | Med     | Done           |
+|                            |                          |       | DE\_IVAExtension | High   | RPM     | High    | Done           |
+|                            |                          |       | DE+MAS           | Near   | RPM     | High    | Done           |
+| Mk3 Cockpit                | mk3Cockpit\_Shuttle      | Stock | Stock            | Low    | Stock   | Low     | Done           |
+|                            |                          |       | RPM              | Med    | RPM     | Med     | Done           |
+|                            |                          |       | DE\_IVAExtension | High   | RPM     | High    | Done           |
+|                            |                          |       | UltimateRetro    | Med    | RPM+MAS | V.High  | Done (2)       |
+|                            |                          |       | UltimateGlass    | High   | RPM+MAS | V.High  | Done           |
+|                            |                          |       | DE+MAS           | Near   | RPM+MAS | High    | Done           |
+| PPD-12 Cupola              | cupola                   | Stock | Stock            | Low    | Stock   | Low     | Done           |
+|                            |                          |       | RPM              | Med    | RPM     | Med     | Done           |
+|                            |                          |       | DE\_IVAExtension | High   | RPM     | Hig     | Done           |
+|----------------------------|--------------------------|-------|------------------|--------|---------|---------|----------------|
+| KV-1                       | kv1Pod                   | MH    | MH               | Low    | Stock   | Low     | Done           |
+|                            |                          |       | ASET for MH      | High   | RPM     | High    | Done           |
+| KV-2                       | kv2Pod                   | MH    | MH               | Low    | Stock   | Low     | Done           |
+|                            |                          |       | ASET for MH      | High   | RPM     | High    | Done           |
+| KV-3                       | kv3Pod                   | MH    | MH               | Low    | Stock   | Low     | Done           |
+|                            |                          |       | ASET for MH      | High   | RPM     | High    | Done           |
+| Mk2 Command Pod            | Mk2Pod                   | MH    | MH               | Low    | Stock   | Low     | Done           |
+|                            |                          |       | ASET for MH      | High   | RPM     | High    | Done           |
+|                            |                          |       | ASET for MH+MAS  | Near   | RPM+MAS | High    | Done           |
+|                            |                          |       | MAS              | Low    | MAS     | WIP     | (5)            |
+| M.E.M.                     | MEMLander                | MH    | MH               | Low    | Stock   | Low     | Done           |
+|                            |                          |       | ASET for MH      | High   | RPM     | High    | Done           |
+|                            |                          |       | ASET for MH+MAS  | Near   | RPM+MAS | High    | Done           |
+|                            |                          |       | Max-Ksp          | Low    | MAS     | V.High  |                |
+|                            |                          |       | Max-Ksp HUD      | Low    | MAS     | V.High  |                |
+|----------------------------|--------------------------|-------|------------------|--------|---------|---------|----------------|
+| Mercury                    | ?                        | BDB   | BDB              | Low    | Stock   | Low     |                |
+|                            | Mark1Cockpit             |       | Stock            | Low    | Stock   | Low     | Done           |
+|                            |                          |       | RPM              | Med    | RPM     | Med     | Done           |
+|                            |                          |       | DE\_IVAExtension | High   | RPM     | High    | Done           |
+|                            |                          |       | Warbirds         | Med    | RPM     | High    | Done           |
+|                            |                          |       | MAS              | Low    | MAS     | V.High  | Done           |
+|                            |                          |       | DE+MAS           | Near   | RPM+MAS | High    | Done           |
+| Gemini                     | ?                        | BDB   | BDB              | Low    | Stock   | Low     |                |
+|                            | Mk2Pod                   |       | MH               | Low    | Stock   | Low     | Done           |
+|                            |                          |       | ASET for MH      | High   | RPM     | High    | Done           |
+|                            |                          |       | ASET for MH+MAS  | Near   | RPM+MAS | High    | Done           |
+|                            |                          |       | MAS              | Low    | MAS     | WIP     | (5)            |
+| Kane Command Pod           | bluedog\_Apollo\_CrewPod | BDB   | BDB              | Low    | Stock   | Low     | Done           |
+|                            |                          |       | Retro            | Med    | MAS     | V.High  | Done           |
+|                            |                          |       | Glass            | High   | MAS     | V.High  | Done           |
+|                            | mk1-3pod                 |       | Stock            | Low    | Stock   | Low     | Done           |
+|                            |                          |       | RPM              | Med    | RPM     | Med     | Done           |
+|                            |                          |       | DE\_IVAExtension | High   | RPM     | High    | Done           |
+|                            |                          |       | ASET             | High   | RPM     | V.High  | Done           |
+|                            |                          |       | MAS              | Low    | MAS     | V.High  | Done           |
+|                            |                          |       | DE+MAS           | Near   | RPM+MAS | High    | Done           |
+|                            |                          |       | Max-Ksp          | Low    | MAS     | V.High  |                |
+| LEM                        | ?                        | BDB   | BDB              | Low    | Stock   | Low     |                |
+|                            | MEMLander                |       | MH               | Low    | Stock   | Low     |                |
+|                            |                          |       | ASET for MH      | High   | RPM     | High    |                |
+|                            |                          |       | ASET for MH+MAS  | Near   | RPM+MAS | High    |                |
+|                            |                          |       | Max-Ksp          | Low    | MAS     | V.High  |                |
+|                            |                          |       | Max-Ksp HUD      | Low    | MAS     | V.High  |                |
+|----------------------------|--------------------------|-------|------------------|--------|---------|---------|----------------|
+| MK1 Viewer's Cockpit       | bellcockpit              | AP    | AP               | Low    | Stock   | Low     | Done           |
+|                            |                          |       | APIP             | Med    | RPM     | V.High  | Done           |
+|                            |                          |       | Warbirds         | High   | RPM     | V.High  | Done           |
+| Size 1.5 Cockpit           | bombardiercockpit        | AP    | AP               | Low    | Stock   | Low     | Done           |
+|                            |                          |       | APIP             | High   | RPM     | High    | Done           |
+| MK1 Business Cockpit       | citationcockpit          | AP    | AP               | Low    | Stock   | Low     | Done           |
+|                            |                          |       | Warbirds         | Med    | RPM     | WIP     | Done (3)       |
+| MK3S1 Cockpit              | cessnacockpit            | AP    | AP               | Low    | Stock   | Low     | Done           |
+|                            |                          |       | APIP             | Med    | RPM     | V.High  | Done           |
+| Mk2 Non-Commercial Cockpit | falconcockpit            | AP    | AP               | Low    | Stock   | Low     | Done           |
+|                            |                          |       | APF16 RPM        | Med    | RPM     | Med     | Done           |
+|                            |                          |       | APF16 ASET       | Med    | RPM     | V.High  | Done           |
+| MK1 Non-Commerical Cockpit | fightercockpit           | AP    | AP               | Low    | Stock   | Low     | Done           |
+|                            |                          |       | APIP             | Med    | RPM     | Med     | Done           |
+| MK3S1.5 Viewer's Cockpit   | hueycockpit              | AP    | AP               | Low    | Stock   | Low     | Done           |
+|                            |                          |       | APIP             | Med    | RPM     | V.High  | Done           |
+| MK1 Caged Inline Cockpit   | oldfightercockpit        | AP    | AP               | Low    | Stock   | Low     | Done           |
+|                            |                          |       | Warbirds         | Med    | RPM     | V.High  | Done (4)       |
+| MK1 Supersonic Cockpit     | x1cockpit                | AP    | AP               | Low    | Stock   | Low     | Done           |
+|                            |                          |       | Warbirds         | Med    | RPM     | V.High  | Done           |
+|                            |                          |       | WarbirdsSI       | Med    | RPM     | V.High  | Done           |
+| Size 2 Viewer's Cockpit II | b29cockpit               | AP    | AP               | Low    | Stock   | Low     | Done           |
+|                            |                          |       | Warbirds         | Med    | RPM     | WIP     | Done (3)       |
+|----------------------------|--------------------------|-------|------------------|--------|---------|---------|----------------|
+| KN2?                       | KN2CabinAnalog           | KN    | KN               |        | Stock   |         |                |
+|                            |                          |       | Warbirds         |        | RPM     |         |                |
+|                            |                          |       | WarbirdsSI       |        | RPM     |         |                |
+| KN7?                       | KN7CAbin                 | KN    | KN               |        | Stock   |         |                |
+|                            |                          |       | Warbirds         |        | RPM     |         |                |
+|----------------------------|--------------------------|-------|------------------|--------|---------|---------|----------------|
+| Bonny?                     | 625mBonny                | SXT   | SXT              |        | Stock   |         |                |
+|                            |                          |       | Warbirds         |        | RPM     |         |                |
+|                            |                          |       | WarbirdsSI       |        | RPM     |         |                |
+| Clyde?                     | SXTClyde                 | SXT   | SXT              |        | Stock   |         |                |
+|                            |                          |       | Warbirds         |        | RPM     |         |                |
+|                            |                          |       | WarbirdsSI       |        | RPM     |         |                |
+|----------------------------|--------------------------|-------|------------------|--------|---------|---------|----------------|
+| Probe Control Room         |                          | PCR   | PCR              | Med    | RPM     |         |                |
+|                            |                          |       | DE\_IVAExtension | High   | RPM     |         |                |
+|----------------------------|--------------------------|-------|------------------|--------|---------|---------|----------------|
+| Alcor                      |                          | Alcor | Alcor            | High   | RPM     |         |                |
+|                            |                          |       | Alcor+MAS        | Near   | RPM+MAS |         |                |
+|----------------------------|--------------------------|-------|------------------|--------|---------|---------|----------------|
 
 - (1) :: Mk1 Inline WarbirdsSI variant display "INITIALIZATION ERROR", but seems benign.
   Will eventually try to fix.
