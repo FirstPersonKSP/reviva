@@ -439,7 +439,7 @@ Happy to recieve pull requests on GitHub for improvements, more IVA support, etc
 [url:ASETIVAforMakingHistoryPods]: https://forum.kerbalspaceprogram.com/index.php?/topic/187162-17xaset-iva-for-making-history-pods/
 [url:MOARdVPlus]: https://github.com/MOARdV/MOARdVPlus
 [url:APIP]: https://github.com/Thilen03/Airplane-Plus-IVA-Pack
-[url:APF16]: https://github.com/Thilen03/Airplane-Plus-IVA-Pack
+[url:APF16]: https://forum.kerbalspaceprogram.com/index.php?/topic/156245-13-asetrpm-for-falcon-cockpit-from-airplane-plus-pack-feb-10-2017/
 [kspf:blowfish]: https://forum.kerbalspaceprogram.com/index.php?/profile/119688-blowfish/
 [kspf:Electrocutor]: https://forum.kerbalspaceprogram.com/index.php?/profile/109593-electrocutor/
 [kspf:sarbian]: https://forum.kerbalspaceprogram.com/index.php?/profile/57146-sarbian/
