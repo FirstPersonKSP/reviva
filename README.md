@@ -382,6 +382,10 @@ are replaced by the superb `MAS_ALCOR_MFD2` which simulates a near future avioni
 |                            |                          |       | ASET for MH      | High   | Done           |
 |                            |                          |       | ASET for MH+MAS  | Near   | Done           |
 |----------------------------|--------------------------|-------|------------------|--------|----------------|
+| Mercury                    | ?                        | BDB   | BDB              | Low    |                |
+|                            |                          |       |                  |        |                |
+| Gemini                     | ?                        | BDB   | BDB              | Low    |                |
+|                            |                          |       |                  |        |                |
 | Kane Command Pod           | bluedog\_Apollo\_CrewPod | BDB   | BDB              | Low    | Done           |
 |                            |                          |       | Retro            | Med    | Done           |
 |                            |                          |       | Glass            | High   | Done           |
@@ -391,30 +395,32 @@ are replaced by the superb `MAS_ALCOR_MFD2` which simulates a near future avioni
 |                            |                          |       | ASET             | High   | Done           |
 |                            |                          |       | MAS              | Low    | Done           |
 |                            |                          |       | DE+MAS           | Near   | Done           |
+| LEM                        | ?                        | BDB   | BDB              | Low    |                |
+|                            |                          |       |                  |        |                |
 |----------------------------|--------------------------|-------|------------------|--------|----------------|
-| MK1 Viewer's Cockpit       | bellcockpit              | AP    | AP               |        |                |
-|                            |                          |       | APIP             |        |                |
-|                            |                          |       | Warbirds         |        |                |
-| Size 1.5 Cockpit           | bombardiercockpit        | AP    | AP               |        |                |
-|                            |                          |       | APIP             |        |                |
-| MK1 Business Cockpit       | citationcockpit          | AP    | AP               |        |                |
-|                            |                          |       | Warbirds         |        |                |
-| MK3S1 Cockpit              | cessnacockpit            | AP    | AP               |        |                |
-|                            |                          |       | APIP             |        |                |
-| Mk2 Non-Commercial Cockpit | falconcockpit            | AP    | AP               |        |                |
-|                            |                          |       | APF16 RPM        |        |                |
-|                            |                          |       | APF16 ASET       |        |                |
-| MK1 Non-Commerical Cockpit | fightercockpit           | AP    | AP               |        |                |
-|                            |                          |       | APIP             |        |                |
-| MK3S1.5 Viewer's Cockpit   | hueycockpit              | AP    | AP               |        |                |
-|                            |                          |       | APIP             |        |                |
-| MK1 Caged Inline Cockpit   | oldfightercockpit        | AP    | AP               |        |                |
-|                            |                          |       | Warbirds         |        |                |
-| MK1 Supersonic Cockpit     | x1cockpit                | AP    | AP               |        |                |
-|                            |                          |       | Warbirds         |        |                |
-|                            |                          |       | WarbirdsSI       |        |                |
-| Size 2 Viewer's Cockpit II | b29cockpit               | AP    | AP               |        |                |
-|                            |                          |       | Warbirds         |        |                |
+| MK1 Viewer's Cockpit       | bellcockpit              | AP    | AP               | Low    | Done           |
+|                            |                          |       | APIP             | Med    | Done           |
+|                            |                          |       | Warbirds         | High   | Done           |
+| Size 1.5 Cockpit           | bombardiercockpit        | AP    | AP               | Low    | Done           |
+|                            |                          |       | APIP             | High   | Done           |
+| MK1 Business Cockpit       | citationcockpit          | AP    | AP               | Low    | Done           |
+|                            |                          |       | Warbirds         | Med    | Done (3)       |
+| MK3S1 Cockpit              | cessnacockpit            | AP    | AP               | Low    | Done           |
+|                            |                          |       | APIP             | Med    | Done           |
+| Mk2 Non-Commercial Cockpit | falconcockpit            | AP    | AP               | Low    | Done           |
+|                            |                          |       | APF16 RPM        | Med    | Done           |
+|                            |                          |       | APF16 ASET       | Med    | Done           |
+| MK1 Non-Commerical Cockpit | fightercockpit           | AP    | AP               | Low    | Done           |
+|                            |                          |       | APIP             | Med    | Done           |
+| MK3S1.5 Viewer's Cockpit   | hueycockpit              | AP    | AP               | Low    | Done           |
+|                            |                          |       | APIP             | Med    | Done           |
+| MK1 Caged Inline Cockpit   | oldfightercockpit        | AP    | AP               | Low    | Done           |
+|                            |                          |       | Warbirds         | Med    | Done (4)       |
+| MK1 Supersonic Cockpit     | x1cockpit                | AP    | AP               | Low    | Done           |
+|                            |                          |       | Warbirds         | Med    | Done           |
+|                            |                          |       | WarbirdsSI       | Med    | Done           |
+| Size 2 Viewer's Cockpit II | b29cockpit               | AP    | AP               | Low    | Done           |
+|                            |                          |       | Warbirds         | Med    | Done (3)       |
 |----------------------------|--------------------------|-------|------------------|--------|----------------|
 | KN2?                       | KN2CabinAnalog           | KN    | Warbirds         |        |                |
 |                            |                          |       | WarbirdsSI       |        |                |
@@ -436,6 +442,9 @@ are replaced by the superb `MAS_ALCOR_MFD2` which simulates a near future avioni
 - (1) :: Mk1 Inline WarbirdsSI variant display "INITIALIZATION ERROR", but seems benign.
   Will eventually try to fix.
 - (2) :: Mk3 Ultimate Retro variant CRT do not seem to work. Will eventually try to fix.
+- (3) :: IVA is work-in-progress or incomplete.
+- (4) :: Some switches on right hand side obscured by cockpit walls.
+
 
 # Building
 
