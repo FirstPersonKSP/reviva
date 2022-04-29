@@ -387,16 +387,16 @@ are replaced by the superb `MAS_ALCOR_MFD2` which simulates a near future avioni
 |                            |                          |       | Max-Ksp HUD      | Low    | MAS     | V.High  |                |
 |----------------------------|--------------------------|-------|------------------|--------|---------|---------|----------------|
 | Mercury                    | ?                        | BDB   | BDB              | Low    | Stock   | Low     |                |
-|                            | Mark1Cockpit             |       | Stock            | Low    | Stock   | Low     | Done           |
-|                            |                          |       | RPM              | Med    | RPM     | Med     | Done           |
-|                            |                          |       | DE\_IVAExtension | High   | RPM     | High    | Done           |
-|                            |                          |       | Warbirds         | Med    | RPM     | High    | Done           |
-|                            |                          |       | MAS              | Low    | MAS     | V.High  | Done           |
-|                            |                          |       | DE+MAS           | Near   | RPM+MAS | High    | Done           |
+|                            | Mark1Cockpit             |       | Stock            | Low    | Stock   | Low     |                |
+|                            |                          |       | RPM              | Med    | RPM     | Med     |                |
+|                            |                          |       | DE\_IVAExtension | High   | RPM     | High    |                |
+|                            |                          |       | Warbirds         | Med    | RPM     | High    |                |
+|                            |                          |       | MAS              | Low    | MAS     | V.High  |                |
+|                            |                          |       | DE+MAS           | Near   | RPM+MAS | High    |                |
 | Gemini                     | ?                        | BDB   | BDB              | Low    | Stock   | Low     |                |
-|                            | Mk2Pod                   |       | MH               | Low    | Stock   | Low     | Done           |
-|                            |                          |       | ASET for MH      | High   | RPM     | High    | Done           |
-|                            |                          |       | ASET for MH+MAS  | Near   | RPM+MAS | High    | Done           |
+|                            | Mk2Pod                   |       | MH               | Low    | Stock   | Low     |                |
+|                            |                          |       | ASET for MH      | High   | RPM     | High    |                |
+|                            |                          |       | ASET for MH+MAS  | Near   | RPM+MAS | High    |                |
 |                            |                          |       | MAS              | Low    | MAS     | WIP     | (5)            |
 | Kane Command Pod           | bluedog\_Apollo\_CrewPod | BDB   | BDB              | Low    | Stock   | Low     | Done           |
 |                            |                          |       | Retro            | Med    | MAS     | V.High  | Done           |
