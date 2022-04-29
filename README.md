@@ -435,8 +435,8 @@ are replaced by the superb `MAS_ALCOR_MFD2` which simulates a near future avioni
 | MK3S1 Cockpit              | cessnacockpit            | AP    | AP               | Low    | Stock   | Low     | Done           |
 |                            |                          |       | APIP             | Med    | RPM     | V.High  | Done           |
 | Mk2 Non-Commercial Cockpit | falconcockpit            | AP    | AP               | Low    | Stock   | Low     | Done           |
-|                            |                          |       | APF16 RPM        | Med    | RPM     | Med     | Done           |
-|                            |                          |       | APF16 ASET       | Med    | RPM     | V.High  | Done           |
+|                            |                          |       | APF16 RPM        | Med    | RPM     | Med     | Done (6)       |
+|                            |                          |       | APF16 ASET       | Med    | RPM     | V.High  | Done (6)       |
 | MK1 Non-Commerical Cockpit | fightercockpit           | AP    | AP               | Low    | Stock   | Low     | Done           |
 |                            |                          |       | APIP             | Med    | RPM     | Med     | Done           |
 | MK3S1.5 Viewer's Cockpit   | hueycockpit              | AP    | AP               | Low    | Stock   | Low     | Done           |
@@ -474,7 +474,10 @@ are replaced by the superb `MAS_ALCOR_MFD2` which simulates a near future avioni
 - (2) :: Mk3 Ultimate Retro variant CRT do not seem to work. Will eventually try to fix.
 - (3) :: IVA is work-in-progress or incomplete.
 - (4) :: Some switches on right hand side obscured by cockpit walls.
-- (5) :: Possible MAS Mk2 Gemini pod for Stock and BDB - https://github.com/MOARdV/AvionicsSystems/issues/264
+- (5) :: Possible MAS Mk2 Gemini pod for Stock and BDB -
+  https://github.com/MOARdV/AvionicsSystems/issues/264
+- (6) :: Installing ASET/RPM for Falcon Cockpit will overwrite AirplanePlus itself, which is not
+  recommended. Reviva only supports a manual install into "GameData/AirplanePlusFalcon", see the falcon.cfg.
 
 # Building
 
