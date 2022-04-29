@@ -50,9 +50,22 @@ the coverage over time.
 
 ## Changes
 
-### 0.7.4 Release (28th Apr 2022)
+### 0.7.5 Release - Airplane Plus (28th Apr 2022)
 
-Fixes:
+Adds:
+
+- Support for Airplane Plus:
+  - Warbirds (Bell Heli, Citation, Old Fighter Inline, X1 Supersonic, B29 Bomber)
+    - [Warbird Cockpits][url:WarbirdCockpits]
+  - Airplane Plus IVA Pack (Bell Heli, Bombardier Jet, Cessna, F-18 Fighter, Huey Heli)
+    - [Airplane Plus IVA Pack][url:APIP]
+    - Airplane Plus F-16 
+    - [ASET/RPM for Falcon cockpit][url:APF16]
+    - Needs to be installed in GameData/AirplanePlusFalcon.
+
+### 0.7.4 Release - BDB experimental (28th Apr 2022)
+
+Adds:
 
 - Added "Experimental" support for MOARdvPlus BDB Kane (Apollo) CM:
   - [MOARdV's Avionics System (MAS)][url:AvionicsSystems]
@@ -66,26 +79,29 @@ Fixes:
   - Will improve when BDB updates the interior.
   - Also even more "Experimental", all Mk1-3 IVA interiors also available and seem to be functional,
     but definitely look even more silly with "Interior Overlay". Will not ever fix this.
+
+Fixes:
+
 - Fix MASFlightComputer support to correctly update config data.
   - This was required to get the MOARdVPlus special action groups to work.
   - Probably helps make other IVA a little more accurate.
 - Updated README.md with more IVAs, and links to completed mods.
 
-### 0.7.3 Release (12th Apr 2022)
+### 0.7.3 Release - Bug fixes (12th Apr 2022)
 
 Fixes:
 
 - Support QuickIVA when loading strait to IVA ([GitHub Issue #6][url:GitHubIssue6])
 - Handle any configuration errors by remaining on same IVA ([GitHub Issue #5][url:GitHubIssue5])
 
-### 0.7.2 Release (11th Mar 2022)
+### 0.7.2 Release - Bug fixes (11th Mar 2022)
 
 Fixes:
 
 - Undocking two of same craft causing crash ([GitHub Issue #3][url:GitHubIssue3])
 - Correctly switch IVA for in-flight craft where multiple similar craft present ([GitHub Issue #4][url:GitHubIssue4])
 
-### 0.7.1 Release (28th Feb 2022)
+### 0.7.1 Release - Stock and Missing History (28th Feb 2022)
 
 - Support Missing History KV-1, KV-2, KV-3, MK2 command pod and M.E.M. lander.
 - Configurations for Stock, ASET IVA for Making History Pods, and MAS alternatives for Mk2
