@@ -154,6 +154,8 @@ namespace Reviva
 
         private ConfigNode FindModuleConfig(PartModule module)
         {
+	    if (module == null)
+                return null;
             ConfigNode[] modules = this.part.partInfo.partConfig.GetNodes("MODULE");
             if (modules == null)
                 return null;
