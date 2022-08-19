@@ -285,7 +285,7 @@ existence that can work on KSP 1.12.x - if you know of more let the mod author k
 | Untested    | Firespitter Apache IVA Upgrade                                      | SpaceDock | MAS     | Firespitter           |         | Apache Cockpit                             |
 | Untested    | ColdwarAerospace (?)                                                | ?         | ?       | ColdwareAerospace     |         | ?                                          |
 | Untested    | HorizonsIVA-Project                                                 | ?         | RPM     | KAX, BDB              |         | C2B Cockpit, BDB LM                        |
-|             |                                                                     |           |         |                       |         |                                            |
+| Untested    | AeroKerbin Industries Modified IVAs                                 | ?         | RPM     | Stock, SXT            |         | ?                                          |
 
 - (1) :: You can have either RPM or MAS, or in fact both at the same time. MAS includes upgrade
 scripts that render some existing RPM IVAs at a high quality and performance (in my
