@@ -261,8 +261,9 @@ existence that can work on KSP 1.12.x - if you know of more let the mod author k
 | Optional    | [Warbird Cockpits][url:WarbirdCockpits]                             | SpaceDock | RPM     | Stock,SXT,AP,Kerbonov | Partial | Analog avaition cockpits for several mods  |
 | Optional    | [Ultimate Shuttle IVA][url:UltimateShuttleIVA]                      | SpaceDock | RPM+MAS | Stock                 | Done    | Retro and modern MK3 Cockpit IVA (2)       |
 | Optional    | [MOARdVPlus][url:MOARdVPlus]                                        | GitHub    | MAS     | BDB                   | Done    | BDB Kane/Sarnus IVA (Apollo)               |
-| Untested    | [Airplane Plus IVA Pack][url:APIP]                                  | GitHub    | RPM     | AirplanePlus          | Planned | Various plane/chopper cockpits             |
-| Untested    | [ASET/RPM for Falcon cockpit][url:APF16]                            | KSPForum  | RPM     | AirplanePlus          | Planned | F-16/mk2 non-commerical IVA                |
+| Optional    | [Airplane Plus IVA Pack][url:APIP]                                  | GitHub    | RPM     | AirplanePlus          | Done    | Various plane/chopper cockpits             |
+| Optional    | [ASET/RPM for Falcon cockpit][url:APF16]                            | KSPForum  | RPM     | AirplanePlus          | Done    | F-16/mk2 non-commerical IVA                |
+| Provides    | KSA IVA Upgrade                                                     | KSPForum  | RPM     | Stock                 |         | V1.5.0 provides Reviva patches             |
 | Optional    | Probe Control Room                                                  | CKAN      | RPM     | PBC                   | Planned | Probe control room for probes              |
 | Optional    | ALCOR by ASET                                                       | CKAN      | RPM     | Alcor                 | Planned | High tech 3-man lander capsule             |
 | Optional    | OPT Spaceplane                                                      | CKAN      | RPM     | Opt                   | Planned | Near and Far Future Spacecraft             |
