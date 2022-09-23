@@ -12,10 +12,6 @@
 
 Soon :: CKAN support so you can install Reviva and all the IVA mods you ever wanted.
 
-## Warning
-
-This mod is *BETA*, do not use for career gameplay unless you like living on the edge.
-
 Currently only stock IVA and some popular IVA mods are covered, the intent is to extended
 the coverage over time.
 
@@ -45,7 +41,7 @@ the coverage over time.
 - [Warbird Cockpits][url:WarbirdCockpits]
 - [Ultimate Shuttle IVA][url:UltimateShuttleIVA]
 - [ASET IVA for Making History Pods][url:ASETIVAforMakingHistoryPods]
-- Many more, see [Support Progress][url:SupportProgress]
+- Many more, see [Support Progress][url:SupportProgress] and [
   for the full list as more are supported.
 
 ## Changes
@@ -245,54 +241,57 @@ existence that can work on KSP 1.12.x - if you know of more let the mod author k
 
 ## Dependency Summary
 
-| Status      | Mod                                                                 | DL        | Style   | For                   | Status  | Provides                                   |
-|-------------|---------------------------------------------------------------------|-----------|---------|-----------------------|---------|--------------------------------------------|
-| Required    | [Reviva][url:Forum]                                                 | CKAN      | -       | Stock                 | -       | IVA switching and 1.12.x compatibility     |
-| Required    | [B9PartSwitch][url:B9PartSwitch]                                    | CKAN      | -       | Stock                 | -       | General part switching mechanics           |
-| Required    | [ModuleManager][url:ModuleManager]                                  | CKAN      | -       | Stock                 | -       | Patching mod configuration                 |
-| Required    | [RasterPropMonitor (RPM)][url:RasterPropMonitor]                    | CKAN      | RPM     | Stock                 | Done    | More complex IVA than stock, includes IVA  |
-| Recommended | [DE_IVAExtension][url:DEIVAExtension]                               | CKAN      | RPM     | Stock                 | Done    | High tech IVA for all of Stock             |
-| Recommended | [ASET IVA for Making History Pods][url:ASETIVAforMakingHistoryPods] | GitHub    | RPM     | Making History        | Done    | High tech IVA for all of Making History    |
-| Optional    | [MOARdV's Avionics System (MAS)][url:AvionicsSystems]               | CKAN      | MAS     | Stock                 | Done    | Successor to RPM (1), includes low tech    |
-|             |                                                                     |           |         |                       |         | Mk1, Mk1-3 and Mk1 Lander.                 |
-| Optional    | [ASET Mk1 Cockpit][url:ASETMk1Cockpit]                              | CKAN      | RPM     | Stock                 | Done    | High tech analog Mk1 Cockpit               |
-| Optional    | [ASET Mk1 Lander Can][url:ASETMk1LanderCan]                         | CKAN      | RPM     | Stock                 | Done    | High tech Mk1 Lander                       |
-| Optional    | [ASET Mk1-2 Command Pod][url:ASETMk1-2CommandPod]                   | CKAN      | RPM     | Stock                 | Done    | High tech Mk1-3 Command Pod                |
-| Optional    | [Warbird Cockpits][url:WarbirdCockpits]                             | SpaceDock | RPM     | Stock,SXT,AP,Kerbonov | Partial | Analog avaition cockpits for several mods  |
-| Optional    | [Ultimate Shuttle IVA][url:UltimateShuttleIVA]                      | SpaceDock | RPM+MAS | Stock                 | Done    | Retro and modern MK3 Cockpit IVA (2)       |
-| Optional    | [MOARdVPlus][url:MOARdVPlus]                                        | GitHub    | MAS     | BDB                   | Done    | BDB Kane/Sarnus IVA (Apollo)               |
-| Optional    | [Airplane Plus IVA Pack][url:APIP]                                  | GitHub    | RPM     | AirplanePlus          | Done    | Various plane/chopper cockpits             |
-| Optional    | [ASET/RPM for Falcon cockpit][url:APF16]                            | KSPForum  | RPM     | AirplanePlus          | Done    | F-16/mk2 non-commerical IVA                |
-| Provides    | KSA IVA Upgrade                                                     | KSPForum  | RPM     | Stock                 |         | V1.5.0 provides Reviva patches             |
-| Optional    | Probe Control Room                                                  | CKAN      | RPM     | PBC                   | Planned | Probe control room for probes              |
-| Optional    | ALCOR by ASET                                                       | CKAN      | RPM     | Alcor                 | Planned | High tech 3-man lander capsule             |
-| Optional    | OPT Spaceplane                                                      | CKAN      | RPM     | Opt                   | Planned | Near and Far Future Spacecraft             |
-| Optional    | Vexarp IVA                                                          | CKAN      | MAS     | NFSpacecraft          | Planned | Near Future Spacecraft improved IVA        |
-| Untested    | Tundra Exploration                                                  | CKAN      | MAS     | TundraExploration     |         | Provides it's own MAS IVA alternatives (?) |
-| Untested    | Kerbal Flying Saucers                                               | CKAN      | MAS     | KerbalFlyingSaucers   |         | With MAS has improved alternatives (?)     |
-| Untested    | Kermantech MK3 IVA                                                  | GitHub    | RPM     | Stock                 |         | Mk3 Shuttle IVA                            |
-| Untested    | Apex                                                                | SpaceDock | RPM     | Stock                 |         | Mk3 Shuttle IVA                            |
-| Untested    | Nice MKseries Body                                                  | SpaceDock | RPM     | Nice MKseries Body    |         | Provides own RPM IVA                       |
-| Untested    | Manul's Flanker IVA (Unpublished?)                                  | ?         | MAS     | Nice MKseries Body    |         | Flanker, has rear view mirrors!            |
-| Untested    | Max-Ksp MAS IVA Pack                                                | GitHub    | MAS     | Stock, Making History |         | Mk1-3, M.E.M. IVAs                         |
-| Untested    | SABS\_IVA: MAS-enabled IVA                                          | GitHub    | MAS     | Stock, MH, PCR        |         | Everything                                 |
-| Untested    | Mk1 Inline Cockpit Upgraded IVA                                     | SpaceDock | RPM     | Stock                 |         | Mk1 Inline                                 |
-| Untested    | [WIP] Mk2 Spaceplane Cockpit IVA                                    | ?         | RPM     | Stock                 |         | Mk2 Cockpit                                |
-| Untested    | Modified MK22 IVA [ASET Avionics]                                   | SpaceDock | RPM     | BDynamics             |         | Mk22 Cockpit                               |
-| Untested    | Advanced Cockpit, B737 style IVA                                    | KSPForums | RPM     | Stock                 |         | Mk3 Cockpit                                |
-| Untested    | MK2 Iva Work in Progress                                            | ?         | RPM     | Stock                 |         | Mk2 Cockpit                                |
-| Untested    | [WIP] KV Pod Family IVA Repl                                        | KSPForums | RPM     | Missing History       |         | KV1 Capsule                                |
-| Untested    | MK3 Space Shuttle IVA                                               | GitHub    | RPM     | Stock                 |         | Mk3 Cockpit                                |
-| Untested    | Firespitter Apache IVA Upgrade                                      | SpaceDock | MAS     | Firespitter           |         | Apache Cockpit                             |
-| Untested    | ColdwarAerospace (?)                                                | ?         | ?       | ColdwareAerospace     |         | ?                                          |
-| Untested    | HorizonsIVA-Project                                                 | ?         | RPM     | KAX, BDB              |         | C2B Cockpit, BDB LM                        |
-| Untested    | AeroKerbin Industries Modified IVAs                                 | ?         | RPM     | Stock, SXT            |         | ?                                          |
+| Status      | Mod                                                                 | DL        | Style   | For                   | Status   | Provides                                   |
+|-------------|---------------------------------------------------------------------|-----------|---------|-----------------------|----------|--------------------------------------------|
+| Required    | [Reviva][url:Forum]                                                 | CKAN      | -       | Stock                 | -        | IVA switching and 1.12.x compatibility     |
+| Required    | [B9PartSwitch][url:B9PartSwitch]                                    | CKAN      | -       | Stock                 | -        | General part switching mechanics           |
+| Required    | [ModuleManager][url:ModuleManager]                                  | CKAN      | -       | Stock                 | -        | Patching mod configuration                 |
+| Required    | [RasterPropMonitor (RPM)][url:RasterPropMonitor]                    | CKAN      | RPM     | Stock                 | Done     | More complex IVA than stock, includes IVA  |
+| Recommended | [DE_IVAExtension][url:DEIVAExtension]                               | CKAN      | RPM     | Stock                 | Done     | High tech IVA for all of Stock             |
+| Recommended | [ASET IVA for Making History Pods][url:ASETIVAforMakingHistoryPods] | GitHub    | RPM     | Making History        | Done     | High tech IVA for all of Making History    |
+| Optional    | [MOARdV's Avionics System (MAS)][url:AvionicsSystems]               | CKAN      | MAS     | Stock                 | Done     | Successor to RPM (1), includes low tech    |
+|             |                                                                     |           |         |                       |          | Mk1, Mk1-3 and Mk1 Lander.                 |
+| Optional    | [ASET Mk1 Cockpit][url:ASETMk1Cockpit]                              | CKAN      | RPM     | Stock                 | Done     | High tech analog Mk1 Cockpit               |
+| Optional    | [ASET Mk1 Lander Can][url:ASETMk1LanderCan]                         | CKAN      | RPM     | Stock                 | Done     | High tech Mk1 Lander                       |
+| Optional    | [ASET Mk1-2 Command Pod][url:ASETMk1-2CommandPod]                   | CKAN      | RPM     | Stock                 | Done     | High tech Mk1-3 Command Pod                |
+| Optional    | [Warbird Cockpits][url:WarbirdCockpits]                             | SpaceDock | RPM     | Stock,SXT,AP,Kerbonov | Partial  | Analog avaition cockpits for several mods  |
+| Optional    | [Ultimate Shuttle IVA][url:UltimateShuttleIVA]                      | SpaceDock | RPM+MAS | Stock                 | Done     | Retro and modern MK3 Cockpit IVA (2)       |
+| Optional    | [MOARdVPlus][url:MOARdVPlus]                                        | GitHub    | MAS     | BDB                   | Done     | BDB Kane/Sarnus IVA (Apollo)               |
+| Optional    | [Airplane Plus IVA Pack][url:APIP]                                  | GitHub    | RPM     | AirplanePlus          | Done     | Various plane/chopper cockpits             |
+| Optional    | [ASET/RPM for Falcon cockpit][url:APF16]                            | Dropbox   | RPM     | AirplanePlus          | Done     | F-16/mk2 non-commerical IVA                |
+| Provides    | [KSA IVA Upgrade][url:KSAIVA]                                       | GitHub    | RPM     | Stock                 | Provides | Stock, BDB (V1.5.0 provides Reviva)        |
+| Provides    | [Starilex Intra-Vehicular Solutions][url:SIVSIVA]                   | SpaceDock | MAS     | Stock                 | Provides | Stock, (V1.1 provides Reviva)              |
+| Untested    | [Max-Ksp MAS IVA Pack][url:MaxKspIVA]                               | GitHub    | MAS     | Stock, Making History | Planned  | Mk1-3, M.E.M. IVAs                         |
+| Untested    | [SABS\_IVA: MAS-enabled IVA][url:SABSIVA]                           | GitHub    | MAS     | Stock, MH, PCR        | Planned  | Everything                                 |
+| Optional    | Probe Control Room                                                  | CKAN      | RPM     | PBC                   | Planned  | Probe control room for probes              |
+| Optional    | ALCOR by ASET                                                       | CKAN      | RPM     | Alcor                 | Planned  | High tech 3-man lander capsule             |
+| Optional    | OPT Spaceplane                                                      | CKAN      | RPM     | Opt                   | Planned  | Near and Far Future Spacecraft             |
+| Optional    | Vexarp IVA                                                          | CKAN      | MAS     | NFSpacecraft          | Planned  | Near Future Spacecraft improved IVA        |
+| Untested    | Tundra Exploration                                                  | CKAN      | MAS     | TundraExploration     |          | Provides it's own MAS IVA alternatives (?) |
+| Untested    | Kerbal Flying Saucers                                               | CKAN      | MAS     | KerbalFlyingSaucers   |          | With MAS has improved alternatives (?)     |
+| Untested    | Kermantech MK3 IVA                                                  | GitHub    | RPM     | Stock                 |          | Mk3 Shuttle IVA                            |
+| Untested    | Apex                                                                | SpaceDock | RPM     | Stock                 |          | Mk3 Shuttle IVA                            |
+| Untested    | Nice MKseries Body                                                  | SpaceDock | RPM     | Nice MKseries Body    |          | Provides own RPM IVA                       |
+| Untested    | Manul's Flanker IVA (Unpublished?)                                  | ?         | MAS     | Nice MKseries Body    |          | Flanker, has rear view mirrors!            |
+| Untested    | Mk1 Inline Cockpit Upgraded IVA                                     | SpaceDock | RPM     | Stock                 |          | Mk1 Inline                                 |
+| Untested    | [WIP] Mk2 Spaceplane Cockpit IVA                                    | ?         | RPM     | Stock                 |          | Mk2 Cockpit                                |
+| Untested    | Modified MK22 IVA [ASET Avionics]                                   | SpaceDock | RPM     | BDynamics             |          | Mk22 Cockpit                               |
+| Untested    | Advanced Cockpit, B737 style IVA                                    | KSPForums | RPM     | Stock                 |          | Mk3 Cockpit                                |
+| Untested    | [WIP] KV Pod Family IVA Repl                                        | KSPForums | RPM     | Missing History       |          | KV1 Capsule                                |
+| Untested    | MK3 Space Shuttle IVA                                               | GitHub    | RPM     | Stock                 |          | Mk3 Cockpit                                |
+| Untested    | Firespitter Apache IVA Upgrade                                      | SpaceDock | MAS     | Firespitter           |          | Apache Cockpit                             |
+| Untested    | ColdwarAerospace (?)                                                | ?         | ?       | ColdwareAerospace     |          | ?                                          |
+| Untested    | HorizonsIVA-Project                                                 | ?         | RPM     | KAX, BDB              |          | C2B Cockpit, BDB LM                        |
+| Untested    | AeroKerbin Industries Modified IVAs                                 | ?         | RPM     | Stock, SXT            |          | ?                                          |
+| Unfinished  | MK2 Iva Work in Progress                                            | ?         | RPM     | Stock                 |          | Mk2 Cockpit                                |
 
 - (1) :: You can have either RPM or MAS, or in fact both at the same time. MAS includes upgrade
 scripts that render some existing RPM IVAs at a high quality and performance (in my
 experience).
 
 - (2) :: Only copy UltimateShuttleIVA into GameData, ignore the top level USIVA-xxx.cfg files.
+
+- Provides :: The mod itself provides Reviva support.
 
 # Detailed User Manual
 
@@ -524,6 +523,7 @@ Happy to recieve pull requests on GitHub for improvements, more IVA support, etc
 [url:GitHubIssue5]: https://github.com/harveyt/reviva/issues/5 "GitHub Issue 5"
 [url:GitHubIssue6]: https://github.com/harveyt/reviva/issues/6 "GitHub Issue 6"
 [url:SupportProgress]: https://github.com/harveyt/reviva/blob/main/README.md#support-progress
+[url:DependencySummary]: https://github.com/harveyt/reviva/blob/main/README.md#dependecy-summary
 [url:SpaceDock]: https://spacedock.info/mod/2990/Reviva "SpaceDock"
 [url:B9PartSwitch]: https://forum.kerbalspaceprogram.com/index.php?/topic/140541-1112-b9partswitch-v2180-march-17/
 [url:ModuleManager]: https://forum.kerbalspaceprogram.com/index.php?/topic/50533-18x-112x-module-manager-421-august-1st-2021-locked-inside-edition/
@@ -539,6 +539,10 @@ Happy to recieve pull requests on GitHub for improvements, more IVA support, etc
 [url:MOARdVPlus]: https://github.com/MOARdV/MOARdVPlus
 [url:APIP]: https://github.com/Thilen03/Airplane-Plus-IVA-Pack
 [url:APF16]: https://forum.kerbalspaceprogram.com/index.php?/topic/156245-13-asetrpm-for-falcon-cockpit-from-airplane-plus-pack-feb-10-2017/
+[url:KSAIVA]: https://forum.kerbalspaceprogram.com/index.php?/topic/208598-ksa-iva-upgrade-adopted-mk1-stock-parts-bdb-apollo/
+[url:SIVSIVA]: https://forum.kerbalspaceprogram.com/index.php?/topic/209466-1123-starilex-intra-vehicular-solutions-mki-pod-needle/
+[url:MaxKspIVA]: https://forum.kerbalspaceprogram.com/index.php?/topic/181392-16x-max-ksp-mas-iva-pack-development/
+[url:SABSIVA]: https://forum.kerbalspaceprogram.com/index.php?/topic/189891-sabs_iva-mas-enabled-iva-configs-for-stock-command-modules/
 [kspf:blowfish]: https://forum.kerbalspaceprogram.com/index.php?/profile/119688-blowfish/
 [kspf:Electrocutor]: https://forum.kerbalspaceprogram.com/index.php?/profile/109593-electrocutor/
 [kspf:sarbian]: https://forum.kerbalspaceprogram.com/index.php?/profile/57146-sarbian/
