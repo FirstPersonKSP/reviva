@@ -41,7 +41,7 @@ the coverage over time.
 - [Warbird Cockpits][url:WarbirdCockpits]
 - [Ultimate Shuttle IVA][url:UltimateShuttleIVA]
 - [ASET IVA for Making History Pods][url:ASETIVAforMakingHistoryPods]
-- Many more, see [Support Progress][url:SupportProgress] and [url:DependencySummary]
+- Many more, see [Support Progress][url:SupportProgress] and [Dependency Summary][url:DependencySummary]
   for the full list as more are supported.
 
 ## Changes
