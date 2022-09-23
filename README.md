@@ -523,7 +523,7 @@ Happy to recieve pull requests on GitHub for improvements, more IVA support, etc
 [url:GitHubIssue5]: https://github.com/harveyt/reviva/issues/5 "GitHub Issue 5"
 [url:GitHubIssue6]: https://github.com/harveyt/reviva/issues/6 "GitHub Issue 6"
 [url:SupportProgress]: https://github.com/harveyt/reviva/blob/main/README.md#support-progress
-[url:DependencySummary]: https://github.com/harveyt/reviva/blob/main/README.md#dependecy-summary
+[url:DependencySummary]: https://github.com/harveyt/reviva/blob/main/README.md#dependency-summary
 [url:SpaceDock]: https://spacedock.info/mod/2990/Reviva "SpaceDock"
 [url:B9PartSwitch]: https://forum.kerbalspaceprogram.com/index.php?/topic/140541-1112-b9partswitch-v2180-march-17/
 [url:ModuleManager]: https://forum.kerbalspaceprogram.com/index.php?/topic/50533-18x-112x-module-manager-421-august-1st-2021-locked-inside-edition/
