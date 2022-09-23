@@ -501,7 +501,11 @@ are replaced by the superb `MAS_ALCOR_MFD2` which simulates a near future avioni
 - (5) :: Possible MAS Mk2 Gemini pod for Stock and BDB -
   https://github.com/MOARdV/AvionicsSystems/issues/264
 - (6) :: Installing ASET/RPM for Falcon Cockpit will overwrite AirplanePlus itself, which is not
-  recommended. Reviva only supports a manual install into "GameData/AirplanePlusFalcon", see the falcon.cfg.
+  recommended. Reviva only supports a manual install into "GameData/AirplanePlusFalcon", see the
+  falcon.cfg.
+- (7) :: Only download and install the Max-Ksp-MAS-IVA-Pack-N.N.zip, the Hud/No-Hud variants are
+  provided by Reviva itself. Must be installed in folder "GameData/Max-Ksp-IVA-Pack", note the
+  spaces are replaced by minus signs to avoid confusion.
 
 # Building
 
