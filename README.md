@@ -284,6 +284,8 @@ existence that can work on KSP 1.12.x - if you know of more let the mod author k
 | Untested    | HorizonsIVA-Project                                                 | ?         | RPM     | KAX, BDB              |          | C2B Cockpit, BDB LM                        |
 | Untested    | AeroKerbin Industries Modified IVAs                                 | ?         | RPM     | Stock, SXT            |          | ?                                          |
 | Unfinished  | MK2 Iva Work in Progress                                            | ?         | RPM     | Stock                 |          | Mk2 Cockpit                                |
+| Untested    | LonesomeRobots Aerospace: The Gusmobile.                            | ?         | RPM     | ?                     |          | Possible Gemini IVA                        |
+| Untested    | Snakeru's Mk2 Pod IVA (MAS Issue 264)                               | ?         | MAS     | ?                     |          | Possible Gemini IVA                        |
 
 - (1) :: You can have either RPM or MAS, or in fact both at the same time. MAS includes upgrade
 scripts that render some existing RPM IVAs at a high quality and performance (in my
