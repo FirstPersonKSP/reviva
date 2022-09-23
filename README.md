@@ -504,8 +504,7 @@ are replaced by the superb `MAS_ALCOR_MFD2` which simulates a near future avioni
   recommended. Reviva only supports a manual install into "GameData/AirplanePlusFalcon", see the
   falcon.cfg.
 - (7) :: Only download and install the Max-Ksp-MAS-IVA-Pack-N.N.zip, the Hud/No-Hud variants are
-  provided by Reviva itself. Must be installed in folder "GameData/Max-Ksp-IVA-Pack", note the
-  spaces are replaced by minus signs to avoid confusion.
+  provided by Reviva itself.
 
 # Building
 
