@@ -264,8 +264,9 @@ existence that can work on KSP 1.12.x - if you know of more let the mod author k
 | Optional    | [Bluedog Design Bureau][url:BDB]                                    | CKAN      | RPM     | BDB                   | Done     | Mercury, Gemini, Apollo, LEM               |
 | Provides    | [KSA IVA Upgrade][url:KSAIVA]                                       | GitHub    | RPM     | Stock                 | Provides | Stock, MH, BDB (V1.5.0 provides Reviva)    |
 | Provides    | [Starilex Intra-Vehicular Solutions][url:SIVSIVA]                   | SpaceDock | RPM     | Stock                 | Provides | Mk1 CM, (V1.1 provides Reviva)             |
-| Untested    | [Max-Ksp MAS IVA Pack][url:MaxKspIVA]                               | GitHub    | MAS     | Stock, Making History | Done     | Mk1-3 CM, M.E.M. IVAs                      |
-| Untested    | [SABS\_IVA: MAS-enabled IVA][url:SABSIVA]                           | GitHub    | MAS     | Stock, MH, PCR        | Planned  | Stock, MH                                  |
+| Optional    | [Max-Ksp MAS IVA Pack][url:MaxKspIVA]                               | GitHub    | MAS     | Stock, Making History | Done     | Mk1-3 CM, M.E.M. IVAs                      |
+| Optional    | [SABS\_IVA: MAS-enabled IVA][url:SABSIVA]                           | GitHub    | MAS     | Stock, MH, PCR        | Partial  | Stock, MH                                  |
+| Optional    | [Snakeru's Mk2 Pod IVA (MAS Issue 264)][url:SnakeruIVA]             | GitHub    | MAS     | Stock                 | Done     | Mk1 / Gemini IVA                           |
 | Optional    | Probe Control Room                                                  | CKAN      | RPM     | PBC                   | Planned  | Probe control room for probes              |
 | Optional    | ALCOR by ASET                                                       | CKAN      | RPM     | Alcor                 | Planned  | High tech 3-man lander capsule             |
 | Optional    | OPT Spaceplane                                                      | CKAN      | RPM     | Opt                   | Planned  | Near and Far Future Spacecraft             |
@@ -288,7 +289,6 @@ existence that can work on KSP 1.12.x - if you know of more let the mod author k
 | Untested    | AeroKerbin Industries Modified IVAs                                 | ?         | RPM     | Stock, SXT            |          | ?                                          |
 | Unfinished  | MK2 Iva Work in Progress                                            | ?         | RPM     | Stock                 |          | Mk2 Cockpit                                |
 | Untested    | LonesomeRobots Aerospace: The Gusmobile.                            | ?         | RPM     | ?                     |          | Possible Gemini IVA                        |
-| Untested    | Snakeru's Mk2 Pod IVA (MAS Issue 264)                               | ?         | MAS     | ?                     |          | Possible Gemini IVA                        |
 
 - (1) :: You can have RPM or MAS, or in fact both at the same time. MAS includes upgrade scripts
 that render some existing RPM IVAs at a high quality and performance (in my experience).
@@ -419,29 +419,30 @@ are replaced by the superb `MAS_ALCOR_MFD2` which simulates a near future avioni
 
 ### Making History
 
-| Name            | CFG Name  | From | IVA             | Tech | Style   | Quality | Support Status |
-|-----------------|-----------|------|-----------------|------|---------|---------|----------------|
-| KV-1            | kv1Pod    | MH   | MH              | Low  | Stock   | Low     | Done           |
-|                 |           |      | ASET for MH     | High | RPM     | High    | Done           |
-|                 |           | KSA  | KSA             | Mid  | RPM     | High    | Provided       |
-|                 |           | SABS | SABS            |      |         |         | Planned        |
-| KV-2            | kv2Pod    | MH   | MH              | Low  | Stock   | Low     | Done           |
-|                 |           |      | ASET for MH     | High | RPM     | High    | Done           |
-|                 |           | SABS | SABS            |      |         |         | Planned        |
-| KV-3            | kv3Pod    | MH   | MH              | Low  | Stock   | Low     | Done           |
-|                 |           |      | ASET for MH     | High | RPM     | High    | Done           |
-|                 |           | SABS | SABS            |      |         |         | Planned        |
-| Mk2 Command Pod | Mk2Pod    | MH   | MH              | Low  | Stock   | Low     | Done           |
-|                 |           |      | ASET for MH     | High | RPM     | High    | Done           |
-|                 |           |      | ASET for MH+MAS | Near | RPM+MAS | High    | Done           |
-|                 |           |      | MAS             | Low  | MAS     | WIP     | Done (5)       |
-|                 |           | SABS | SABS            | Mid  | MAS     | Med     | Done           |
-| M.E.M.          | MEMLander | MH   | MH              | Low  | Stock   | Low     | Done           |
-|                 |           |      | ASET for MH     | High | RPM     | High    | Done           |
-|                 |           |      | ASET for MH+MAS | Near | RPM+MAS | High    | Done           |
-|                 |           |      | Max-Ksp         | Low  | MAS     | V.High  | Done           |
-|                 |           |      | Max-Ksp No Hud  | Low  | MAS     | V.High  | Done           |
-|                 |           | SABS | SABS            | Mid  | MAS     | Med     | Done           |
+| Name            | CFG Name  | From   | IVA             | Tech | Style   | Quality | Support Status |
+|-----------------|-----------|--------|-----------------|------|---------|---------|----------------|
+| KV-1            | kv1Pod    | MH     | MH              | Low  | Stock   | Low     | Done           |
+|                 |           |        | ASET for MH     | High | RPM     | High    | Done           |
+|                 |           | KSA    | KSA             | Mid  | RPM     | High    | Provided       |
+|                 |           | SABS   | SABS            |      |         |         | Planned        |
+| KV-2            | kv2Pod    | MH     | MH              | Low  | Stock   | Low     | Done           |
+|                 |           |        | ASET for MH     | High | RPM     | High    | Done           |
+|                 |           | SABS   | SABS            |      |         |         | Planned        |
+| KV-3            | kv3Pod    | MH     | MH              | Low  | Stock   | Low     | Done           |
+|                 |           |        | ASET for MH     | High | RPM     | High    | Done           |
+|                 |           | SABS   | SABS            |      |         |         | Planned        |
+| Mk2 Command Pod | Mk2Pod    | MH     | MH              | Low  | Stock   | Low     | Done           |
+|                 |           |        | ASET for MH     | High | RPM     | High    | Done           |
+|                 |           |        | ASET for MH+MAS | Near | RPM+MAS | High    | Done           |
+|                 |           |        | MAS             | Low  | MAS     | WIP     | Done (5)       |
+|                 |           | SABS   | SABS            | Mid  | MAS     | Med     | Done           |
+|                 |           | Saneru | Snakeru         | Low  | MAS     | High    | Done           |
+| M.E.M.          | MEMLander | MH     | MH              | Low  | Stock   | Low     | Done           |
+|                 |           |        | ASET for MH     | High | RPM     | High    | Done           |
+|                 |           |        | ASET for MH+MAS | Near | RPM+MAS | High    | Done           |
+|                 |           |        | Max-Ksp         | Low  | MAS     | V.High  | Done           |
+|                 |           |        | Max-Ksp No Hud  | Low  | MAS     | V.High  | Done           |
+|                 |           | SABS   | SABS            | Mid  | MAS     | Med     | Done           |
 
 ### BDB
 
@@ -466,6 +467,7 @@ both of the very excellent MAS MOARdVPlus IVA.
 |                  |                          |            | ASET for MH+MAS  | Near | RPM+MAS | High    | Done           |
 |                  |                          |            | MAS              | Low  | MAS     | WIP     | Done (5)       |
 |                  |                          | SABS       | SABS             | Mid  | MAS     | Med     | Done           |
+|                  |                          | Saneru     | Snakeru          | Low  | MAS     | High    | Done           |
 | Kane Command Pod | bluedog\_Apollo\_CrewPod | BDB        | BDB              | Low  | Stock   | Low     | Done           |
 |                  |                          | MOARdVPlus | Retro            | Med  | MAS     | V.High  | Done           |
 |                  |                          |            | Glass            | High | MAS     | V.High  | Done           |
@@ -595,7 +597,7 @@ scenarios. Feel free to try to change my mind!
 | KV-1            | KSA            | ASET for MH     |
 | KV-2            | ASET for MH    | ASET for MH     |
 | KV-3            | ASET for MH    | ASET for MH     |
-| Mk2 Command Pod | MAS            | ASET for MH+MAS |
+| Mk2 Command Pod | Snakeru        | ASET for MH+MAS |
 | M.E.M.          | Max-Ksp No Hud | ASET for MH+MAS |
 
 ## BDB
@@ -603,7 +605,7 @@ scenarios. Feel free to try to change my mind!
 | Name           | Best Realistic   | Best Functional |
 |----------------|------------------|-----------------|
 | Hermes/Mercury | Starilex         | DE+MAS          |
-| Vinci/Gemini   | MAS              | ASET for MH+MAS |
+| Vinci/Gemini   | Snakeru          | ASET for MH+MAS |
 | Kane/Apollo    | MOARdVPlus Retro | DE+MAS          |
 | Sina/L.E.M.    | Max-Ksp No Hud   | ASET for MH+MAS |
 
@@ -656,6 +658,7 @@ Happy to recieve pull requests on GitHub for improvements, more IVA support, etc
 [url:SIVSIVA]: https://forum.kerbalspaceprogram.com/index.php?/topic/209466-1123-starilex-intra-vehicular-solutions-mki-pod-needle/
 [url:MaxKspIVA]: https://forum.kerbalspaceprogram.com/index.php?/topic/181392-16x-max-ksp-mas-iva-pack-development/
 [url:SABSIVA]: https://forum.kerbalspaceprogram.com/index.php?/topic/189891-sabs_iva-mas-enabled-iva-configs-for-stock-command-modules/
+[url:SnakeruIVA]: https://github.com/MOARdV/AvionicsSystems/issues/264
 [kspf:blowfish]: https://forum.kerbalspaceprogram.com/index.php?/profile/119688-blowfish/
 [kspf:Electrocutor]: https://forum.kerbalspaceprogram.com/index.php?/profile/109593-electrocutor/
 [kspf:sarbian]: https://forum.kerbalspaceprogram.com/index.php?/profile/57146-sarbian/
