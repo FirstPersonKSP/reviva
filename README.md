@@ -577,18 +577,18 @@ scenarios. Feel free to try to change my mind!
 
 ## Stock
 
-| Name               | Best Realistic | Best Functional |
-|--------------------|----------------|-----------------|
-| Mk1 Cockpit        | ASET           | DE+MAS          |
-| Mk1 Command Pod    | Starilex       | DE+MAS          |
-| Mk1 Inline Cockpit | WarbirdsRetro  | DE+MAS          |
-| Mk1 Lander Can     | ASET           | DE+MAS          |
-| Mk1-3 Command Pod  | Max-Ksp        | ASET            |
-| Mk2 Cockpit        | DE+MAS         | DE+MAS          |
-| Mk2 Inline Cockpit | WarbirdsSI     | DE+MAS          |
-| Mk2 Lander Can     | DE+MAS         | DE+MAS          |
-| Mk3 Cockpit        | UltimateRetro  | UltimateGlass   |
-| PPD-12 Cupola      | DE             | DE              |
+| Name               | Best Realistic   | Best Functional |
+|--------------------|------------------|-----------------|
+| Mk1 Cockpit        | ASET             | DE+MAS          |
+| Mk1 Command Pod    | Starilex         | DE+MAS          |
+| Mk1 Inline Cockpit | WarbirdsRetro    | DE+MAS          |
+| Mk1 Lander Can     | ASET             | DE+MAS          |
+| Mk1-3 Command Pod  | MOARdVPlus Retro | ASET            |
+| Mk2 Cockpit        | DE+MAS           | DE+MAS          |
+| Mk2 Inline Cockpit | WarbirdsSI       | DE+MAS          |
+| Mk2 Lander Can     | DE+MAS           | DE+MAS          |
+| Mk3 Cockpit        | UltimateRetro    | UltimateGlass   |
+| PPD-12 Cupola      | DE               | DE              |
 
 ## Making History
 
@@ -606,7 +606,7 @@ scenarios. Feel free to try to change my mind!
 |----------------|------------------|-----------------|
 | Hermes/Mercury | Starilex         | DE+MAS          |
 | Vinci/Gemini   | Snakeru          | ASET for MH+MAS |
-| Kane/Apollo    | MOARdVPlus Retro | DE+MAS          |
+| Kane/Apollo    | MOARdVPlus Retro | ASET            |
 | Sina/L.E.M.    | Max-Ksp No Hud   | ASET for MH+MAS |
 
 # Building
