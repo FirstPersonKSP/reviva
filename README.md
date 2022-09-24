@@ -433,7 +433,7 @@ are replaced by the superb `MAS_ALCOR_MFD2` which simulates a near future avioni
 |                 |           |      | ASET for MH     | High | RPM     | High    | Done           |
 |                 |           |      | ASET for MH+MAS | Near | RPM+MAS | High    | Done           |
 |                 |           |      | MAS             | Low  | MAS     | WIP     | (5)            |
-|                 |           | SABS | SABS            |      |         |         |                |
+|                 |           | SABS | SABS            | Mid  | MAS     | Med     | Done           |
 | M.E.M.          | MEMLander | MH   | MH              | Low  | Stock   | Low     | Done           |
 |                 |           |      | ASET for MH     | High | RPM     | High    | Done           |
 |                 |           |      | ASET for MH+MAS | Near | RPM+MAS | High    | Done           |
@@ -469,7 +469,7 @@ both of the very excellent MAS MOARdVPlus IVA.
 |                  |                          |            | ASET for MH      | High | RPM     | High    | Done           |
 |                  |                          |            | ASET for MH+MAS  | Near | RPM+MAS | High    | Done           |
 |                  |                          |            | MAS              | Low  | MAS     | WIP     | (5)            |
-|                  |                          | SABS       | SABS             |      |         |         |                |
+|                  |                          | SABS       | SABS             | Mid  | MAS     | Med     | Done           |
 | Kane Command Pod | bluedog\_Apollo\_CrewPod | BDB        | BDB              | Low  | Stock   | Low     | Done           |
 |                  |                          | MOARdVPlus | Retro            | Med  | MAS     | V.High  | Done           |
 |                  |                          |            | Glass            | High | MAS     | V.High  | Done           |
