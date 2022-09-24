@@ -379,7 +379,7 @@ are replaced by the superb `MAS_ALCOR_MFD2` which simulates a near future avioni
 |                            |                          |       | ASET             | High   | RPM     | V.High  | Done           |
 |                            |                          |       | MAS              | Low    | MAS     | V.High  | Done           |
 |                            |                          |       | DE+MAS           | Near   | RPM+MAS | High    | Done           |
-|                            |                          |       | Max-Ksp          | Low    | MAS     | V.High  |                |
+|                            |                          |       | Max-Ksp          | Low    | MAS     | V.High  | Done           |
 | Mk2 Cockpit                | mk2Cockpit\_Standard     | Stock | Stock            | Low    | Stock   | Low     | Done           |
 |                            |                          |       | RPM              | Med    | RPM     | Med     | Done           |
 |                            |                          |       | DE\_IVAExtension | High   | RPM     | High    | Done           |
@@ -417,8 +417,8 @@ are replaced by the superb `MAS_ALCOR_MFD2` which simulates a near future avioni
 | M.E.M.                     | MEMLander                | MH    | MH               | Low    | Stock   | Low     | Done           |
 |                            |                          |       | ASET for MH      | High   | RPM     | High    | Done           |
 |                            |                          |       | ASET for MH+MAS  | Near   | RPM+MAS | High    | Done           |
-|                            |                          |       | Max-Ksp          | Low    | MAS     | V.High  |                |
-|                            |                          |       | Max-Ksp HUD      | Low    | MAS     | V.High  |                |
+|                            |                          |       | Max-Ksp          | Low    | MAS     | V.High  | Done           |
+|                            |                          |       | Max-Ksp No Hud   | Low    | MAS     | V.High  | Done           |
 |----------------------------|--------------------------|-------|------------------|--------|---------|---------|----------------|
 | Mercury                    | ?                        | BDB   | BDB              | Low    | Stock   | Low     |                |
 |                            | Mark1Cockpit             |       | Stock            | Low    | Stock   | Low     |                |
