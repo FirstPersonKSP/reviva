@@ -448,7 +448,7 @@ are replaced by the superb `MAS_ALCOR_MFD2` which simulates a near future avioni
 |                            |                          |       | ASET for MH      | High   | RPM     | High    |                |
 |                            |                          |       | ASET for MH+MAS  | Near   | RPM+MAS | High    |                |
 |                            |                          |       | Max-Ksp          | Low    | MAS     | V.High  |                |
-|                            |                          |       | Max-Ksp HUD      | Low    | MAS     | V.High  |                |
+|                            |                          |       | Max-Ksp No Hud   | Low    | MAS     | V.High  |                |
 |----------------------------|--------------------------|-------|------------------|--------|---------|---------|----------------|
 | MK1 Viewer's Cockpit       | bellcockpit              | AP    | AP               | Low    | Stock   | Low     | Done           |
 |                            |                          |       | APIP             | Med    | RPM     | V.High  | Done           |
