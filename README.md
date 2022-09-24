@@ -259,9 +259,10 @@ existence that can work on KSP 1.12.x - if you know of more let the mod author k
 | Optional    | [MOARdVPlus][url:MOARdVPlus]                                        | GitHub    | MAS     | BDB                   | Done     | BDB Kane/Sarnus IVA (Apollo)               |
 | Optional    | [Airplane Plus IVA Pack][url:APIP]                                  | GitHub    | RPM     | AirplanePlus          | Done     | Various plane/chopper cockpits             |
 | Optional    | [ASET/RPM for Falcon cockpit][url:APF16]                            | Dropbox   | RPM     | AirplanePlus          | Done     | F-16/mk2 non-commerical IVA                |
+| Optional    | [Bluedog Design Bureau][url:BDB]                                    | CKAN      | RPM     | BDB                   | Done     | Mercury, Gemini, Apollo, LEM               |
 | Provides    | [KSA IVA Upgrade][url:KSAIVA]                                       | GitHub    | RPM     | Stock                 | Provides | Stock, MH, BDB (V1.5.0 provides Reviva)    |
 | Provides    | [Starilex Intra-Vehicular Solutions][url:SIVSIVA]                   | SpaceDock | MAS     | Stock                 | Provides | Mk1 CM, (V1.1 provides Reviva)             |
-| Untested    | [Max-Ksp MAS IVA Pack][url:MaxKspIVA]                               | GitHub    | MAS     | Stock, Making History | Planned  | Mk1-3 CM, M.E.M. IVAs                      |
+| Untested    | [Max-Ksp MAS IVA Pack][url:MaxKspIVA]                               | GitHub    | MAS     | Stock, Making History | Done     | Mk1-3 CM, M.E.M. IVAs                      |
 | Untested    | [SABS\_IVA: MAS-enabled IVA][url:SABSIVA]                           | GitHub    | MAS     | Stock, MH, PCR        | Planned  | Stock, MH                                  |
 | Optional    | Probe Control Room                                                  | CKAN      | RPM     | PBC                   | Planned  | Probe control room for probes              |
 | Optional    | ALCOR by ASET                                                       | CKAN      | RPM     | Alcor                 | Planned  | High tech 3-man lander capsule             |
@@ -551,6 +552,7 @@ Happy to recieve pull requests on GitHub for improvements, more IVA support, etc
 [url:MOARdVPlus]: https://github.com/MOARdV/MOARdVPlus
 [url:APIP]: https://github.com/Thilen03/Airplane-Plus-IVA-Pack
 [url:APF16]: https://forum.kerbalspaceprogram.com/index.php?/topic/156245-13-asetrpm-for-falcon-cockpit-from-airplane-plus-pack-feb-10-2017/
+[url:BDB]: https://forum.kerbalspaceprogram.com/index.php?/topic/122020-1123-bluedog-design-bureau-stockalike-saturn-apollo-and-more-v1104-%D0%BB%D1%83%D0%BD%D0%B0-19july2022/
 [url:KSAIVA]: https://forum.kerbalspaceprogram.com/index.php?/topic/208598-ksa-iva-upgrade-adopted-mk1-stock-parts-bdb-apollo/
 [url:SIVSIVA]: https://forum.kerbalspaceprogram.com/index.php?/topic/209466-1123-starilex-intra-vehicular-solutions-mki-pod-needle/
 [url:MaxKspIVA]: https://forum.kerbalspaceprogram.com/index.php?/topic/181392-16x-max-ksp-mas-iva-pack-development/
