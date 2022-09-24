@@ -428,10 +428,10 @@ are replaced by the superb `MAS_ALCOR_MFD2` which simulates a near future avioni
 |                            |                          |       | MAS              | Low    | MAS     | V.High  | Done           |
 |                            |                          |       | DE+MAS           | Near   | RPM+MAS | High    | Done           |
 |                            |                          | KSA   | KSA              | Mid    | RPM     | High    | Done           |
-| Gemini                     | ?                        | BDB   | BDB              | Low    | Stock   | Low     |                |
-|                            | Mk2Pod                   | Stock | MH               | Low    | Stock   | Low     |                |
-|                            |                          |       | ASET for MH      | High   | RPM     | High    |                |
-|                            |                          |       | ASET for MH+MAS  | Near   | RPM+MAS | High    |                |
+| Gemini                     | ?                        | BDB   | BDB              | Low    | Stock   | Low     | Done           |
+|                            | Mk2Pod                   | Stock | MH               | Low    | Stock   | Low     | Done           |
+|                            |                          |       | ASET for MH      | High   | RPM     | High    | Done           |
+|                            |                          |       | ASET for MH+MAS  | Near   | RPM+MAS | High    | Done           |
 |                            |                          |       | MAS              | Low    | MAS     | WIP     | (5)            |
 | Kane Command Pod           | bluedog\_Apollo\_CrewPod | BDB   | BDB              | Low    | Stock   | Low     | Done           |
 |                            |                          |       | Retro            | Med    | MAS     | V.High  | Done           |
