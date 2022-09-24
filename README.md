@@ -23,7 +23,7 @@ the coverage over time.
     - Download and extract the Reviva-x.x.x.zip file at the root of your KSP installation.
   - SpaceDock - [SpaceDock][url:SpaceDock]
   - CKAN - Available
-  - Curse - Soon
+  - Curse - Probably never
 - [B9PartSwitch][url:B9PartSwitch]
 - [ModuleManager][url:ModuleManager]
 - [RasterPropMonitor (RPM)][url:RasterPropMonitor]
@@ -42,7 +42,9 @@ the coverage over time.
 - [Ultimate Shuttle IVA][url:UltimateShuttleIVA]
 - [ASET IVA for Making History Pods][url:ASETIVAforMakingHistoryPods]
 - Many more, see [Support Progress][url:SupportProgress] and [Dependency Summary][url:DependencySummary]
-  for the full list as more are supported.
+  for the full list as more are supported. Some IVA mods require downloading from GitHub, Dropbox or
+  even Zip files in GitHub issues and must be installed in their suggestion locations for Reviva to
+  work correctly (directory names under GameData are very important).
 
 ## Changes
 
@@ -432,7 +434,7 @@ are replaced by the superb `MAS_ALCOR_MFD2` which simulates a near future avioni
 | Mk2 Command Pod | Mk2Pod    | MH   | MH              | Low  | Stock   | Low     | Done           |
 |                 |           |      | ASET for MH     | High | RPM     | High    | Done           |
 |                 |           |      | ASET for MH+MAS | Near | RPM+MAS | High    | Done           |
-|                 |           |      | MAS             | Low  | MAS     | WIP     | (5)            |
+|                 |           |      | MAS             | Low  | MAS     | WIP     | Done (5)       |
 |                 |           | SABS | SABS            | Mid  | MAS     | Med     | Done           |
 | M.E.M.          | MEMLander | MH   | MH              | Low  | Stock   | Low     | Done           |
 |                 |           |      | ASET for MH     | High | RPM     | High    | Done           |
@@ -462,7 +464,7 @@ both of the very excellent MAS MOARdVPlus IVA.
 |                  | Mk2Pod                   | Stock      | MH               | Low  | Stock   | Low     | Done           |
 |                  |                          |            | ASET for MH      | High | RPM     | High    | Done           |
 |                  |                          |            | ASET for MH+MAS  | Near | RPM+MAS | High    | Done           |
-|                  |                          |            | MAS              | Low  | MAS     | WIP     | (5)            |
+|                  |                          |            | MAS              | Low  | MAS     | WIP     | Done (5)       |
 |                  |                          | SABS       | SABS             | Mid  | MAS     | Med     | Done           |
 | Kane Command Pod | bluedog\_Apollo\_CrewPod | BDB        | BDB              | Low  | Stock   | Low     | Done           |
 |                  |                          | MOARdVPlus | Retro            | Med  | MAS     | V.High  | Done           |
@@ -556,8 +558,8 @@ both of the very excellent MAS MOARdVPlus IVA.
 - (2) :: Mk3 Ultimate Retro variant CRT do not seem to work. Will eventually try to fix.
 - (3) :: IVA is work-in-progress or incomplete.
 - (4) :: Some switches on right hand side obscured by cockpit walls.
-- (5) :: Possible MAS Mk2 Gemini pod for Stock and BDB -
-  https://github.com/MOARdV/AvionicsSystems/issues/264
+- (5) :: This MAS Mk2 / Gemini pod for Stock and BDB can be downloaded from Mk2.20190329.zip stored
+  in https://github.com/MOARdV/AvionicsSystems/issues/264
 - (6) :: Installing ASET/RPM for Falcon Cockpit will overwrite AirplanePlus itself, which is not
   recommended. Reviva only supports a manual install into "GameData/AirplanePlusFalcon", see the
   falcon.cfg.
