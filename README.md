@@ -48,6 +48,22 @@ the coverage over time.
 
 ## Changes
 
+### 0.7.6 Release - Moar IVA and BDB (24th Sep 2022)
+
+Adds:
+
+- Support for:
+  - [Starilex Intra-Vehicular Solutions][url:SIVSIVA] - an excellent retro Mk1
+    pod. Available for Stock Mk1 and BDB Hermes / Mercury CM. Uses RPM.
+  - [Max-Ksp MAS IVA Pack][url:MaxKspIVA] - excellent retro Mk1-3 and MEM pods. Available for Stock
+    Mk1-3, Making History MEM, BDB Kane / Apollo,  Sina / LEM. Uses MAS.
+  - [SABS\_IVA: MAS-enabled IVA][url:SABSIVA] - partial support (it provides a full set of Stock and
+    Making History pods using MAS) for Mk1, Mk2, Mk1-3, MEM and BDB equivalents. Uses MAS. These
+    are work-in-progress, I may add configs for everything else later.
+  - [Snakeru's Mk2 Pod IVA][url:SnakeruIVA] - excelent retro style Mk2. Available for Stock and BDB
+    Vinci / Gemini. Note that this is a ZIP file in a GitHub issue and is Beta, but to me is the
+    best retro MAS style IVA for the Mk2.
+  
 ### 0.7.5 Release - Airplane Plus (28th Apr 2022)
 
 Adds:
