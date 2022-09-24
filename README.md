@@ -420,14 +420,14 @@ are replaced by the superb `MAS_ALCOR_MFD2` which simulates a near future avioni
 |                            |                          |       | Max-Ksp          | Low    | MAS     | V.High  | Done           |
 |                            |                          |       | Max-Ksp No Hud   | Low    | MAS     | V.High  | Done           |
 |----------------------------|--------------------------|-------|------------------|--------|---------|---------|----------------|
-| Mercury                    | ?                        | BDB   | BDB              | Low    | Stock   | Low     |                |
-|                            | mk1pod\_v2               | Stock | Stock            | Low    | Stock   | Low     |                |
-|                            |                          |       | RPM              | Med    | RPM     | Med     |                |
-|                            |                          |       | DE\_IVAExtension | High   | RPM     | High    |                |
-|                            |                          |       | Warbirds         | Med    | RPM     | High    |                |
-|                            |                          |       | MAS              | Low    | MAS     | V.High  |                |
-|                            |                          |       | DE+MAS           | Near   | RPM+MAS | High    |                |
-|                            |                          | KSA   | KSA              | Mid    | RPM     | High    | Provided       |
+| Mercury                    | ?                        | BDB   | BDB              | Low    | Stock   | Low     | Done           |
+|                            | mk1pod\_v2               | Stock | Stock            | Low    | Stock   | Low     | Done           |
+|                            |                          |       | RPM              | Med    | RPM     | Med     | Done           |
+|                            |                          |       | DE\_IVAExtension | High   | RPM     | High    | Done           |
+|                            |                          |       | Warbirds         | Med    | RPM     | High    | Done           |
+|                            |                          |       | MAS              | Low    | MAS     | V.High  | Done           |
+|                            |                          |       | DE+MAS           | Near   | RPM+MAS | High    | Done           |
+|                            |                          | KSA   | KSA              | Mid    | RPM     | High    | Done           |
 | Gemini                     | ?                        | BDB   | BDB              | Low    | Stock   | Low     |                |
 |                            | Mk2Pod                   | Stock | MH               | Low    | Stock   | Low     |                |
 |                            |                          |       | ASET for MH      | High   | RPM     | High    |                |
