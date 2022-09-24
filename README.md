@@ -421,35 +421,34 @@ are replaced by the superb `MAS_ALCOR_MFD2` which simulates a near future avioni
 |                            |                          |       | Max-Ksp No Hud   | Low    | MAS     | V.High  | Done           |
 |----------------------------|--------------------------|-------|------------------|--------|---------|---------|----------------|
 | Mercury                    | ?                        | BDB   | BDB              | Low    | Stock   | Low     |                |
-|                            | Mark1Cockpit             |       | Stock            | Low    | Stock   | Low     |                |
+|                            | mk1pod\_v2               | Stock | Stock            | Low    | Stock   | Low     |                |
 |                            |                          |       | RPM              | Med    | RPM     | Med     |                |
 |                            |                          |       | DE\_IVAExtension | High   | RPM     | High    |                |
 |                            |                          |       | Warbirds         | Med    | RPM     | High    |                |
 |                            |                          |       | MAS              | Low    | MAS     | V.High  |                |
 |                            |                          |       | DE+MAS           | Near   | RPM+MAS | High    |                |
+|                            |                          | KSA   | KSA              | Mid    | RPM     | High    | Provided       |
 | Gemini                     | ?                        | BDB   | BDB              | Low    | Stock   | Low     |                |
-|                            | Mk2Pod                   |       | MH               | Low    | Stock   | Low     |                |
+|                            | Mk2Pod                   | Stock | MH               | Low    | Stock   | Low     |                |
 |                            |                          |       | ASET for MH      | High   | RPM     | High    |                |
 |                            |                          |       | ASET for MH+MAS  | Near   | RPM+MAS | High    |                |
 |                            |                          |       | MAS              | Low    | MAS     | WIP     | (5)            |
 | Kane Command Pod           | bluedog\_Apollo\_CrewPod | BDB   | BDB              | Low    | Stock   | Low     | Done           |
 |                            |                          |       | Retro            | Med    | MAS     | V.High  | Done           |
 |                            |                          |       | Glass            | High   | MAS     | V.High  | Done           |
-|                            | mk1-3pod                 |       | Stock            | Low    | Stock   | Low     | Done           |
+|                            | mk1-3pod                 | Stock | Stock            | Low    | Stock   | Low     | Done           |
 |                            |                          |       | RPM              | Med    | RPM     | Med     | Done           |
 |                            |                          |       | DE\_IVAExtension | High   | RPM     | High    | Done           |
 |                            |                          |       | ASET             | High   | RPM     | V.High  | Done           |
 |                            |                          |       | MAS              | Low    | MAS     | V.High  | Done           |
 |                            |                          |       | DE+MAS           | Near   | RPM+MAS | High    | Done           |
-|                            |                          |       | Max-Ksp          | Low    | MAS     | V.High  |                |
-|                            |                          | KSA   | KSA              | Mid    | RPM     | High    | Provided       |
+|                            |                          |       | Max-Ksp          | Low    | MAS     | V.High  | Done           |
 | LEM                        | ?                        | BDB   | BDB              | Low    | Stock   | Low     |                |
-|                            | MEMLander                |       | MH               | Low    | Stock   | Low     |                |
+|                            | MEMLander                | Stock | MH               | Low    | Stock   | Low     |                |
 |                            |                          |       | ASET for MH      | High   | RPM     | High    |                |
 |                            |                          |       | ASET for MH+MAS  | Near   | RPM+MAS | High    |                |
 |                            |                          |       | Max-Ksp          | Low    | MAS     | V.High  |                |
 |                            |                          |       | Max-Ksp HUD      | Low    | MAS     | V.High  |                |
-|                            |                          | KSA   | KSA              | Mid    | RPM     | High    | Provided       |
 |----------------------------|--------------------------|-------|------------------|--------|---------|---------|----------------|
 | MK1 Viewer's Cockpit       | bellcockpit              | AP    | AP               | Low    | Stock   | Low     | Done           |
 |                            |                          |       | APIP             | Med    | RPM     | V.High  | Done           |
