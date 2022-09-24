@@ -361,7 +361,7 @@ are replaced by the superb `MAS_ALCOR_MFD2` which simulates a near future avioni
 |                    |                      |          | DE+MAS           | Near   | RPM+MAS | High    | Done           |
 |                    |                      | Starilex | Starilex         | Low    | RPM     | High    | Done           |
 |                    |                      | KSA      | KSA              | Mid    | RPM     | High    | Provided       |
-|                    |                      | SABS     | SABS             |        |         |         |                |
+|                    |                      | SABS     | SABS             | High   | MAS     | Med     | Done           |
 | Mk1 Inline Cockpit | Mark2Cockpit         | Stock    | Stock            | Low    | Stock   | Low     | Done           |
 |                    |                      |          | DE\_IVAExtension | High   | RPM     | High    | Done           |
 |                    |                      |          | Warbirds         | Medium | RPM     | V.High  | Done           |
@@ -463,7 +463,7 @@ both of the very excellent MAS MOARdVPlus IVA.
 |                  |                          |            | MAS              | Low  | MAS     | V.High  | Done           |
 |                  |                          |            | DE+MAS           | Near | RPM+MAS | High    | Done           |
 |                  |                          | Starilex   | Starilex         | Low  | RPM     | High    | Done           |
-|                  |                          | SABS       | SABS             |      |         |         |                |
+|                  |                          | SABS       | SABS             | High | MAS     | Med     | Done           |
 | Gemini           | ?                        | BDB        | BDB              | Low  | Stock   | Low     | Done           |
 |                  | Mk2Pod                   | Stock      | MH               | Low  | Stock   | Low     | Done           |
 |                  |                          |            | ASET for MH      | High | RPM     | High    | Done           |
