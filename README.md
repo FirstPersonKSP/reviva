@@ -544,6 +544,47 @@ both of the very excellent MAS MOARdVPlus IVA.
 - (7) :: Only download and install the Max-Ksp-MAS-IVA-Pack-N.N.zip, the Hud/No-Hud variants are
   provided by Reviva itself.
 
+# Best IVA
+
+This is a very subjective decision for best IVA for both "realism" (probably nowhere near reality,
+but realistic for the era the IVA would first appear) and "functionality" (the most functional,
+probably high tech) IVA. All the IVA are great, but these represent my usual choice for those
+scenarios. Feel free to try to change my mind!
+
+## Stock
+
+| Name               | Best Realistic | Best Functional |
+|--------------------|----------------|-----------------|
+| Mk1 Cockpit        | ASET           | DE+MAS          |
+| Mk1 Command Pod    | Starilex       | DE+MAS          |
+| Mk1 Inline Cockpit | WarbirdsRetro  | DE+MAS          |
+| Mk1 Lander Can     | ASET           | DE+MAS          |
+| Mk1-3 Command Pod  | Max-Ksp        | ASET            |
+| Mk2 Cockpit        | DE+MAS         | DE+MAS          |
+| Mk2 Inline Cockpit | WarbirdsSI     | DE+MAS          |
+| Mk2 Lander Can     | DE+MAS         | DE+MAS          |
+| Mk3 Cockpit        | UltimateRetro  | UltimateGlass   |
+| PPD-12 Cupola      | DE             | DE              |
+
+## Making History
+
+| Name            | Best Realistic | Best Functional |
+|-----------------|----------------|-----------------|
+| KV-1            | KSA            | ASET for MH     |
+| KV-2            | ASET for MH    | ASET for MH     |
+| KV-3            | ASET for MH    | ASET for MH     |
+| Mk2 Command Pod | MAS            | ASET for MH+MAS |
+| M.E.M.          | Max-Ksp No Hud | ASET for MH+MAS |
+
+## BDB
+
+| Name           | Best Realistic   | Best Functional |
+|----------------|------------------|-----------------|
+| Hermes/Mercury | Starilex         | DE+MAS          |
+| Vinci/Gemini   | MAS              | ASET for MH+MAS |
+| Kane/Apollo    | MOARdVPlus Retro | DE+MAS          |
+| Sina/L.E.M.    | Max-Ksp No Hud   | ASET for MH+MAS |
+
 # Building
 
 If you want to build the DLL and packages, just be aware that the provided source assume
