@@ -352,7 +352,7 @@ are replaced by the superb `MAS_ALCOR_MFD2` which simulates a near future avioni
 |                    |                      |          | ASET             | High   | RPM     | V.High  | Done           |
 |                    |                      |          | DE+MAS           | Near   | RPM+MAS | High    | Done           |
 |                    |                      | KSA      | KSA              | Mid    | RPM     | High    | Provided       |
-|                    |                      | SABS     | SABS             |        |         |         |                |
+|                    |                      | SABS     | SABS             |        |         |         | Planned        |
 | Mk1 Command Pod    | mk1pod\_v2           | Stock    | Stock            | Low    | Stock   | Low     | Done           |
 |                    |                      |          | RPM              | Med    | RPM     | Med     | Done           |
 |                    |                      |          | DE\_IVAExtension | High   | RPM     | High    | Done           |
@@ -370,7 +370,7 @@ are replaced by the superb `MAS_ALCOR_MFD2` which simulates a near future avioni
 |                    |                      |          | WarbirdsRetroSI  | Low    | RPM     | V.High  | Done           |
 |                    |                      |          | DE+MAS           | Near   | RPM+MAS | High    | Done           |
 |                    |                      | KSA      | KSA              | Mid    | RPM     | High    | Provided       |
-|                    |                      | SABS     | SABS             |        |         |         |                |
+|                    |                      | SABS     | SABS             |        |         |         | Planned        |
 | Mk1 Lander Can     | landerCabinSmall     | Stock    | Stock            | Low    | Stock   | Low     | Done           |
 |                    |                      |          | RPM              | Med    | RPM     | Med     | Done           |
 |                    |                      |          | DE\_IVAExtension | High   | RPM     | High    | Done           |
@@ -378,7 +378,7 @@ are replaced by the superb `MAS_ALCOR_MFD2` which simulates a near future avioni
 |                    |                      |          | MAS              | Low    | MAS     | V.High  | Done           |
 |                    |                      |          | DE+MAS           | Near   | RPM+MAS | High    | Done           |
 |                    |                      | KSA      | KSA              | Mid    | RPM     | High    | Provided       |
-|                    |                      | SABS     | SABS             |        |         |         |                |
+|                    |                      | SABS     | SABS             |        |         |         | Planned        |
 | Mk1-3 Command Pod  | mk1-3pod             | Stock    | Stock            | Low    | Stock   | Low     | Done           |
 |                    |                      |          | RPM              | Med    | RPM     | Med     | Done           |
 |                    |                      |          | DE\_IVAExtension | High   | RPM     | High    | Done           |
@@ -386,34 +386,34 @@ are replaced by the superb `MAS_ALCOR_MFD2` which simulates a near future avioni
 |                    |                      |          | MAS              | Low    | MAS     | V.High  | Done           |
 |                    |                      |          | DE+MAS           | Near   | RPM+MAS | High    | Done           |
 |                    |                      |          | Max-Ksp          | Low    | MAS     | V.High  | Done           |
-|                    |                      | SABS     | SABS             |        |         |         |                |
+|                    |                      | SABS     | SABS             | Mid    | MAS     | Med     | Done           |
 | Mk2 Cockpit        | mk2Cockpit\_Standard | Stock    | Stock            | Low    | Stock   | Low     | Done           |
 |                    |                      |          | RPM              | Med    | RPM     | Med     | Done           |
 |                    |                      |          | DE\_IVAExtension | High   | RPM     | High    | Done           |
 |                    |                      |          | DE+MAS           | Near   | RPM+MAS | High    | Done           |
-|                    |                      | SABS     | SABS             |        |         |         |                |
+|                    |                      | SABS     | SABS             |        |         |         | Planned        |
 | Mk2 Inline Cockpit | mk2Cockpit\_Inline   | Stock    | Stock            | Low    | Stock   | Low     | Done           |
 |                    |                      |          | DE\_IVAExtension | High   | RPM     | High    | Done           |
 |                    |                      |          | WarbirdsSI       | High   | RPM     | V.High  | Done           |
 |                    |                      |          | DE+MAS           | Near   | RPM+MAS | High    | Done           |
-|                    |                      | SABS     | SABS             |        |         |         |                |
+|                    |                      | SABS     | SABS             |        |         |         | Planned        |
 | Mk2 Lander Can     | mk2LanderCabin\_v2   | Stock    | Stock            | Low    | Stock   | Low     | Done           |
 |                    |                      |          | RPM              | Med    | RPM     | Med     | Done           |
 |                    |                      |          | DE\_IVAExtension | High   | RPM     | High    | Done           |
 |                    |                      |          | DE+MAS           | Near   | RPM     | High    | Done           |
 |                    |                      | KSA      | KSA              | Mid    | RPM     | High    | Provided       |
-|                    |                      | SABS     | SABS             |        |         |         |                |
+|                    |                      | SABS     | SABS             |        |         |         | Planned        |
 | Mk3 Cockpit        | mk3Cockpit\_Shuttle  | Stock    | Stock            | Low    | Stock   | Low     | Done           |
 |                    |                      |          | RPM              | Med    | RPM     | Med     | Done           |
 |                    |                      |          | DE\_IVAExtension | High   | RPM     | High    | Done           |
 |                    |                      |          | UltimateRetro    | Med    | RPM+MAS | V.High  | Done (2)       |
 |                    |                      |          | UltimateGlass    | High   | RPM+MAS | V.High  | Done           |
 |                    |                      |          | DE+MAS           | Near   | RPM+MAS | High    | Done           |
-|                    |                      | SABS     | SABS             |        |         |         |                |
+|                    |                      | SABS     | SABS             |        |         |         | Planned        |
 | PPD-12 Cupola      | cupola               | Stock    | Stock            | Low    | Stock   | Low     | Done           |
 |                    |                      |          | RPM              | Med    | RPM     | Med     | Done           |
 |                    |                      |          | DE\_IVAExtension | High   | RPM     | Hig     | Done           |
-|                    |                      | SABS     | SABS             |        |         |         |                |
+|                    |                      | SABS     | SABS             |        |         |         | Planned        |
 
 ### Making History
 
@@ -422,13 +422,13 @@ are replaced by the superb `MAS_ALCOR_MFD2` which simulates a near future avioni
 | KV-1            | kv1Pod    | MH   | MH              | Low  | Stock   | Low     | Done           |
 |                 |           |      | ASET for MH     | High | RPM     | High    | Done           |
 |                 |           | KSA  | KSA             | Mid  | RPM     | High    | Provided       |
-|                 |           | SABS | SABS            |      |         |         |                |
+|                 |           | SABS | SABS            |      |         |         | Planned        |
 | KV-2            | kv2Pod    | MH   | MH              | Low  | Stock   | Low     | Done           |
 |                 |           |      | ASET for MH     | High | RPM     | High    | Done           |
-|                 |           | SABS | SABS            |      |         |         |                |
+|                 |           | SABS | SABS            |      |         |         | Planned        |
 | KV-3            | kv3Pod    | MH   | MH              | Low  | Stock   | Low     | Done           |
 |                 |           |      | ASET for MH     | High | RPM     | High    | Done           |
-|                 |           | SABS | SABS            |      |         |         |                |
+|                 |           | SABS | SABS            |      |         |         | Planned        |
 | Mk2 Command Pod | Mk2Pod    | MH   | MH              | Low  | Stock   | Low     | Done           |
 |                 |           |      | ASET for MH     | High | RPM     | High    | Done           |
 |                 |           |      | ASET for MH+MAS | Near | RPM+MAS | High    | Done           |
@@ -439,13 +439,7 @@ are replaced by the superb `MAS_ALCOR_MFD2` which simulates a near future avioni
 |                 |           |      | ASET for MH+MAS | Near | RPM+MAS | High    | Done           |
 |                 |           |      | Max-Ksp         | Low  | MAS     | V.High  | Done           |
 |                 |           |      | Max-Ksp No Hud  | Low  | MAS     | V.High  | Done           |
-|                 |           | SABS | SABS            |      |         |         |                |
-
-kv1
-kv2
-kv3
-Mk2Pod
-MEMLander
+|                 |           | SABS | SABS            | Mid  | MAS     | Med     | Done           |
 
 ### BDB
 
@@ -480,14 +474,14 @@ both of the very excellent MAS MOARdVPlus IVA.
 |                  |                          |            | MAS              | Low  | MAS     | V.High  | Done           |
 |                  |                          |            | DE+MAS           | Near | RPM+MAS | High    | Done           |
 |                  |                          |            | Max-Ksp          | Low  | MAS     | V.High  | Done           |
-|                  |                          | SABS       | SABS             |      |         |         |                |
+|                  |                          | SABS       | SABS             | Mid  | MAS     | Med     | Done           |
 | LEM              | ?                        | BDB        | BDB              | Low  | Stock   | Low     | Done           |
 |                  | MEMLander                | Stock      | MH               | Low  | Stock   | Low     | Done           |
 |                  |                          |            | ASET for MH      | High | RPM     | High    | Done           |
 |                  |                          |            | ASET for MH+MAS  | Near | RPM+MAS | High    | Done           |
 |                  |                          |            | Max-Ksp          | Low  | MAS     | V.High  | Done           |
 |                  |                          |            | Max-Ksp No Hud   | Low  | MAS     | V.High  | Done           |
-|                  |                          | SABS       | SABS             |      |         |         |                |
+|                  |                          | SABS       | SABS             | Mid  | MAS     | Med     | Done           |
 
 ### Airplane Plus
 
