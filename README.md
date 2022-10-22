@@ -48,6 +48,25 @@ the coverage over time.
 
 ## Changes
 
+### 0.7.7 Release - BDB 1.11 Support (22nd Oct 2022)
+
+Adds:
+
+- Slightly improved support for BDB 1.11 Release.
+  - Hermes/Mercury: Added Placeholder (empty) and BDBAlternate (super minimal, non-functional)
+  - Vinci/Gemini: Added Placeholder (empty) and BDBAlternate (old FASA, non-functional)
+  - Kane/Apollo: Added Placeholder (empty) and BDBRPM (functional RPM variant of non-functional BDB)
+  - Sina/LEM: Added Placeholder (empty) and BDB2 (new BDB non-functional IVA), the older BDB remains
+    unchanged for compatibility.
+
+NOTES:
+- Previous Reviva 0.7.6, 0.7.5, 0.7.4 will still work fine with BDB 1.11 - though the new
+  non-functional LEM IVA will not be selectable.
+- Currently no LEM variants have IVA switching: ie. no engine cover, Taxi, Lab, Shelter. You get the
+  BDB default only.
+- Similarly any Mercury, Gemini or Apollo variants (eg. Big Gemini or Apollo 5-Crew) do not have IVA
+  switching, BDB default only.
+
 ### 0.7.6 Release - Moar IVA and BDB (24th Sep 2022)
 
 Adds:
