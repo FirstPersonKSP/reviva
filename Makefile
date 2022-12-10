@@ -1,6 +1,6 @@
 # KSP	= /mnt/c/Program Files (x86)/Steam/steamapps/common/Kerbal Space Program
 KSP		= /mnt/c/Games/KSP-Dev
-KSP_VER		= 1.12.3
+KSP_VER		= 1.12.4
 MANAGED		= $(KSP)/KSP_x64_Data/Managed
 
 CSC		= csc
@@ -117,9 +117,8 @@ github-release:
 	gh release upload $(GIT_TAG) $(BUILD)/$(PKG_ZIP)
 
 spacedock-login:
-	1pass --login-valid
 	curl -F username=$(SD_USER) \
-		-F password=`1pass -p SpaceDock` \
+		-F password=`op item get --fields label=password SpaceDock` \
 		-c ./cookies "https://spacedock.info/api/login"
 
 spacedock-release:
