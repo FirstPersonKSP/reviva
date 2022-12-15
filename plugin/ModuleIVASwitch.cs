@@ -235,6 +235,7 @@ namespace Reviva
 
             ConfigNode newInternalConfig = new ConfigNode("INTERNAL");
             newInternalConfig.AddValue("name", newName);
+            this.part.partInfo = new AvailablePart(this.part.partInfo); // clone the partinfo so we don't affect all instances of this part
             this.part.partInfo.internalConfig = newInternalConfig;
             return true;
         }
@@ -279,7 +280,23 @@ namespace Reviva
             }
 
             Log("Load in-flight IVA");
-            this.part.SpawnIVA();
+            //this.part.SpawnIVA();
+
+            // the following is essentially what SpawnIVA does, except SpawnIVA is a no-op if the part has no crew capacity
+            // FreeIVA includes several internal models that do not have crew capacity, and failing to call internalModel.Initialize() will leave the internal model attached to the part and make physics go insane
+            {
+                if (this.part.internalModel == null)
+                {
+                    this.part.CreateInternalModel();
+                }
+
+                if (this.part.internalModel != null)
+                {
+                    this.part.internalModel.Initialize(this.part);
+                    this.part.internalModel.SpawnCrew();
+                    this.part.internalModel.SetVisible(false);
+                }
+            }
         }
 
         private void Log(string text)
