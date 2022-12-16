@@ -52,6 +52,10 @@ the coverage over time.
 
 Fixes:
 
+- [Fix GitHub Issue 9][url:GitHubIssue9]: Thanks to [JonnyOThan][kspf:JonnyOThan]
+  - Clone the partInfo so that changes to the internal config don't affect all instances of the same
+    part Also fix an issue with internals that don't have crew capacity, exposed by FreeIva
+
 ### 0.7.7 Release - BDB 1.11 Support (22nd Oct 2022)
 
 Adds:
@@ -675,6 +679,7 @@ Happy to recieve pull requests on GitHub for improvements, more IVA support, etc
 [url:GitHubIssue4]: https://github.com/harveyt/reviva/issues/4 "GitHub Issue 4"
 [url:GitHubIssue5]: https://github.com/harveyt/reviva/issues/5 "GitHub Issue 5"
 [url:GitHubIssue6]: https://github.com/harveyt/reviva/issues/6 "GitHub Issue 6"
+[url:GitHubIssue9]: https://github.com/harveyt/reviva/issues/9 "GitHub Issue 9"
 [url:SupportProgress]: https://github.com/harveyt/reviva/blob/main/README.md#support-progress
 [url:DependencySummary]: https://github.com/harveyt/reviva/blob/main/README.md#dependency-summary
 [url:SpaceDock]: https://spacedock.info/mod/2990/Reviva "SpaceDock"
