@@ -48,6 +48,10 @@ the coverage over time.
 
 ## Changes
 
+### 0.8.0 Release - Bug fixing (16th Dec 2022)
+
+Fixes:
+
 ### 0.7.7 Release - BDB 1.11 Support (22nd Oct 2022)
 
 Adds:
