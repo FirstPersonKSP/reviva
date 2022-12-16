@@ -52,9 +52,11 @@ the coverage over time.
 
 Fixes:
 
-- [Fix GitHub Issue 9][url:GitHubIssue9]: Thanks to [JonnyOThan][kspf:JonnyOThan]
+- [Fix GitHub Issue 9][url:GitHubIssue9]: Thanks to [JonnyOThan][kspf:JonnyOThan]:
   - Clone the partInfo so that changes to the internal config don't affect all instances of the same
-    part Also fix an issue with internals that don't have crew capacity, exposed by FreeIva
+    part.
+- Extra fix from [Fix GitHub Issue 9][url:GitHubIssue9], again thanks to [JonnyOThan][kspf:JonnyOThan]:
+  - Fix an issue with internals that don't have crew capacity, exposed by FreeIva.
 
 ### 0.7.7 Release - BDB 1.11 Support (22nd Oct 2022)
 
