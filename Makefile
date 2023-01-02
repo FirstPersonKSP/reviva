@@ -32,6 +32,7 @@ VER_SHA		= $(word 5,$(VER))
 GIT_TAG		= $(VER_MAJOR).$(VER_MINOR).$(VER_PATCH)
 PKG_ZIP		= Reviva-$(GIT_TAG).zip
 
+SD_COOKIES	= $(BUILD)/cookies
 SD_USER		= 610yesnolovely
 SD_MODID	= 2990
 
@@ -119,10 +120,10 @@ github-release:
 spacedock-login:
 	curl -F username=$(SD_USER) \
 		-F password=`op item get --fields label=password SpaceDock` \
-		-c ./cookies "https://spacedock.info/api/login"
+		-c $(SD_COOKIES) "https://spacedock.info/api/login"
 
 spacedock-release:
-	curl -c ./cookies -b ./cookies -F "version=$(GIT_TAG)" \
+	curl -c $(SD_COOKIES) -b $(SD_COOKIES) -F "version=$(GIT_TAG)" \
 		-F "changelog=$(CHANGES)" \
 		-F "game-version=$(KSP_VER)" \
 		-F "notify-followers=yes" \
