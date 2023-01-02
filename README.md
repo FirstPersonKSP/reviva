@@ -48,6 +48,14 @@ the coverage over time.
 
 ## Changes
 
+### 0.8.1 Release - Bug fixing (2nd Jan 2023)
+
+Fixes:
+
+- Added support for AirplanePlus Mk1/0 Caged Inline (same as Mk1 Caged Inline).
+  - Note that the part does not fit exactly and has the wrong interior window structure, but
+    is better than nothing.
+
 ### 0.8.0 Release - Bug fixing (16th Dec 2022)
 
 Fixes:
