@@ -542,31 +542,33 @@ both of the very excellent MAS MOARdVPlus IVA.
 
 ### Airplane Plus
 
-| Name                       | CFG Name          | From  | IVA              | Tech | Style   | Quality | Support Status |
-|----------------------------|-------------------|-------|------------------|------|---------|---------|----------------|
-| MK1 Viewer's Cockpit       | bellcockpit       | AP    | AP               | Low  | Stock   | Low     | Done           |
-|                            |                   |       | APIP             | Med  | RPM     | V.High  | Done           |
-|                            |                   |       | Warbirds         | High | RPM     | V.High  | Done           |
-| Size 1.5 Cockpit           | bombardiercockpit | AP    | AP               | Low  | Stock   | Low     | Done           |
-|                            |                   |       | APIP             | High | RPM     | High    | Done           |
-| MK1 Business Cockpit       | citationcockpit   | AP    | AP               | Low  | Stock   | Low     | Done           |
-|                            |                   |       | Warbirds         | Med  | RPM     | WIP     | Done (3)       |
-| MK3S1 Cockpit              | cessnacockpit     | AP    | AP               | Low  | Stock   | Low     | Done           |
-|                            |                   |       | APIP             | Med  | RPM     | V.High  | Done           |
-| Mk2 Non-Commercial Cockpit | falconcockpit     | AP    | AP               | Low  | Stock   | Low     | Done           |
-|                            |                   |       | APF16 RPM        | Med  | RPM     | Med     | Done (6)       |
-|                            |                   |       | APF16 ASET       | Med  | RPM     | V.High  | Done (6)       |
-| MK1 Non-Commerical Cockpit | fightercockpit    | AP    | AP               | Low  | Stock   | Low     | Done           |
-|                            |                   |       | APIP             | Med  | RPM     | Med     | Done           |
-| MK3S1.5 Viewer's Cockpit   | hueycockpit       | AP    | AP               | Low  | Stock   | Low     | Done           |
-|                            |                   |       | APIP             | Med  | RPM     | V.High  | Done           |
-| MK1 Caged Inline Cockpit   | oldfightercockpit | AP    | AP               | Low  | Stock   | Low     | Done           |
-|                            |                   |       | Warbirds         | Med  | RPM     | V.High  | Done (4)       |
-| MK1 Supersonic Cockpit     | x1cockpit         | AP    | AP               | Low  | Stock   | Low     | Done           |
-|                            |                   |       | Warbirds         | Med  | RPM     | V.High  | Done           |
-|                            |                   |       | WarbirdsSI       | Med  | RPM     | V.High  | Done           |
-| Size 2 Viewer's Cockpit II | b29cockpit        | AP    | AP               | Low  | Stock   | Low     | Done           |
-|                            |                   |       | Warbirds         | Med  | RPM     | WIP     | Done (3)       |
+| Name                       | CFG Name          | From | IVA        | Tech | Style | Quality | Support Status |
+|----------------------------|-------------------|------|------------|------|-------|---------|----------------|
+| MK1 Viewer's Cockpit       | bellcockpit       | AP   | AP         | Low  | Stock | Low     | Done           |
+|                            |                   |      | APIP       | Med  | RPM   | V.High  | Done           |
+|                            |                   |      | Warbirds   | High | RPM   | V.High  | Done           |
+| Size 1.5 Cockpit           | bombardiercockpit | AP   | AP         | Low  | Stock | Low     | Done           |
+|                            |                   |      | APIP       | High | RPM   | High    | Done           |
+| MK1 Business Cockpit       | citationcockpit   | AP   | AP         | Low  | Stock | Low     | Done           |
+|                            |                   |      | Warbirds   | Med  | RPM   | WIP     | Done (3)       |
+| MK3S1 Cockpit              | cessnacockpit     | AP   | AP         | Low  | Stock | Low     | Done           |
+|                            |                   |      | APIP       | Med  | RPM   | V.High  | Done           |
+| Mk2 Non-Commercial Cockpit | falconcockpit     | AP   | AP         | Low  | Stock | Low     | Done           |
+|                            |                   |      | APF16 RPM  | Med  | RPM   | Med     | Done (6)       |
+|                            |                   |      | APF16 ASET | Med  | RPM   | V.High  | Done (6)       |
+| MK1 Non-Commerical Cockpit | fightercockpit    | AP   | AP         | Low  | Stock | Low     | Done           |
+|                            |                   |      | APIP       | Med  | RPM   | Med     | Done           |
+| MK3S1.5 Viewer's Cockpit   | hueycockpit       | AP   | AP         | Low  | Stock | Low     | Done           |
+|                            |                   |      | APIP       | Med  | RPM   | V.High  | Done           |
+| MK1 Caged Inline Cockpit   | oldfightercockpit | AP   | AP         | Low  | Stock | Low     | Done           |
+|                            |                   |      | Warbirds   | Med  | RPM   | V.High  | Done (4)       |
+| MK1/0 Caged Inline Cockpit | zerocockpit       | AP   | AP         | Low  | Stock | Low     | Done           |
+|                            |                   |      | Warbirds   | Med  | RPM   | V.High  | Done (4)       |
+| MK1 Supersonic Cockpit     | x1cockpit         | AP   | AP         | Low  | Stock | Low     | Done           |
+|                            |                   |      | Warbirds   | Med  | RPM   | V.High  | Done           |
+|                            |                   |      | WarbirdsSI | Med  | RPM   | V.High  | Done           |
+| Size 2 Viewer's Cockpit II | b29cockpit        | AP   | AP         | Low  | Stock | Low     | Done           |
+|                            |                   |      | Warbirds   | Med  | RPM   | WIP     | Done (3)       |
 
 ### Kerbonov
 

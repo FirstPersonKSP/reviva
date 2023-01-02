@@ -126,9 +126,9 @@ spacedock-login:
 		-F password=`op item get --fields label=password SpaceDock` \
 		-c $(SD_COOKIES) "https://spacedock.info/api/login"
 
-spacedock-release:
+spacedock-release: build-changes
 	curl -c $(SD_COOKIES) -b $(SD_COOKIES) -F "version=$(GIT_TAG)" \
-		-F "changelog=$(CHANGES)" \
+		-F "changelog=$$(sed -E -e 's/$$/\r/g' < $(CHANGES))" \
 		-F "game-version=$(KSP_VER)" \
 		-F "notify-followers=yes" \
 		-F "zipball=@$(BUILD)/$(PKG_ZIP)" \
