@@ -32,6 +32,7 @@ VER_SHA		= $(word 5,$(VER))
 GIT_TAG		= $(VER_MAJOR).$(VER_MINOR).$(VER_PATCH)
 PKG_ZIP		= Reviva-$(GIT_TAG).zip
 
+CHANGES		= $(BUILD)/Changes-$(GIT_TAG).md
 SD_COOKIES	= $(BUILD)/cookies
 SD_USER		= 610yesnolovely
 SD_MODID	= 2990
@@ -110,11 +111,14 @@ list-parts:
 		print name;								\
 	}' | sort -u
 
-CHANGES	= Release $(GIT_TAG)
+build-changes:
+	@sed -E -n -e '/^### $(GIT_TAG) Release/,/^###.*/p' < $(ROOT)/README.md | \
+		head -n -1 | \
+		sed -E -e 's/\[([^]]*)\]\[[^]]*\]/\1/g' > $(CHANGES)
 
-github-release:
+github-release: build-changes
 	gh auth status
-	gh release create $(GIT_TAG) --title "$(GIT_TAG)" --notes "$(CHANGES)"
+	gh release create $(GIT_TAG) --title "$(GIT_TAG)" --notes-file $(CHANGES)
 	gh release upload $(GIT_TAG) $(BUILD)/$(PKG_ZIP)
 
 spacedock-login:
