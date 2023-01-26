@@ -60,7 +60,7 @@ namespace Reviva
             ConfigNode[] oldComputerNodes = ownerPart.partInfo.partConfig.GetNodes("MODULE", "name", this.ModuleName);
             foreach (ConfigNode oldComputerNode in oldComputerNodes)
             {
-#if REVIVA_DEBUG
+#if DEBUG
                 Log($"Removing: {oldComputerNode}");
 #endif
                 ownerPart.partInfo.partConfig.RemoveNode(oldComputerNode);
@@ -69,7 +69,7 @@ namespace Reviva
 	    ConfigNode newComputerNode = new ConfigNode("MODULE");
 	    newConfig.CopyTo(newComputerNode);
 
-#if REVIVA_DEBUG
+#if DEBUG
 	    Log($"Adding: {newComputerNode}");
 #endif
 	    ownerPart.partInfo.partConfig.AddNode(newComputerNode);

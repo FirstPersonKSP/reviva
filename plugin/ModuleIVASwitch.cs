@@ -100,7 +100,7 @@ namespace Reviva
                 var mode = CameraManager.Instance.currentCameraMode;
 		if (mode == CameraManager.CameraMode.IVA || mode == CameraManager.CameraMode.Internal)
                 {
-#if REVIVA_DEBUG
+#if DEBUG
 		    Log($"Defer switch IVA, active vessel IVA in view");
 #endif
                     canUpdate = false;
