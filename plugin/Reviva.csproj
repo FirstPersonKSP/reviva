@@ -5,7 +5,10 @@
     <LangVersion>8</LangVersion>
     <IsPackable>false</IsPackable>
     <PlatformTarget>x64</PlatformTarget>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>    
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <KSP_ROOT Condition=" '$(KSP_ROOT)' == ''">
+      /mnt/c/Games/KSP-Dev      
+    </KSP_ROOT>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,6 +20,9 @@
     </Reference>
     <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>$(KSP_ROOT)/KSP_x64_Data/Managed/UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>$(KSP_ROOT)/KSP_x64_Data/Managed/UnityEngine.dll</HintPath>
     </Reference>
   </ItemGroup>
 
