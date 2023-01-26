@@ -3,7 +3,6 @@ KSP_ROOT	= /mnt/c/Games/KSP-Dev
 KSP_VER		= 1.12.4
 MANAGED		= $(KSP_ROOT)/KSP_x64_Data/Managed
 
-CSC		= csc
 ROOT		= .
 SRC		= $(ROOT)/plugin
 BUILD		= $(ROOT)/build
@@ -14,13 +13,11 @@ SRCS		= $(SRC)/AssemblyInfo.cs \
 		  $(SRC)/RPMComputer.cs \
 		  $(SRC)/MASComputer.cs
 CFGS		= $(shell find $(GAMEDATA) -type f -print)
-DEPS		= $(SRCS) $(CFGS) $(ROOT)/Makefile
 
 PKG		= $(BUILD)/GameData/Reviva
-DLL		= $(BUILD)/Reviva.dll
-FLAGS		= -optimize+ -debug-
-DEFS		=
-# DEFS		= -define:REVIVA_DEBUG
+DLL		= $(SRC)/bin/$(CONFIG)/net48/Reviva.dll
+CONFIG		= Release
+# CONFIG		= Debug
 
 VER_GIT		:= $(shell git describe --tags --long --always HEAD)
 VER		= $(subst -, ,$(subst ., ,$(VER_GIT)))
@@ -48,19 +45,21 @@ version:
 
 $(DLL): $(SRCS)
 	mkdir -p "$(BUILD)"
-	KSP_ROOT=$(KSP_ROOT) dotnet build Reviva.sln
+	KSP_ROOT=$(KSP_ROOT) dotnet build -c $(CONFIG) Reviva.sln
 
 assembly:
 	sed -e 's/%%VER_GIT%%/$(VER_GIT)/g' \
 	    -e 's/%%VER_MAJOR%%/$(VER_MAJOR)/g' \
 	    -e 's/%%VER_MINOR%%/$(VER_MINOR)/g' \
 	    -e 's/%%VER_PATCH%%/$(VER_PATCH)/g' \
-	    -e 's/%%VER_BUILD%%/$(VER_BUILD)/g' \
-	    -e 's/%%VER_SHA%%/$(VER_SHA)/g' \
 	    < $(SRC)/AssemblyInfo.cs.in > $(SRC)/AssemblyInfo.cs
 
 clean:
 	rm -rf "$(BUILD)"
+
+clobber: clean
+	rm -rf plugin/obj
+	rm -rf plugin/bin
 
 package: build
 	rm -rf $(PKG)

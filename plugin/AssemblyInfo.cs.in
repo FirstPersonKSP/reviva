@@ -15,7 +15,7 @@ using System.Runtime.InteropServices;
 [assembly: Guid("e33468f4-ccae-4af4-ab17-0f48195d85c7")]
 
 [assembly: AssemblyInformationalVersionAttribute("%%VER_GIT%%")]
-[assembly: AssemblyVersion("%%VER_MAJOR%%.%%VER_MINOR%%.%%VER_PATCH%%.%%VER_BUILD%%")]
-[assembly: AssemblyFileVersion("%%VER_MAJOR%%.%%VER_MINOR%%.%%VER_PATCH%%.%%VER_BUILD%%")]
+[assembly: AssemblyVersion("%%VER_MAJOR%%.%%VER_MINOR%%.%%VER_PATCH%%.0")]
+[assembly: AssemblyFileVersion("%%VER_MAJOR%%.%%VER_MINOR%%.%%VER_PATCH%%.0")]
 
 [assembly: KSPAssembly("Reviva", %%VER_MAJOR%%, %%VER_MINOR%%, %%VER_PATCH%%)]

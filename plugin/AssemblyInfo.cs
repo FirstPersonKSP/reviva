@@ -14,8 +14,8 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 [assembly: Guid("e33468f4-ccae-4af4-ab17-0f48195d85c7")]
 
-[assembly: AssemblyInformationalVersionAttribute("0.8.1-2-ge6aa476")]
-[assembly: AssemblyVersion("0.8.1.2")]
-[assembly: AssemblyFileVersion("0.8.1.2")]
+[assembly: AssemblyInformationalVersionAttribute("0.8.1-3-gc538347")]
+[assembly: AssemblyVersion("0.8.1.0")]
+[assembly: AssemblyFileVersion("0.8.1.0")]
 
 [assembly: KSPAssembly("Reviva", 0, 8, 1)]
