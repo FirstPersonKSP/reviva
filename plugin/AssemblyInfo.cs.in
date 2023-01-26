@@ -18,4 +18,4 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyVersion("%%VER_MAJOR%%.%%VER_MINOR%%.%%VER_PATCH%%.%%VER_BUILD%%")]
 [assembly: AssemblyFileVersion("%%VER_MAJOR%%.%%VER_MINOR%%.%%VER_PATCH%%.%%VER_BUILD%%")]
 
-[assembly: KSPAssembly("B9PartSwitch", %%VER_MAJOR%%, %%VER_MINOR%%, %%VER_PATCH%%)]
+[assembly: KSPAssembly("Reviva", %%VER_MAJOR%%, %%VER_MINOR%%, %%VER_PATCH%%)]
