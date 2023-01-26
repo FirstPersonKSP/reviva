@@ -1,2 +1,4 @@
 *~
 build/
+plugin/bin/
+plugin/obj/
