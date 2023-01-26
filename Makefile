@@ -48,8 +48,7 @@ $(DLL): $(SRCS)
 	KSP_ROOT=$(KSP_ROOT) dotnet build -c $(CONFIG) Reviva.sln
 
 assembly:
-	sed -e 's/%%VER_GIT%%/$(VER_GIT)/g' \
-	    -e 's/%%VER_MAJOR%%/$(VER_MAJOR)/g' \
+	sed -e 's/%%VER_MAJOR%%/$(VER_MAJOR)/g' \
 	    -e 's/%%VER_MINOR%%/$(VER_MINOR)/g' \
 	    -e 's/%%VER_PATCH%%/$(VER_PATCH)/g' \
 	    < $(SRC)/AssemblyInfo.cs.in > $(SRC)/AssemblyInfo.cs
