@@ -13,7 +13,16 @@ namespace Reviva
 
         public override void OnLoad(ConfigNode node)
         {
+            if (!HighLogic.LoadedSceneIsFlight) return;
+
             base.OnLoad(node);
+            
+            if (!vessel.loaded)
+            {
+                UpdateInternalConfig(internalName);
+                return;
+            }
+            
             DetectIVASwitch(node);
 
             /*
@@ -197,7 +206,7 @@ namespace Reviva
 	// Returns null if none available
         private string GetCurrentInternalModelName()
         {
-            return this.part?.internalModel?.name;
+            return this.part?.internalModel?.internalName;
         }
 
 	private string GetConfigValue(ConfigNode node, string id)
