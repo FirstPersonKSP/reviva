@@ -21,8 +21,7 @@ namespace Reviva
 			if (needUpdate && this.vessel != null)
 			{
 				Log($"Trying to switch IVA to for newly loaded vessel");
-				CanIVASwitch();
-				if (canUpdate)
+				if (CanIVASwitch())
 				{
 					string newName = GetRequiredInternalName();
 					Log($"Switching IVA to {newName} before vessel loads (for QuickIVA support)");
@@ -43,16 +42,11 @@ namespace Reviva
 			// 		If true, should switch IVA when possible, additionally updateConfig is set to
 			// 		the ModuleIVASwitch config node.
 			// 
-			// canUpdate: Can change be made in this frame?
-			// 		If true, changing the IVA is safe to do.
-			// 		If false, not currently possible (currently in the IVA that is switching for
-			// 		example), the actual update is deferred until this becomes true
-			// 		(or needUpdate becomes false).
 			base.OnUpdate();
-			if (needUpdate)
-				CanIVASwitch();
-			if (needUpdate && canUpdate)
+			if (needUpdate && CanIVASwitch())
+			{
 				DoIVASwitch();
+			}
 		}
 
 		public RPMComputer RPMComputer => this.rpmComputer;
@@ -61,7 +55,6 @@ namespace Reviva
 		/*  -------------------------------------------------------------------------------- */
 
 		private bool needUpdate = false;
-		private bool canUpdate = false;
 		private ConfigNode updateConfig = null;
 		private RPMComputer rpmComputer = null;
 		private MASComputer masComputer = null;
@@ -77,9 +70,9 @@ namespace Reviva
 			updateConfig = needUpdate ? node : null;
 		}
 
-		private void CanIVASwitch()
+		private bool CanIVASwitch()
 		{
-			canUpdate = true;
+			bool canUpdate = true;
 
 			// Disallow switching IVA if in the active vessel, and viewing the IVA.
 			// 
@@ -97,12 +90,13 @@ namespace Reviva
 					canUpdate = false;
 				}
 			}
+
+			return canUpdate;
 		}
 
 		private void DoIVASwitch()
 		{
 			needUpdate = false;
-			canUpdate = false;
 
 			string oldName = GetCurrentInternalConfigName();
 			string newName = GetRequiredInternalName();
