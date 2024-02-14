@@ -1,2 +1,8 @@
 *~
 build/
+.vs
+obj
+bin
+*.user
+/GameData/Reviva/Reviva.dll
+/GameData/Reviva/Reviva.pdb
