@@ -111,7 +111,9 @@ namespace Reviva
 
 			RebootRPMComputer();
 
-			if (ivaWasSpawned)
+			// Never create a PCR internal after a subtype swap - leave it up to PCR to do that
+			// https://github.com/harveyt/reviva/issues/22
+			if (ivaWasSpawned && part.Modules["ProbeControlRoomPart"] == null)
 			{
 				//this.part.SpawnIVA();
 
