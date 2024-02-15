@@ -14,8 +14,15 @@ namespace Reviva
 			base.OnLoad(node);
 
 			if (!HighLogic.LoadedSceneIsFlight) return;
-			
-			if (!vessel.loaded)
+
+			if (!HasInternalNameChanged())
+			{
+				needUpdate = false;
+				return;
+			}
+
+			// on initial loading, just change the config directly so that the correct IVA will be created through the normal pathways
+			if (vessel == null || !vessel.loaded)
 			{
 				UpdateInternalConfig(internalName);
 				return;
@@ -26,22 +33,8 @@ namespace Reviva
 			//  
 			// The actual update is done from OnUpdate() which means the IVA can be updated
 			// over one or more frames (if required in the future).  
-			needUpdate = HasInternalNameChanged();
-			updateConfig = needUpdate ? node : null;
-
-			// To support QuickIVA and for sanity, if loading vessel before flight scene
-			// is ready, can do the internal configuration update which will cause the
-			// right IVA to be loaded when QuickIVA goes direct to IVA.
-			if (needUpdate && this.vessel != null)
-			{
-				Log($"Trying to switch IVA to for newly loaded vessel");
-				if (CanIVASwitch())
-				{
-					string newName = GetRequiredInternalName();
-					Log($"Switching IVA to {newName} before vessel loads (for QuickIVA support)");
-					DoIVASwitch();
-				}
-			}
+			needUpdate = true;
+			updateConfig = node;
 		}
 
 		public override void OnUpdate()
@@ -110,27 +103,34 @@ namespace Reviva
 			Log($"updateConfig={updateConfig}");
 #endif
 
+			bool ivaWasSpawned = part.internalModel != null;
+			bool ivaWasActive = ivaWasSpawned && part.internalModel.gameObject.activeSelf;
 			this.part.DespawnIVA();
 
 			UpdateInternalConfig(newName);
 
 			RebootRPMComputer();
 
-			//this.part.SpawnIVA();
-
-			// the following is essentially what SpawnIVA does, except SpawnIVA is a no-op if the part has no crew capacity
-			// FreeIVA includes several internal models that do not have crew capacity, and failing to call internalModel.Initialize() will leave the internal model attached to the part and make physics go insane
-
-			if (this.part.internalModel == null)
+			if (ivaWasSpawned)
 			{
+				//this.part.SpawnIVA();
+
+				// the following is essentially what SpawnIVA does, except SpawnIVA is a no-op if the part has no crew capacity
+				// FreeIVA includes several internal models that do not have crew capacity, and failing to call internalModel.Initialize() will leave the internal model attached to the part and make physics go insane
+
 				this.part.CreateInternalModel();
-			}
 
-			if (this.part.internalModel != null)
-			{
-				this.part.internalModel.Initialize(this.part);
-				this.part.internalModel.SpawnCrew();
-				this.part.internalModel.SetVisible(false);
+				if (this.part.internalModel != null)
+				{
+					this.part.internalModel.Initialize(this.part);
+					this.part.internalModel.SpawnCrew();
+					this.part.internalModel.SetVisible(false);
+
+					if (!ivaWasActive)
+					{
+						part.internalModel.gameObject.SetActive(false);
+					}
+				}
 			}
 		}
 
