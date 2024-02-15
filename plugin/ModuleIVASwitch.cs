@@ -14,6 +14,12 @@ namespace Reviva
 			base.OnLoad(node);
 
 			if (!HighLogic.LoadedSceneIsFlight) return;
+			
+			if (!vessel.loaded)
+			{
+				UpdateInternalConfig(internalName);
+				return;
+			}
 
 			// In order to reduce switching, detect if a change has been requested for each
 			// load over one frame (this may be undone, or multiple loads may happen).
