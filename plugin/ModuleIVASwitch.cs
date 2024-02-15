@@ -12,8 +12,16 @@ namespace Reviva
 		public override void OnLoad(ConfigNode node)
 		{
 			base.OnLoad(node);
-			DetectIVASwitch(node);
 
+			if (!HighLogic.LoadedSceneIsFlight) return;
+
+			// In order to reduce switching, detect if a change has been requested for each
+			// load over one frame (this may be undone, or multiple loads may happen).
+			//  
+			// The actual update is done from OnUpdate() which means the IVA can be updated
+			// over one or more frames (if required in the future).  
+			needUpdate = HasInternalNameChanged();
+			updateConfig = needUpdate ? node : null;
 
 			// To support QuickIVA and for sanity, if loading vessel before flight scene
 			// is ready, can do the internal configuration update which will cause the
@@ -59,17 +67,6 @@ namespace Reviva
 		private RPMComputer rpmComputer = null;
 		private MASComputer masComputer = null;
 
-		private void DetectIVASwitch(ConfigNode node)
-		{
-			// In order to reduce switching, detect if a change has been requested for each
-			// load over one frame (this may be undone, or multiple loads may happen).
-			//  
-			// The actual update is done from OnUpdate() which means the IVA can be updated
-			// over one or more frames (if required in the future).  
-			needUpdate = HasInternalNameChanged();
-			updateConfig = needUpdate ? node : null;
-		}
-
 		private bool CanIVASwitch()
 		{
 			bool canUpdate = true;
@@ -85,7 +82,7 @@ namespace Reviva
 				if (mode == CameraManager.CameraMode.IVA || mode == CameraManager.CameraMode.Internal)
 				{
 #if REVIVA_DEBUG
-		    Log($"Defer switch IVA, active vessel IVA in view");
+					Log($"Defer switch IVA, active vessel IVA in view");
 #endif
 					canUpdate = false;
 				}
@@ -96,43 +93,45 @@ namespace Reviva
 
 		private void DoIVASwitch()
 		{
+			if (!HighLogic.LoadedSceneIsFlight) return;
+
 			needUpdate = false;
 
 			string oldName = GetCurrentInternalConfigName();
 			string newName = GetRequiredInternalName();
 			Log($"Switching IVA to {newName}");
 #if REVIVA_DEBUG
-	    Log($"updateConfig={updateConfig}");
+			Log($"updateConfig={updateConfig}");
 #endif
 
-			if (!UnloadIVA())
-			{
-				return;
-			}
+			this.part.DespawnIVA();
 
-			if (!UpdateInternalConfig(newName))
-			{
-				LogError($"Error recovery, remaining with IVA {oldName}");
-				LoadIVA();
-				return;
-			}
+			UpdateInternalConfig(newName);
 
 			RebootRPMComputer();
 
-			if (!RefreshInternalModel())
+			//this.part.SpawnIVA();
+
+			// the following is essentially what SpawnIVA does, except SpawnIVA is a no-op if the part has no crew capacity
+			// FreeIVA includes several internal models that do not have crew capacity, and failing to call internalModel.Initialize() will leave the internal model attached to the part and make physics go insane
+
+			if (this.part.internalModel == null)
 			{
-				// Hopefully revert to old IVA if something goes wrong
-				LogError($"Error recovery, remaining with IVA {oldName}");
-				UpdateInternalConfig(oldName);
+				this.part.CreateInternalModel();
 			}
 
-			LoadIVA();
+			if (this.part.internalModel != null)
+			{
+				this.part.internalModel.Initialize(this.part);
+				this.part.internalModel.SpawnCrew();
+				this.part.internalModel.SetVisible(false);
+			}
 		}
 
 		private bool HasInternalNameChanged()
 		{
 			string oldConfigName = GetCurrentInternalConfigName();
-			string oldModelName = GetCurrentInternalModelName();
+			string oldModelName = this.part?.internalModel?.internalName;
 			string newName = GetRequiredInternalName();
 
 			Log($"HasInternalNameChanged: oldConfigName={oldConfigName} oldModelName={oldModelName} newName={newName}");
@@ -171,21 +170,7 @@ namespace Reviva
 		private string GetCurrentInternalConfigName()
 		{
 			ConfigNode internalConfig = this.part?.partInfo?.internalConfig;
-			return GetConfigValue(internalConfig, "name");
-		}
-
-		// Name of the part's current internal model IVA, dynamically changes in flight
-		// Returns null if none available
-		private string GetCurrentInternalModelName()
-		{
-			return this.part?.internalModel?.name;
-		}
-
-		private string GetConfigValue(ConfigNode node, string id)
-		{
-			if (node == null || !node.HasValue(id))
-				return "";
-			return node.GetValue(id) ?? "";
+			return internalConfig?.GetValue("name") ?? "";
 		}
 
 		private string GetRequiredInternalName()
@@ -193,32 +178,12 @@ namespace Reviva
 			return this.internalName ?? "";
 		}
 
-		private bool UnloadIVA()
+		private void UpdateInternalConfig(string newName)
 		{
-			if (!HighLogic.LoadedSceneIsFlight)
-			{
-				Log("Not in flight scene, IVA not unloaded");
-				return false;
-			}
-
-			Log("Unload in-flight IVA");
-			this.part.DespawnIVA();
-			return true;
-		}
-
-		private bool UpdateInternalConfig(string newName)
-		{
-			if (this.part?.partInfo == null)
-			{
-				LogError("No part or partinfo, cannot switch");
-				return false;
-			}
-
 			ConfigNode newInternalConfig = new ConfigNode("INTERNAL");
 			newInternalConfig.AddValue("name", newName);
 			this.part.partInfo = new AvailablePart(this.part.partInfo); // clone the partinfo so we don't affect all instances of this part
 			this.part.partInfo.internalConfig = newInternalConfig;
-			return true;
 		}
 
 		private void RebootRPMComputer()
@@ -230,54 +195,6 @@ namespace Reviva
 
 			this.rpmComputer.Reboot(this.updateConfig);
 			this.masComputer.Reboot(this.updateConfig);
-		}
-
-		private bool RefreshInternalModel()
-		{
-			if (!HighLogic.LoadedSceneIsFlight)
-			{
-				Log("Not in flight scene, internal model not refreshed");
-				return false;
-			}
-			if (this.part == null)
-			{
-				LogError("No current part, internal model not refreshed");
-				return false;
-			}
-
-			Log("Refresh IVA interal model");
-			this.part.CreateInternalModel();
-
-			// Check internal model is valid, fail if not. Usually configuration error.
-			return (this.part.internalModel != null);
-		}
-
-		private void LoadIVA()
-		{
-			if (!HighLogic.LoadedSceneIsFlight)
-			{
-				Log("Not in flight scene, IVA not loaded");
-				return;
-			}
-
-			Log("Load in-flight IVA");
-			//this.part.SpawnIVA();
-
-			// the following is essentially what SpawnIVA does, except SpawnIVA is a no-op if the part has no crew capacity
-			// FreeIVA includes several internal models that do not have crew capacity, and failing to call internalModel.Initialize() will leave the internal model attached to the part and make physics go insane
-			{
-				if (this.part.internalModel == null)
-				{
-					this.part.CreateInternalModel();
-				}
-
-				if (this.part.internalModel != null)
-				{
-					this.part.internalModel.Initialize(this.part);
-					this.part.internalModel.SpawnCrew();
-					this.part.internalModel.SetVisible(false);
-				}
-			}
 		}
 
 		private void Log(string text)
