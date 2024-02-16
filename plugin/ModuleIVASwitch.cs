@@ -113,7 +113,7 @@ namespace Reviva
 
 			// Never create a PCR internal after a subtype swap - leave it up to PCR to do that
 			// https://github.com/harveyt/reviva/issues/22
-			if (ivaWasSpawned && part.Modules["ProbeControlRoomPart"] == null)
+			if (ivaWasSpawned && part.Modules.GetModule("ProbeControlRoomPart") == null)
 			{
 				//this.part.SpawnIVA();
 
