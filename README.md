@@ -48,6 +48,20 @@ the coverage over time.
 
 ## Changes
 
+### 1.0.0 Release - Major Updates by JonnyOThan
+
+[JonnyOThan][kspf:JonnyOThan] is awesome! He's now a co-contributor for Reviva on
+GitHub, so he has full power and authority to do anything with the mod.
+
+This release is mostly due to his hard work to really make this mod shine.
+
+- Giant refactoring of patches to make it easier to add support for mods and parts
+- Fixed bugs regarding RPM variable persistence and action group memos being lost
+- Fixed bugs that prevented ProbeControlRoom from working properly with Reviva
+- Added Apex and Kermantech options for mk3 cockpit
+- Fixed some configuration bugs
+
+
 ### 0.8.1 Release - Bug fixing (2nd Jan 2023)
 
 Fixes:
