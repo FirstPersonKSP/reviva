@@ -688,6 +688,11 @@ use of Visual Studio 22 Community Edition on Windows.
   * This is where the Assemblies are taken for building.
 * Open `Reviva.sln` in VS 22.
 * Select `Debug` or `Release` configuration.
+* Check `tools\postbuild.bat`
+  * The default on a succesful build is to:
+    * Copy the DLL to the repository `GameData` - so that the repo is exactly what should be packaged for release.
+    * Remove and re-copy the repository GameData to `$(ReferencePath)\GameData\Reviva` - so the
+      developer can restart KSP and test.
 * Hit `Build` or `F6` to build.
 
 Happy to recieve pull requests on GitHub for improvements, more IVA support, etc.
