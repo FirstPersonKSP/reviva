@@ -1,13 +1,13 @@
 root = true
 
 [*.cs]
-indent_style = space
+indent_style = tab
 indent_size = 4
 
-[*.csproj*]
-indent_style = space
-indent_size = 2
+[*.cfg]
+indent_style = tab
+indent_size = 4
 
-[*.sln]
+[*.{csproj*,sln,props}]
 indent_style = space
 indent_size = 2
