@@ -681,17 +681,19 @@ scenarios. Feel free to try to change my mind!
 # Building
 
 If you want to build the DLL and packages, just be aware that the provided source assume
-use of Unix make and mono.
+use of Visual Studio 22 Community Edition on Windows.
 
-I personally work on Ubuntu 20.04 (running on WSL2 in Windows 10). You will need to
-install mono-complete and know how to use make and Unix. If not, it's likely you could
-generate a Visual Studio project and fill in some sensible details.
-
-The Makefile "build" target will build the DLL.
-
-The "install" target will copy the DLL and GameData to the KSP directory specified in the
-Makefile, you should modify that (the default Steam install on WSL2 on Windows is
-commented out).
+* Copy `plugin/Reviva.csproj.user-example` to `plugin/Reviva.csproj.user`
+* Edit `ReferencePath` to point to your KSP game root.
+  * This is where the Assemblies are taken for building.
+* Open `Reviva.sln` in VS 22.
+* Select `Debug` or `Release` configuration.
+* Check `tools\postbuild.bat`
+  * The default on a succesful build is to:
+    * Copy the DLL to the repository `GameData` - so that the repo is exactly what should be packaged for release.
+    * Remove and re-copy the repository GameData to `$(ReferencePath)\GameData\Reviva` - so the
+      developer can restart KSP and test.
+* Hit `Build` or `F6` to build.
 
 Happy to recieve pull requests on GitHub for improvements, more IVA support, etc.
 

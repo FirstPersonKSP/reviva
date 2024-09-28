@@ -1,0 +1,13 @@
+root = true
+
+[*.cs]
+indent_style = tab
+indent_size = 4
+
+[*.cfg]
+indent_style = tab
+indent_size = 4
+
+[*.{csproj*,sln,props}]
+indent_style = space
+indent_size = 2

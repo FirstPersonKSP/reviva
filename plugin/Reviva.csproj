@@ -68,7 +68,9 @@
     </Reference>
   </ItemGroup>
   <PropertyGroup>
-    <PostBuildEvent>xcopy /Y $(TargetDir) $(SolutionDir)GameData\Reviva\</PostBuildEvent>
+    <PostBuildEvent>
+      call &quot;$(SolutionDir)tools\postbuild.bat&quot; &quot;$(TargetDir)&quot; &quot;$(SolutionDir)&quot; &quot;$(ReferencePath)&quot;
+    </PostBuildEvent>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
