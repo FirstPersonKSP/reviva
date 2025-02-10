@@ -2,6 +2,7 @@ using System;
 using System.Reflection;
 using System.Linq;
 using UnityEngine;
+using KSPBuildTools;
 
 namespace Reviva
 {
@@ -53,18 +54,14 @@ namespace Reviva
 			ConfigNode[] oldComputerNodes = ownerPart.partInfo.partConfig.GetNodes("MODULE", "name", this.ModuleName);
 			foreach (ConfigNode oldComputerNode in oldComputerNodes)
 			{
-#if REVIVA_DEBUG
-                Log($"Removing: {oldComputerNode}");
-#endif
+				Log.Debug($"Removing: {oldComputerNode}");
 				ownerPart.partInfo.partConfig.RemoveNode(oldComputerNode);
 			}
 
 			ConfigNode newComputerNode = new ConfigNode("MODULE");
 			newConfig.CopyTo(newComputerNode);
 
-#if REVIVA_DEBUG
-	    Log($"Adding: {newComputerNode}");
-#endif
+			Log.Debug($"Adding: {newComputerNode}");
 			ownerPart.partInfo.partConfig.AddNode(newComputerNode);
 		}
 

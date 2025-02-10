@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using KSPBuildTools;
 
 namespace Reviva
 {
@@ -80,9 +81,7 @@ namespace Reviva
 				var mode = CameraManager.Instance.currentCameraMode;
 				if (mode == CameraManager.CameraMode.IVA || mode == CameraManager.CameraMode.Internal)
 				{
-#if REVIVA_DEBUG
-					Log($"Defer switch IVA, active vessel IVA in view");
-#endif
+					Log.Debug($"Defer switch IVA, active vessel IVA in view");
 					canUpdate = false;
 				}
 			}
@@ -98,10 +97,8 @@ namespace Reviva
 
 			string oldName = GetCurrentInternalConfigName();
 			string newName = GetRequiredInternalName();
-			Log($"Switching IVA to {newName}");
-#if REVIVA_DEBUG
-			Log($"updateConfig={updateConfig}");
-#endif
+			Log.Message($"Switching IVA to {newName}");
+			Log.Debug($"updateConfig={updateConfig}");
 
 			bool ivaWasSpawned = part.internalModel != null;
 			bool ivaWasActive = ivaWasSpawned && part.internalModel.gameObject.activeSelf;
@@ -142,10 +139,10 @@ namespace Reviva
 			string oldModelName = this.part?.internalModel?.internalName;
 			string newName = GetRequiredInternalName();
 
-			Log($"HasInternalNameChanged: oldConfigName={oldConfigName} oldModelName={oldModelName} newName={newName}");
+			Log.Message($"HasInternalNameChanged: oldConfigName={oldConfigName} oldModelName={oldModelName} newName={newName}");
 			if (newName == "")
 			{
-				LogError("InternalName is null or empty, no switch");
+				Log.Error("InternalName is null or empty, no switch");
 				return false;
 			}
 
@@ -155,22 +152,22 @@ namespace Reviva
 			{
 				if (oldModelName != newName)
 				{
-					Log($"InternalModel switch IVA {oldModelName} -> {newName}");
+					Log.Message($"InternalModel switch IVA {oldModelName} -> {newName}");
 					return true;
 				}
 
-				Log("InternalModel unchanged, no in-flight dynamic IVA switch needed");
+				Log.Message("InternalModel unchanged, no in-flight dynamic IVA switch needed");
 				return false;
 			}
 
 			// Otherwise the use the partInfo name.
 			if (oldConfigName != newName)
 			{
-				Log($"InternalConfig switch IVA {oldConfigName} -> {newName}");
+				Log.Message($"InternalConfig switch IVA {oldConfigName} -> {newName}");
 				return true;
 			}
 
-			Log("InternalConfig unchanged, no IVA switch needed");
+			Log.Message("InternalConfig unchanged, no IVA switch needed");
 			return false;
 		}
 
@@ -203,16 +200,6 @@ namespace Reviva
 
 			this.rpmComputer.Reboot(this.updateConfig);
 			this.masComputer.Reboot(this.updateConfig);
-		}
-
-		private void Log(string text)
-		{
-			Debug.Log($"[Reviva] {text}");
-		}
-
-		private void LogError(string text)
-		{
-			Debug.LogError($"[Reviva] {text}");
 		}
 	}
 }

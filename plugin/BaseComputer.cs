@@ -2,6 +2,7 @@ using System;
 using System.Reflection;
 using System.Linq;
 using UnityEngine;
+using KSPBuildTools;
 
 namespace Reviva
 {
@@ -14,7 +15,7 @@ namespace Reviva
 
 			if (updateConfig == null)
 			{
-				LogError($"No updateConfig present, cannot reboot {ModuleName}");
+				Log.Error($"No updateConfig present, cannot reboot {ModuleName}");
 				return;
 			}
 
@@ -47,7 +48,7 @@ namespace Reviva
 			this.computer = null;
 			this.computerData = null;
 			this.computerConfig = null;
-			Log($"Created {ModuleName} proxy for ModuleIVASwitch");
+			Log.Message($"Created {ModuleName} proxy for ModuleIVASwitch");
 		}
 
 		protected abstract ConfigNode CreateDefaultData();
@@ -56,7 +57,7 @@ namespace Reviva
 		{
 			var assembly = AssemblyLoader.loadedAssemblies.FirstOrDefault(a => a.name == assemblyName);
 			bool enabled = (assembly != null);
-			Log($"Detected {assemblyName}: {enabled}");
+			Log.Message($"Detected {assemblyName}: {enabled}");
 			return enabled;
 		}
 
@@ -74,29 +75,29 @@ namespace Reviva
 		{
 			if (this.ivaSwitch == null)
 			{
-				LogError($"{ModuleName} has null ModuleIVASwitch");
+				Log.Error($"{ModuleName} has null ModuleIVASwitch");
 				return false;
 			}
 			if (this.part == null)
 			{
-				LogError($"{ModuleName} has null ModuleIVASwitch part");
+				Log.Error($"{ModuleName} has null ModuleIVASwitch part");
 				return false;
 			}
 			if (this.part.partInfo == null)
 			{
-				LogError($"{ModuleName} has null ModuleIVASwitch part.partInfo");
+				Log.Error($"{ModuleName} has null ModuleIVASwitch part.partInfo");
 				return false;
 			}
 			if (this.part.partInfo.partConfig == null)
 			{
-				LogError($"{ModuleName} has null ModuleIVASwitch part.partInfo.partConfig");
+				Log.Error($"{ModuleName} has null ModuleIVASwitch part.partInfo.partConfig");
 				return false;
 			}
 
 			this.computer = this.part.Modules?.GetModule(ModuleName);
 			if (this.computer == null)
 			{
-				Log($"No {ModuleName} found, strange but not impossible, adding one");
+				Log.Message($"No {ModuleName} found, strange but not impossible, adding one");
 				// This is ok, will create new one
 			}
 
@@ -110,7 +111,7 @@ namespace Reviva
 			{
 				// This means the subtype is not configured, usually stock or does not need
 				// RPM computer. Assume nothing is needed.
-				Log($"No {ModuleName} ConfigNode in B9PartSwitch MODULE DATA: assume default");
+				Log.Message($"No {ModuleName} ConfigNode in B9PartSwitch MODULE DATA: assume default");
 				this.computerData = CreateDefaultData();
 			}
 		}
@@ -132,11 +133,9 @@ namespace Reviva
 			ConfigNode oldConfig = FindModuleConfig(this.computer) ?? new ConfigNode();
 			ConfigNode newConfig = this.computerConfig;
 
-			Log($"Rebooting {ModuleName} with changed configuration");
-#if REVIVA_DEBUG
-            Log($"OldConfig: {oldConfig}");
-            Log($"NewConifg: {newConfig}");
-#endif
+			Log.Message($"Rebooting {ModuleName} with changed configuration");
+            Log.Debug($"OldConfig: {oldConfig}");
+            Log.Debug($"NewConifg: {newConfig}");
 
 			int index = -1;
 			if (this.computer != null)
@@ -170,11 +169,11 @@ namespace Reviva
 			int index = this.part.Modules.IndexOf(module);
 			if (index < 0)
 			{
-				LogError($"Cannot find {module.moduleName} in partConfig");
+				Log.Error($"Cannot find {module.moduleName} in partConfig");
 				return -1;
 			}
 
-			Log($"Destroying {module.moduleName} at index {index}");
+			Log.Message($"Destroying {module.moduleName} at index {index}");
 			this.part.Modules[index] = null;
 			UnityEngine.Object.DestroyImmediate((UnityEngine.Object)module);
 			return index;
@@ -185,15 +184,15 @@ namespace Reviva
 			string moduleName = newConfig.GetValue("name");
 			if (moduleName == null)
 			{
-				LogError("Cannot create new module, no name entry in ConfigNode");
+				Log.Error("Cannot create new module, no name entry in ConfigNode");
 				return;
 			}
 
-			Log($"Adding new {moduleName}");
+			Log.Message($"Adding new {moduleName}");
 			PartModule newModule = this.part.AddModule(newConfig, forceAwake : true);
 			if (newModule == null)
 			{
-				LogError($"Cannot create new {moduleName}");
+				Log.Error($"Cannot create new {moduleName}");
 				return;
 			}
 
@@ -202,20 +201,10 @@ namespace Reviva
 			// Part.RemoveModule) and set the index.
 			if (index >= 0)
 			{
-				Log($"Ensure {moduleName} is at index {index}");
+				Log.Message($"Ensure {moduleName} is at index {index}");
 				this.part.Modules.Remove(newModule);
 				this.part.Modules[index] = newModule;
 			}
-		}
-
-		protected static void Log(string text)
-		{
-			Debug.Log($"[Reviva] {text}");
-		}
-
-		protected static void LogError(string text)
-		{
-			Debug.LogError($"[Reviva] {text}");
 		}
 	}
 }
