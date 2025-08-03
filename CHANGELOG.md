@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 1.0.1 - 2025-08-03
 
 - Fix issues with mk3 shuttle mid-deck
 - Add FASA as an option for BDB apollo command pod
