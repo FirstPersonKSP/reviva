@@ -1,0 +1,5 @@
+<Project>
+	<PropertyGroup>
+		<Version>@VERSION_FULL@</Version>
+	</PropertyGroup>
+</Project>
