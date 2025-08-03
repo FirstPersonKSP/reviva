@@ -46,138 +46,6 @@ the coverage over time.
   even Zip files in GitHub issues and must be installed in their suggestion locations for Reviva to
   work correctly (directory names under GameData are very important).
 
-## Changes
-
-### 1.0.0 Release - Major Updates by JonnyOThan
-
-[JonnyOThan][kspf:JonnyOThan] is awesome! He's now a co-contributor for Reviva on
-GitHub, so he has full power and authority to do anything with the mod.
-
-This release is mostly due to his hard work to really make this mod shine.
-
-- Giant refactoring of patches to make it easier to add support for mods and parts
-- Fixed bugs regarding RPM variable persistence and action group memos being lost
-- Fixed bugs that prevented ProbeControlRoom from working properly with Reviva
-- Added Apex and Kermantech options for mk3 cockpit
-- Fixed some configuration bugs
-
-
-### 0.8.1 Release - Bug fixing (2nd Jan 2023)
-
-Fixes:
-
-- Added support for AirplanePlus Mk1/0 Caged Inline (same as Mk1 Caged Inline).
-  - Note that the part does not fit exactly and has the wrong interior window structure, but
-    is better than nothing.
-
-### 0.8.0 Release - Bug fixing (16th Dec 2022)
-
-Fixes:
-
-- [Fix GitHub Issue 9][url:GitHubIssue9]: Thanks to [JonnyOThan][kspf:JonnyOThan]:
-  - Clone the partInfo so that changes to the internal config don't affect all instances of the same
-    part.
-- Extra fix from [Fix GitHub Issue 9][url:GitHubIssue9], again thanks to [JonnyOThan][kspf:JonnyOThan]:
-  - Fix an issue with internals that don't have crew capacity, exposed by FreeIva.
-
-### 0.7.7 Release - BDB 1.11 Support (22nd Oct 2022)
-
-Adds:
-
-- Slightly improved support for BDB 1.11 Release.
-  - Hermes/Mercury: Added Placeholder (empty) and BDBAlternate (super minimal, non-functional)
-  - Vinci/Gemini: Added Placeholder (empty) and BDBAlternate (old FASA, non-functional)
-  - Kane/Apollo: Added Placeholder (empty) and BDBRPM (functional RPM variant of non-functional BDB)
-  - Sina/LEM: Added Placeholder (empty) and BDB2 (new BDB non-functional IVA), the older BDB remains
-    unchanged for compatibility.
-
-NOTES:
-- Previous Reviva 0.7.6, 0.7.5, 0.7.4 will still work fine with BDB 1.11 - though the new
-  non-functional LEM IVA will not be selectable.
-- Currently no LEM variants have IVA switching: ie. no engine cover, Taxi, Lab, Shelter. You get the
-  BDB default only.
-- Similarly any Mercury, Gemini or Apollo variants (eg. Big Gemini or Apollo 5-Crew) do not have IVA
-  switching, BDB default only.
-
-### 0.7.6 Release - Moar IVA and BDB (24th Sep 2022)
-
-Adds:
-
-- Support for:
-  - [Starilex Intra-Vehicular Solutions][url:SIVSIVA] - an excellent retro Mk1
-    pod. Available for Stock Mk1 and BDB Hermes / Mercury CM. Uses RPM.
-  - [Max-Ksp MAS IVA Pack][url:MaxKspIVA] - excellent retro Mk1-3 and MEM pods. Available for Stock
-    Mk1-3, Making History MEM, BDB Kane / Apollo,  Sina / LEM. Uses MAS.
-  - [SABS\_IVA: MAS-enabled IVA][url:SABSIVA] - partial support (it provides a full set of Stock and
-    Making History pods using MAS) for Mk1, Mk2, Mk1-3, MEM and BDB equivalents. Uses MAS. These
-    are work-in-progress, I may add configs for everything else later.
-  - [Snakeru's Mk2 Pod IVA][url:SnakeruIVA] - excelent retro style Mk2. Available for Stock and BDB
-    Vinci / Gemini. Note that this is a ZIP file in a GitHub issue and is Beta, but to me is the
-    best retro MAS style IVA for the Mk2.
-  
-### 0.7.5 Release - Airplane Plus (28th Apr 2022)
-
-Adds:
-
-- Support for Airplane Plus:
-  - Warbirds (Bell Heli, Citation, Old Fighter Inline, X1 Supersonic, B29 Bomber)
-    - [Warbird Cockpits][url:WarbirdCockpits]
-  - Airplane Plus IVA Pack (Bell Heli, Bombardier Jet, Cessna, F-18 Fighter, Huey Heli)
-    - [Airplane Plus IVA Pack][url:APIP]
-    - Airplane Plus F-16 
-    - [ASET/RPM for Falcon cockpit][url:APF16]
-    - Needs to be installed in GameData/AirplanePlusFalcon.
-
-### 0.7.4 Release - BDB experimental (28th Apr 2022)
-
-Adds:
-
-- Added "Experimental" support for MOARdvPlus BDB Kane (Apollo) CM:
-  - [MOARdV's Avionics System (MAS)][url:AvionicsSystems]
-  - Only covers the standard 3 crew Kane/Apollo CM.
-  - Original MOARdVPlus FASA variants still present and unmodified,
-    they're hidden, don't use them as they won't work as well.
-  - Reviva MM config changed to support BDB 1.10.x naming
-  - Specialized action group switches work (eg. EVA Light)
-  - Glass variant also seems to work.
-  - Interior model does not match exterior so "Interior Overlay" will not look great.
-  - Will improve when BDB updates the interior.
-  - Also even more "Experimental", all Mk1-3 IVA interiors also available and seem to be functional,
-    but definitely look even more silly with "Interior Overlay". Will not ever fix this.
-
-Fixes:
-
-- Fix MASFlightComputer support to correctly update config data.
-  - This was required to get the MOARdVPlus special action groups to work.
-  - Probably helps make other IVA a little more accurate.
-- Updated README.md with more IVAs, and links to completed mods.
-
-### 0.7.3 Release - Bug fixes (12th Apr 2022)
-
-Fixes:
-
-- Support QuickIVA when loading strait to IVA ([GitHub Issue #6][url:GitHubIssue6])
-- Handle any configuration errors by remaining on same IVA ([GitHub Issue #5][url:GitHubIssue5])
-
-### 0.7.2 Release - Bug fixes (11th Mar 2022)
-
-Fixes:
-
-- Undocking two of same craft causing crash ([GitHub Issue #3][url:GitHubIssue3])
-- Correctly switch IVA for in-flight craft where multiple similar craft present ([GitHub Issue #4][url:GitHubIssue4])
-
-### 0.7.1 Release - Stock and Missing History (28th Feb 2022)
-
-- Support Missing History KV-1, KV-2, KV-3, MK2 command pod and M.E.M. lander.
-- Configurations for Stock, ASET IVA for Making History Pods, and MAS alternatives for Mk2
-  and M.E.M (the KV pods are meant to be low to medium tech only).
-  
-### 0.7.0 Pre-Release (3rd Feb 2022)
-
-- Support for RasterPropMonitor (RPM) and/or Avionics System (MAS) IVA.
-- Covers stock command pods, cockpits, landers and cuppola only.
-- Configurations for Stock, RPM, MAS, ASET, DE_IVAExtension, Warbird Cokcpits and Ultimate
-  Shuttle IVA variants.
 
 ## For Players
 
@@ -680,34 +548,23 @@ scenarios. Feel free to try to change my mind!
 
 # Building
 
-If you want to build the DLL and packages, just be aware that the provided source assume
-use of Unix make and mono.
+Reviva makes use of [KSPBuildTools](https://github.com/kspmoddingLibs/kspbuildTools/).  See [its documentation](https://kspbuildtools.readthedocs.io/en/stable/msbuild/getting-started.html#locating-your-ksp-install) for how to specify the location of your KSP install.  I'd recommend setting the `KSPRoot` property in `reviva.csproj.user`.  Then you should be able to build `reviva.sln` in Visual Studio or run `dotnet build` in the root directory. 
 
-I personally work on Ubuntu 20.04 (running on WSL2 in Windows 10). You will need to
-install mono-complete and know how to use make and Unix. If not, it's likely you could
-generate a Visual Studio project and fill in some sensible details.
+Happy to receive pull requests on GitHub for improvements, more IVA support, etc.
 
-The Makefile "build" target will build the DLL.
-
-The "install" target will copy the DLL and GameData to the KSP directory specified in the
-Makefile, you should modify that (the default Steam install on WSL2 on Windows is
-commented out).
-
-Happy to recieve pull requests on GitHub for improvements, more IVA support, etc.
-
-[url:Screenshot]: https://github.com/harveyt/reviva/blob/main/Reviva.png?raw=true
+[url:Screenshot]: https://github.com/FirstPersonKSP/reviva/blob/main/Reviva.png?raw=true
 [url:Forum]: https://forum.kerbalspaceprogram.com/index.php?/topic/206744-wip112x-reviva-the-iva-revival-and-editorflight-switcher-070-pre-release-3rd-feb-2022/
-[url:GitHub]: https://github.com/harveyt/reviva
-[url:GitHubLatest]: https://github.com/harveyt/reviva/releases/latest
-[url:GitHubREADME]: https://github.com/harveyt/reviva/blob/main/README.md
-[url:GitHubIssues]: https://github.com/harveyt/reviva/issues
-[url:GitHubIssue3]: https://github.com/harveyt/reviva/issues/3 "GitHub Issue 3"
-[url:GitHubIssue4]: https://github.com/harveyt/reviva/issues/4 "GitHub Issue 4"
-[url:GitHubIssue5]: https://github.com/harveyt/reviva/issues/5 "GitHub Issue 5"
-[url:GitHubIssue6]: https://github.com/harveyt/reviva/issues/6 "GitHub Issue 6"
-[url:GitHubIssue9]: https://github.com/harveyt/reviva/issues/9 "GitHub Issue 9"
-[url:SupportProgress]: https://github.com/harveyt/reviva/blob/main/README.md#support-progress
-[url:DependencySummary]: https://github.com/harveyt/reviva/blob/main/README.md#dependency-summary
+[url:GitHub]: https://github.com/FirstPersonKSP/reviva
+[url:GitHubLatest]: https://github.com/FirstPersonKSP/reviva/releases/latest
+[url:GitHubREADME]: https://github.com/FirstPersonKSP/reviva/blob/main/README.md
+[url:GitHubIssues]: https://github.com/FirstPersonKSP/reviva/issues
+[url:GitHubIssue3]: https://github.com/FirstPersonKSP/reviva/issues/3 "GitHub Issue 3"
+[url:GitHubIssue4]: https://github.com/FirstPersonKSP/reviva/issues/4 "GitHub Issue 4"
+[url:GitHubIssue5]: https://github.com/FirstPersonKSP/reviva/issues/5 "GitHub Issue 5"
+[url:GitHubIssue6]: https://github.com/FirstPersonKSP/reviva/issues/6 "GitHub Issue 6"
+[url:GitHubIssue9]: https://github.com/FirstPersonKSP/reviva/issues/9 "GitHub Issue 9"
+[url:SupportProgress]: https://github.com/FirstPersonKSP/reviva/blob/main/README.md#support-progress
+[url:DependencySummary]: https://github.com/FirstPersonKSP/reviva/blob/main/README.md#dependency-summary
 [url:SpaceDock]: https://spacedock.info/mod/2990/Reviva "SpaceDock"
 [url:B9PartSwitch]: https://forum.kerbalspaceprogram.com/index.php?/topic/140541-1112-b9partswitch-v2180-march-17/
 [url:ModuleManager]: https://forum.kerbalspaceprogram.com/index.php?/topic/50533-18x-112x-module-manager-421-august-1st-2021-locked-inside-edition/
