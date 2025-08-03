@@ -4,6 +4,9 @@
     <TargetFramework>net48</TargetFramework>
     <OutputType>Library</OutputType>
   </PropertyGroup>
+  <PropertyGroup>
+    <GenerateKSPAssemblyAttribute>true</GenerateKSPAssemblyAttribute>
+  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="KSPBuildTools" Version="0.0.4" />
   </ItemGroup>
