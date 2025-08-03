@@ -1,11 +1,12 @@
 # Changelog
 
-## Unreleased
+## 1.0.1 - 2025-08-03
 
 - Fix issues with mk3 shuttle mid-deck
 - Add FASA as an option for BDB apollo command pod
 - Remove option for ASET mk1-2 from BDB apollo CM if it's not installed
 - Fix some issues when MAS is installed but a part doesn't have a MASFlightComputer
+
 
 ## 1.0.0 Release - Major Updates by JonnyOThan
 
