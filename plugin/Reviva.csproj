@@ -4,6 +4,6 @@
     <OutputType>Library</OutputType>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="KSPBuildTools" Version="0.0.3-alpha.2" />
+    <PackageReference Include="KSPBuildTools" Version="0.0.4" />
   </ItemGroup>
 </Project>
