@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Fix bad cfg syntax which broke MAS variants
+
 ## 1.0.1 - 2025-08-03
 
 - Fix issues with mk3 shuttle mid-deck
