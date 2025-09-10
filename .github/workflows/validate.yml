@@ -1,0 +1,16 @@
+name: Validate CFG Files
+
+on:
+  workflow_call:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - '**.cfg'
+  push:
+    branches: [ main ]
+    paths:
+      - '**.cfg'
+
+jobs:
+  validate:
+    uses: KSPModdingLibs/KSPBuildTools/.github/workflows/validate.yml@main
