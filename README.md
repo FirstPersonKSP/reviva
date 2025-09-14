@@ -93,8 +93,7 @@ Features:
 - [alexustas][kspf:alexustas] :: For the amazing ASET IVAs and props.
 - [MOARdV][kspf:MOARdV], [JonnyOThan][kspf:JonnyOThan] :: For Raster Prop Monitor (RPM), making IVAs look all fancy.
 - [MOARdV][kspf:MOARdV] :: For Avionics System (MAS), making IVAs look even more fancy.
-- [DemonEin][kspf:DemonEin] :: For DE_IVAExtension which provides decent IVA for all of stock.
-- [Honk Hogan][kspf:HonkHogan] :: For IVA_ASET_MAKING_HISTORY which provides decent IVA for Missing History.
+- [DemonEin][kspf:DemonEin] :: For DE_IVAExtension which provides decent IVA for all of stock. HonkHogan's configs for Making History parts have been rolled into here.
 - [theonegalen][kspf:theonegalen] :: For Warbird Cockpits IVA, and forum posts that inspired that this is
   possible.
 - [G'th][kspf:Gth] :: For the Ultimate Shuttle IVA.
