@@ -129,6 +129,28 @@ the pattern.
 - You could alternatively clone Reviva and make changes there and push them, or if you're
   really lazy ask me to do it.
 
+If the part-to-internal relationship needs extra `INTERNAL` values such as an `offset`
+or `scale`, put those values in the selected B9 subtype's `ModuleIVASwitch` data. Reviva
+copies that nested node to the runtime `INTERNAL` config when the subtype is selected:
+
+```cfg
+MODULE
+{
+  IDENTIFIER
+  {
+    name = ModuleIVASwitch
+  }
+  DATA
+  {
+    internalName = ExampleInternal
+    INTERNAL
+    {
+      offset = 0, 0, 0
+    }
+  }
+}
+```
+
 Feel free to ask questions in the forum, I'm not super experienced with KSP modding, but I
 know game development well enough to be dangerous/helpful.
 

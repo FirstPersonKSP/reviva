@@ -25,7 +25,7 @@ namespace Reviva
 			// on initial loading, just change the config directly so that the correct IVA will be created through the normal pathways
 			if (vessel == null || !vessel.loaded)
 			{
-				UpdateInternalConfig(internalName);
+				UpdateInternalConfig(internalName, node);
 				return;
 			}
 
@@ -104,7 +104,7 @@ namespace Reviva
 			bool ivaWasActive = ivaWasSpawned && part.internalModel.gameObject.activeSelf;
 			this.part.DespawnIVA();
 
-			UpdateInternalConfig(newName);
+			UpdateInternalConfig(newName, updateConfig);
 
 			RebootRPMComputer();
 
@@ -183,10 +183,16 @@ namespace Reviva
 			return this.internalName ?? "";
 		}
 
-		private void UpdateInternalConfig(string newName)
+		private void UpdateInternalConfig(string newName, ConfigNode moduleConfig)
 		{
 			ConfigNode newInternalConfig = new ConfigNode("INTERNAL");
-			newInternalConfig.AddValue("name", newName);
+			ConfigNode configuredInternal = moduleConfig?.GetNode("INTERNAL");
+			if (configuredInternal != null)
+			{
+				configuredInternal.CopyTo(newInternalConfig);
+			}
+
+			newInternalConfig.SetValue("name", newName, true);
 			this.part.partInfo = new AvailablePart(this.part.partInfo); // clone the partinfo so we don't affect all instances of this part
 			this.part.partInfo.internalConfig = newInternalConfig;
 		}
